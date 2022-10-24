@@ -326,7 +326,7 @@ func (SignatureCondition) SwaggerDoc() map[string]string {
 var map_SignatureGenericEntity = map[string]string{
 	"":             "SignatureGenericEntity holds a generic information about a person or entity who is an issuer or a subject of signing certificate or key.",
 	"organization": "Organization name.",
-	"commonName":   "Common name (e.g. openshift-signing-service).",
+	"commonName":   "Common name (e.g. uccp-signing-service).",
 }
 
 func (SignatureGenericEntity) SwaggerDoc() map[string]string {

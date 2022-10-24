@@ -48,7 +48,7 @@ type ImageSpec struct {
 	// additionalTrustedCA is a reference to a ConfigMap containing additional CAs that
 	// should be trusted during imagestream import, pod image pull, build image pull, and
 	// imageregistry pullthrough.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	AdditionalTrustedCA ConfigMapNameReference `json:"additionalTrustedCA"`
 

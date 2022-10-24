@@ -8,7 +8,7 @@ import (
 
 const (
 	Version   = "v1"
-	GroupName = "samples.operator.openshift.io"
+	GroupName = "samples.operator.uccp.io"
 )
 
 var (

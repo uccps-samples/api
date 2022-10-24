@@ -46,7 +46,7 @@ type KubeAPIServerStatus struct {
 type ServiceAccountIssuerStatus struct {
 	// name is the name of the service account issuer
 	// ---
-	// + This value comes from the serviceAccountIssuer field on the authentication.config.openshift.io/v1 resource.
+	// + This value comes from the serviceAccountIssuer field on the authentication.config.uccp.io/v1 resource.
 	// + As the authentication field is not validated, we cannot apply validation here else this may cause the controller
 	// + to error when trying to update this status field.
 	Name string `json:"name"`

@@ -15,15 +15,15 @@ Pull requests that change API types in this repo that have corresponding "intern
 [openshift/origin](https://github.com/openshift/origin).
 
 To ensure the corresponding origin pull request is ready to merge as soon as the pull request to this repo is merged:
-1. Base your pull request to this repo on latest [openshift/api#master](https://github.com/openshift/api/commits/master) and ensure CI is green
+1. Base your pull request to this repo on latest [openshift/api#master](https://github.com/uccps-samples/api/commits/master) and ensure CI is green
 2. Base your pull request to openshift/origin on latest [openshift/origin#master](https://github.com/openshift/origin/commits/master)
 3. In your openshift/origin pull request:
    1. Add a TMP commit that points [glide.yaml](https://github.com/openshift/origin/blob/master/glide.yaml#L39-L41) at your fork of openshift/api, and the branch of your pull request:
 
       ```
-      - package: github.com/openshift/api
+      - package: github.com/uccps-samples/api
         repo:    https://github.com/<your-username>/api.git
-        version: "<your-openshift-api-branch>"
+        version: "<your-uccp-api-branch>"
       ```
 
     2. Update your `bump(*)` commit to include the result of running `hack/update-deps.sh`, which will pull in the changes from your openshift/api pull request
@@ -43,7 +43,7 @@ Since Kubernetes 1.16, every CRD created in `apiextensions.k8s.io/v1` is require
 
 These schemas are often very long and complex, and should not be written by hand. For OpenShift, we provide Makefile targets in [build-machinery-go](https://github.com/openshift/build-machinery-go/) which generate the schema, built on upstream's [controller-gen](https://github.com/kubernetes-sigs/controller-tools) tool.
 
-If you make a change to a CRD type in this repo, simply calling `make update-codegen-crds` should regenerate all CRDs and update the manifests. If yours is not updated, ensure that the path to its API is included in our [calls to the Makefile targets](https://github.com/openshift/api/blob/release-4.5/Makefile#L17-L29).
+If you make a change to a CRD type in this repo, simply calling `make update-codegen-crds` should regenerate all CRDs and update the manifests. If yours is not updated, ensure that the path to its API is included in our [calls to the Makefile targets](https://github.com/uccps-samples/api/blob/release-4.5/Makefile#L17-L29).
 
 To add this generator to another repo:
 1. Vendor `github.com/openshift/build-machinery-go`

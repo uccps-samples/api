@@ -10,7 +10,7 @@ import (
 
 // APIServer holds configuration (like serving certificates, client CA and CORS domains)
 // shared by all API servers in the system, among them especially kube-apiserver
-// and openshift-apiserver. The canonical name of an instance is 'cluster'.
+// and uccp-apiserver. The canonical name of an instance is 'cluster'.
 //
 // Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).
 // +openshift:compatibility-gen:level=1
@@ -34,7 +34,7 @@ type APIServerSpec struct {
 	// clientCA references a ConfigMap containing a certificate bundle for the signers that will be recognized for
 	// incoming client certificates in addition to the operator managed signers. If this is empty, then only operator managed signers are valid.
 	// You usually only have to set this if you have your own PKI you wish to honor client certificates from.
-	// The ConfigMap must exist in the openshift-config namespace and contain the following required fields:
+	// The ConfigMap must exist in the uccp-config namespace and contain the following required fields:
 	// - ConfigMap.Data["ca-bundle.crt"] - CA bundle.
 	// +optional
 	ClientCA ConfigMapNameReference `json:"clientCA"`
@@ -84,7 +84,7 @@ const (
 type Audit struct {
 	// profile specifies the name of the desired top-level audit profile to be applied to all requests
 	// sent to any of the OpenShift-provided API servers in the cluster (kube-apiserver,
-	// openshift-apiserver and oauth-apiserver), with the exception of those requests that match
+	// uccp-apiserver and oauth-apiserver), with the exception of those requests that match
 	// one or more of the customRules.
 	//
 	// The following profiles are provided:
@@ -158,7 +158,7 @@ type APIServerNamedServingCert struct {
 	// +optional
 	Names []string `json:"names,omitempty"`
 	// servingCertificate references a kubernetes.io/tls type secret containing the TLS cert info for serving secure traffic.
-	// The secret must exist in the openshift-config namespace and contain the following required fields:
+	// The secret must exist in the uccp-config namespace and contain the following required fields:
 	// - Secret.Data["tls.key"] - TLS private key.
 	// - Secret.Data["tls.crt"] - TLS certificate.
 	ServingCertificate SecretNameReference `json:"servingCertificate"`
@@ -175,9 +175,9 @@ type APIServerEncryption struct {
 	//
 	//   1. secrets
 	//   2. configmaps
-	//   3. routes.route.openshift.io
-	//   4. oauthaccesstokens.oauth.openshift.io
-	//   5. oauthauthorizetokens.oauth.openshift.io
+	//   3. routes.route.uccp.io
+	//   4. oauthaccesstokens.oauth.uccp.io
+	//   5. oauthauthorizetokens.oauth.uccp.io
 	//
 	// +unionDiscriminator
 	// +optional

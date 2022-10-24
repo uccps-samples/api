@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	servicecertsignerv1alpha1 "github.com/openshift/api/servicecertsigner/v1alpha1"
+	servicecertsignerv1alpha1 "github.com/uccps-samples/api/servicecertsigner/v1alpha1"
 )
 
 const (
-	GroupName = "servicecertsigner.config.openshift.io"
+	GroupName = "servicecertsigner.config.uccp.io"
 )
 
 var (

@@ -3,6 +3,6 @@
 // +k8s:openapi-gen=true
 
 // +kubebuilder:validation:Optional
-// +groupName=controlplane.operator.openshift.io
+// +groupName=controlplane.operator.uccp.io
 
 package v1alpha1

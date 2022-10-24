@@ -309,7 +309,7 @@ const (
 	// not function.  The annotation is provided to allow a custom scenario, e.g. a custom
 	// ingress controller that relies on the route API, but for some customized purpose
 	// needs to use routes with invalid hosts.
-	AllowNonDNSCompliantHostAnnotation = "route.openshift.io/allow-non-dns-compliant-host"
+	AllowNonDNSCompliantHostAnnotation = "route.uccp.io/allow-non-dns-compliant-host"
 )
 
 // Ingress-to-route controller
@@ -317,5 +317,5 @@ const (
 	// IngressToRouteIngressClassControllerName is the name of the
 	// controller that translates ingresses into routes.  This value is
 	// intended to be used for the spec.controller field of ingressclasses.
-	IngressToRouteIngressClassControllerName = "openshift.io/ingress-to-route"
+	IngressToRouteIngressClassControllerName = "uccp.io/ingress-to-route"
 )

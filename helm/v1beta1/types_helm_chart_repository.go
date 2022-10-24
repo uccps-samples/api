@@ -1,7 +1,7 @@
 package v1beta1
 
 import (
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -72,7 +72,7 @@ type ConnectionConfig struct {
 	// It is used as a trust anchor to validate the TLS certificate presented by the remote server.
 	// The key "ca-bundle.crt" is used to locate the data.
 	// If empty, the default system roots are used.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	CA configv1.ConfigMapNameReference `json:"ca,omitempty"`
 
@@ -80,7 +80,7 @@ type ConnectionConfig struct {
 	// PEM-encoded TLS client certificate and private key to present when connecting to the server.
 	// The key "tls.crt" is used to locate the client certificate.
 	// The key "tls.key" is used to locate the private key.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	TLSClientConfig configv1.SecretNameReference `json:"tlsClientConfig,omitempty"`
 }

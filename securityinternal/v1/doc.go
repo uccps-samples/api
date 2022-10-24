@@ -3,6 +3,6 @@
 // +k8s:openapi-gen=true
 
 // +kubebuilder:validation:Optional
-// +groupName=security.internal.openshift.io
+// +groupName=security.internal.uccp.io
 // Package v1 is the v1 version of the API.
 package v1

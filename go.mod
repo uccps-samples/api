@@ -1,4 +1,4 @@
-module github.com/openshift/api
+module github.com/uccps-samples/api
 
 go 1.16
 

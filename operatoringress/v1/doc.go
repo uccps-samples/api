@@ -3,5 +3,5 @@
 // +k8s:openapi-gen=true
 
 // +kubebuilder:validation:Optional
-// +groupName=ingress.operator.openshift.io
+// +groupName=ingress.operator.uccp.io
 package v1

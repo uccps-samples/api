@@ -8,14 +8,14 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // SharedConfigMap allows a ConfigMap to be shared across namespaces.
 // Pods can mount the shared ConfigMap by adding a CSI volume to the pod specification using the
-// "csi.sharedresource.openshift.io" CSI driver and a reference to the SharedConfigMap in the volume attributes:
+// "csi.sharedresource.uccp.io" CSI driver and a reference to the SharedConfigMap in the volume attributes:
 //
 // spec:
 //
 //	volumes:
 //	- name: shared-configmap
 //	  csi:
-//	    driver: csi.sharedresource.openshift.io
+//	    driver: csi.sharedresource.uccp.io
 //	    volumeAttributes:
 //	      sharedConfigMap: my-share
 //
@@ -23,7 +23,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // within its namespace with an appropriate Role and RoleBinding. For compactness, here are example `oc` invocations for creating
 // such Role and RoleBinding objects.
 //
-//	`oc create role shared-resource-my-share --verb=use --resource=sharedconfigmaps.sharedresource.openshift.io --resource-name=my-share`
+//	`oc create role shared-resource-my-share --verb=use --resource=sharedconfigmaps.sharedresource.uccp.io --resource-name=my-share`
 //	`oc create rolebinding shared-resource-my-share --role=shared-resource-my-share --serviceaccount=my-namespace:default`
 //
 // Shared resource objects, in this case ConfigMaps, have default permissions of list, get, and watch for system authenticated users.

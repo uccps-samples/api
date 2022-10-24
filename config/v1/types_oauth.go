@@ -100,7 +100,7 @@ type OAuthTemplates struct {
 	// If specified and the secret or expected key is not found, the default login page is used.
 	// If the specified template is not valid, the default login page is used.
 	// If unspecified, the default login page is used.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	Login SecretNameReference `json:"login"`
 
@@ -110,7 +110,7 @@ type OAuthTemplates struct {
 	// If specified and the secret or expected key is not found, the default provider selection page is used.
 	// If the specified template is not valid, the default provider selection page is used.
 	// If unspecified, the default provider selection page is used.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	ProviderSelection SecretNameReference `json:"providerSelection"`
 
@@ -120,7 +120,7 @@ type OAuthTemplates struct {
 	// If specified and the secret or expected key is not found, the default error page is used.
 	// If the specified template is not valid, the default error page is used.
 	// If unspecified, the default error page is used.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	Error SecretNameReference `json:"error"`
 }
@@ -255,7 +255,7 @@ type OAuthRemoteConnectionInfo struct {
 	// If specified and the config map or expected key is not found, the identity provider is not honored.
 	// If the specified ca data is not valid, the identity provider is not honored.
 	// If empty, the default system roots are used.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	CA ConfigMapNameReference `json:"ca"`
 
@@ -264,7 +264,7 @@ type OAuthRemoteConnectionInfo struct {
 	// The key "tls.crt" is used to locate the data.
 	// If specified and the secret or expected key is not found, the identity provider is not honored.
 	// If the specified certificate data is not valid, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	TLSClientCert SecretNameReference `json:"tlsClientCert"`
 
@@ -273,7 +273,7 @@ type OAuthRemoteConnectionInfo struct {
 	// The key "tls.key" is used to locate the data.
 	// If specified and the secret or expected key is not found, the identity provider is not honored.
 	// If the specified certificate data is not valid, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	TLSClientKey SecretNameReference `json:"tlsClientKey"`
 }
@@ -284,7 +284,7 @@ type HTPasswdIdentityProvider struct {
 	// The key "htpasswd" is used to locate the data.
 	// If the secret or expected key is not found, the identity provider is not honored.
 	// If the specified htpasswd data is not valid, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	FileData SecretNameReference `json:"fileData"`
 }
 
@@ -303,7 +303,7 @@ type LDAPIdentityProvider struct {
 	// containing a password to bind with during the search phase.
 	// The key "bindPassword" is used to locate the data.
 	// If specified and the secret or expected key is not found, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	// +optional
 	BindPassword SecretNameReference `json:"bindPassword"`
 
@@ -320,7 +320,7 @@ type LDAPIdentityProvider struct {
 	// If specified and the config map or expected key is not found, the identity provider is not honored.
 	// If the specified ca data is not valid, the identity provider is not honored.
 	// If empty, the default system roots are used.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	CA ConfigMapNameReference `json:"ca"`
 
@@ -395,7 +395,7 @@ type RequestHeaderIdentityProvider struct {
 	// The key "ca.crt" is used to locate the data.
 	// If the config map or expected key is not found, the identity provider is not honored.
 	// If the specified ca data is not valid, the identity provider is not honored.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	ClientCA ConfigMapNameReference `json:"ca"`
 
 	// clientCommonNames is an optional list of common names to require a match from. If empty, any
@@ -424,7 +424,7 @@ type GitHubIdentityProvider struct {
 	// clientSecret is a required reference to the secret by name containing the oauth client secret.
 	// The key "clientSecret" is used to locate the data.
 	// If the secret or expected key is not found, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	ClientSecret SecretNameReference `json:"clientSecret"`
 
 	// organizations optionally restricts which organizations are allowed to log in
@@ -448,7 +448,7 @@ type GitHubIdentityProvider struct {
 	// If the specified ca data is not valid, the identity provider is not honored.
 	// If empty, the default system roots are used.
 	// This can only be configured when hostname is set to a non-empty value.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	CA ConfigMapNameReference `json:"ca"`
 }
@@ -461,7 +461,7 @@ type GitLabIdentityProvider struct {
 	// clientSecret is a required reference to the secret by name containing the oauth client secret.
 	// The key "clientSecret" is used to locate the data.
 	// If the secret or expected key is not found, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	ClientSecret SecretNameReference `json:"clientSecret"`
 
 	// url is the oauth server base URL
@@ -473,7 +473,7 @@ type GitLabIdentityProvider struct {
 	// If specified and the config map or expected key is not found, the identity provider is not honored.
 	// If the specified ca data is not valid, the identity provider is not honored.
 	// If empty, the default system roots are used.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	CA ConfigMapNameReference `json:"ca"`
 }
@@ -486,7 +486,7 @@ type GoogleIdentityProvider struct {
 	// clientSecret is a required reference to the secret by name containing the oauth client secret.
 	// The key "clientSecret" is used to locate the data.
 	// If the secret or expected key is not found, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	ClientSecret SecretNameReference `json:"clientSecret"`
 
 	// hostedDomain is the optional Google App domain (e.g. "mycompany.com") to restrict logins to
@@ -502,7 +502,7 @@ type OpenIDIdentityProvider struct {
 	// clientSecret is a required reference to the secret by name containing the oauth client secret.
 	// The key "clientSecret" is used to locate the data.
 	// If the secret or expected key is not found, the identity provider is not honored.
-	// The namespace for this secret is openshift-config.
+	// The namespace for this secret is uccp-config.
 	ClientSecret SecretNameReference `json:"clientSecret"`
 
 	// ca is an optional reference to a config map by name containing the PEM-encoded CA bundle.
@@ -511,7 +511,7 @@ type OpenIDIdentityProvider struct {
 	// If specified and the config map or expected key is not found, the identity provider is not honored.
 	// If the specified ca data is not valid, the identity provider is not honored.
 	// If empty, the default system roots are used.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	CA ConfigMapNameReference `json:"ca"`
 

@@ -11,7 +11,8 @@ include $(addprefix ./vendor/github.com/openshift/build-machinery-go/make/, \
 	targets/openshift/crd-schema-gen.mk \
 )
 
-GO_PACKAGES :=$(addsuffix ...,$(addprefix ./,$(filter-out vendor/,$(filter-out hack/,$(wildcard */)))))
+EXCLUDE_DIRS := _output/ dependencymagnet/ hack/ third_party/ tls/ vendor/
+GO_PACKAGES :=$(addsuffix ...,$(addprefix ./,$(filter-out $(EXCLUDE_DIRS), $(wildcard */))))
 GO_BUILD_PACKAGES :=$(GO_PACKAGES)
 GO_BUILD_PACKAGES_EXPANDED :=$(GO_BUILD_PACKAGES)
 # LDFLAGS are not needed for dummy builds (saving time on calling git commands)
@@ -44,7 +45,7 @@ $(call add-crd-gen,operatorcontrolplane,./operatorcontrolplane/v1alpha1,./operat
 $(call add-crd-gen,machine,./machine/v1beta1,./machine/v1beta1,./machine/v1beta1)
 
 RUNTIME ?= podman
-RUNTIME_IMAGE_NAME ?= openshift-api-generator
+RUNTIME_IMAGE_NAME ?= uccp-api-generator
 
 verify-scripts:
 	bash -x hack/verify-deepcopy.sh
@@ -67,4 +68,4 @@ update-scripts:
 
 generate-with-container: Dockerfile.build
 	$(RUNTIME) build -t $(RUNTIME_IMAGE_NAME) -f Dockerfile.build .
-	$(RUNTIME) run -ti --rm -v $(PWD):/go/src/github.com/openshift/api:z -w /go/src/github.com/openshift/api $(RUNTIME_IMAGE_NAME) make update
+	$(RUNTIME) run -ti --rm -v $(PWD):/go/src/github.com/uccps-samples/api:z -w /go/src/github.com/uccps-samples/api $(RUNTIME_IMAGE_NAME) make update

@@ -56,7 +56,7 @@ type ConsolePluginProxy struct {
 	//
 	// Request example path:
 	//
-	// /api/proxy/plugin/acm/search/pods?namespace=openshift-apiserver
+	// /api/proxy/plugin/acm/search/pods?namespace=uccp-apiserver
 	//
 	// +kubebuilder:validation:Required
 	// +kubebuilder:validation:MinLength=1

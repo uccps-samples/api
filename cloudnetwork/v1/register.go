@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	GroupName          = "cloud.network.openshift.io"
+	GroupName          = "cloud.network.uccp.io"
 	SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: "v1"}
 	SchemeBuilder      = runtime.NewSchemeBuilder(addKnownTypes)
 	Install            = SchemeBuilder.AddToScheme

@@ -37,7 +37,7 @@ pkgLoop:
 			apiType := isAPIType(t)
 			hasTag := containsCompatibilityGenTag(t)
 			switch {
-			case strings.HasPrefix(i, "github.com/openshift/api/operator/") && apiType && !hasTag:
+			case strings.HasPrefix(i, "github.com/uccps-samples/api/operator/") && apiType && !hasTag:
 				klog.Warningf("API Type %v requires at least one of the following tags: +%s or +%s.", t, levelTagName, internalTagName)
 				continue pkgLoop
 			case apiType && !hasTag:

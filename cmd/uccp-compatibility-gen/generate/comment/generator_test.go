@@ -469,11 +469,11 @@ func stringLit(s string) *dst.BasicLit {
 }
 
 const (
-	levelTagComment    = "// +openshift:compatibility-gen:level"
+	levelTagComment    = "// +uccp:compatibility-gen:level"
 	level1TagComment   = levelTagComment + "=1"
 	level2TagComment   = levelTagComment + "=2"
 	level4TagComment   = levelTagComment + "=4"
-	internalTagComment = "// +openshift:compatibility-gen:internal"
+	internalTagComment = "// +uccp:compatibility-gen:internal"
 
 	level1CompatibilityComment = "// Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
 	level2CompatibilityComment = "// Compatibility level 2: Stable within a major release for a minimum of 9 months or 3 minor releases (whichever is longer)."

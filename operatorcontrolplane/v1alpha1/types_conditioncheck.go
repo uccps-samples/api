@@ -1,8 +1,8 @@
-// Package v1alpha1 is an API version in the controlplane.operator.openshift.io group
+// Package v1alpha1 is an API version in the controlplane.operator.uccp.io group
 package v1alpha1
 
 import (
-	v1 "github.com/openshift/api/config/v1"
+	v1 "github.com/uccps-samples/api/config/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	ingressoperatorv1 "github.com/openshift/api/operatoringress/v1"
+	ingressoperatorv1 "github.com/uccps-samples/api/operatoringress/v1"
 )
 
 const (
-	GroupName = "ingress.operator.openshift.io"
+	GroupName = "ingress.operator.uccp.io"
 )
 
 var (

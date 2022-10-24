@@ -3,6 +3,6 @@
 // +k8s:defaulter-gen=TypeMeta
 // +k8s:openapi-gen=true
 
-// +groupName=user.openshift.io
+// +groupName=user.uccp.io
 // Package v1 is the v1 version of the API.
 package v1

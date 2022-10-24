@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	machinev1beta1 "github.com/openshift/api/machine/v1beta1"
+	machinev1beta1 "github.com/uccps-samples/api/machine/v1beta1"
 )
 
 const (
-	GroupName = "machine.openshift.io"
+	GroupName = "machine.uccp.io"
 )
 
 var (

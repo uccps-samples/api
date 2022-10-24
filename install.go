@@ -32,36 +32,36 @@ import (
 	kstoragev1beta1 "k8s.io/api/storage/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/openshift/api/apiserver"
-	"github.com/openshift/api/apps"
-	"github.com/openshift/api/authorization"
-	"github.com/openshift/api/build"
-	"github.com/openshift/api/cloudnetwork"
-	"github.com/openshift/api/config"
-	"github.com/openshift/api/helm"
-	"github.com/openshift/api/image"
-	"github.com/openshift/api/imageregistry"
-	"github.com/openshift/api/kubecontrolplane"
-	"github.com/openshift/api/machine"
-	"github.com/openshift/api/network"
-	"github.com/openshift/api/networkoperator"
-	"github.com/openshift/api/oauth"
-	"github.com/openshift/api/openshiftcontrolplane"
-	"github.com/openshift/api/operator"
-	"github.com/openshift/api/operatorcontrolplane"
-	"github.com/openshift/api/osin"
-	"github.com/openshift/api/project"
-	"github.com/openshift/api/quota"
-	"github.com/openshift/api/route"
-	"github.com/openshift/api/samples"
-	"github.com/openshift/api/security"
-	"github.com/openshift/api/servicecertsigner"
-	"github.com/openshift/api/sharedresource"
-	"github.com/openshift/api/template"
-	"github.com/openshift/api/user"
+	"github.com/uccps-samples/api/apiserver"
+	"github.com/uccps-samples/api/apps"
+	"github.com/uccps-samples/api/authorization"
+	"github.com/uccps-samples/api/build"
+	"github.com/uccps-samples/api/cloudnetwork"
+	"github.com/uccps-samples/api/config"
+	"github.com/uccps-samples/api/helm"
+	"github.com/uccps-samples/api/image"
+	"github.com/uccps-samples/api/imageregistry"
+	"github.com/uccps-samples/api/kubecontrolplane"
+	"github.com/uccps-samples/api/machine"
+	"github.com/uccps-samples/api/network"
+	"github.com/uccps-samples/api/networkoperator"
+	"github.com/uccps-samples/api/oauth"
+	"github.com/uccps-samples/api/uccpcontrolplane"
+	"github.com/uccps-samples/api/operator"
+	"github.com/uccps-samples/api/operatorcontrolplane"
+	"github.com/uccps-samples/api/osin"
+	"github.com/uccps-samples/api/project"
+	"github.com/uccps-samples/api/quota"
+	"github.com/uccps-samples/api/route"
+	"github.com/uccps-samples/api/samples"
+	"github.com/uccps-samples/api/security"
+	"github.com/uccps-samples/api/servicecertsigner"
+	"github.com/uccps-samples/api/sharedresource"
+	"github.com/uccps-samples/api/template"
+	"github.com/uccps-samples/api/user"
 
 	// just make sure this compiles.  Don't add it to a scheme
-	_ "github.com/openshift/api/legacyconfig/v1"
+	_ "github.com/uccps-samples/api/legacyconfig/v1"
 )
 
 var (
@@ -79,7 +79,7 @@ var (
 		network.Install,
 		networkoperator.Install,
 		oauth.Install,
-		openshiftcontrolplane.Install,
+		uccpcontrolplane.Install,
 		operator.Install,
 		operatorcontrolplane.Install,
 		osin.Install,

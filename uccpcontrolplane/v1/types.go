@@ -4,8 +4,8 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	buildv1 "github.com/openshift/api/build/v1"
-	configv1 "github.com/openshift/api/config/v1"
+	buildv1 "github.com/uccps-samples/api/build/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -190,7 +190,7 @@ type OpenShiftControllerManagerConfig struct {
 	ImageImport        ImageImportControllerConfig      `json:"imageImport"`
 	SecurityAllocator  SecurityAllocator                `json:"securityAllocator"`
 
-	// featureGates are the set of extra OpenShift feature gates for openshift-controller-manager.
+	// featureGates are the set of extra OpenShift feature gates for uccp-controller-manager.
 	// These feature gates can be used to enable features that are tech preview or otherwise not available on
 	// OpenShift by default.
 	FeatureGates []string `json:"featureGates"`

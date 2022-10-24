@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	GroupName     = "machine.openshift.io"
+	GroupName     = "machine.uccp.io"
 	GroupVersion  = schema.GroupVersion{Group: GroupName, Version: "v1beta1"}
 	schemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)
 	// Install is a function which adds this version to a scheme

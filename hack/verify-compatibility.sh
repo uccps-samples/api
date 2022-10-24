@@ -10,7 +10,7 @@ cleanup() {
 }
 trap "cleanup" EXIT SIGINT
 
-V_ROOT="${TMP_ROOT}/src/github.com/openshift/api"
+V_ROOT="${TMP_ROOT}/src/github.com/uccps-samples/api"
 mkdir -p "$V_ROOT"
 cp -a --no-preserve=timestamp -r "$SCRIPT_ROOT"/* "$V_ROOT"
 (

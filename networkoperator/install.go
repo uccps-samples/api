@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	networkoperatorv1 "github.com/openshift/api/networkoperator/v1"
+	networkoperatorv1 "github.com/uccps-samples/api/networkoperator/v1"
 )
 
 const (
-	GroupName = "network.operator.openshift.io"
+	GroupName = "network.operator.uccp.io"
 )
 
 var (

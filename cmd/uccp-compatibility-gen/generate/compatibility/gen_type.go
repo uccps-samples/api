@@ -13,7 +13,7 @@ import (
 	"k8s.io/klog/v2"
 )
 
-// NewCompatibilityGen creates the openshift compatibility generator.
+// NewCompatibilityGen creates the uccp compatibility generator.
 func NewCompatibilityGen(sanitizedName, targetPackage string) generator.Generator {
 	return &genCompatibility{
 		DefaultGen: generator.DefaultGen{

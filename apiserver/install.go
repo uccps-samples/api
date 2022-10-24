@@ -4,7 +4,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	v1 "github.com/openshift/api/apiserver/v1"
+	v1 "github.com/uccps-samples/api/apiserver/v1"
 )
 
 var (
@@ -14,9 +14,9 @@ var (
 )
 
 func Resource(resource string) schema.GroupResource {
-	return schema.GroupResource{Group: "apiserver.openshift.io", Resource: resource}
+	return schema.GroupResource{Group: "apiserver.uccp.io", Resource: resource}
 }
 
 func Kind(kind string) schema.GroupKind {
-	return schema.GroupKind{Group: "apiserver.openshift.io", Kind: kind}
+	return schema.GroupKind{Group: "apiserver.uccp.io", Kind: kind}
 }
