@@ -22,15 +22,15 @@ spec:
           name: Phase
           type: string
         - description: Type of instance
-          jsonPath: .metadata.labels['machine\.openshift\.io/instance-type']
+          jsonPath: .metadata.labels['machine\.uccp\.io/instance-type']
           name: Type
           type: string
         - description: Region associated with machine
-          jsonPath: .metadata.labels['machine\.openshift\.io/region']
+          jsonPath: .metadata.labels['machine\.uccp\.io/region']
           name: Region
           type: string
         - description: Zone associated with machine
-          jsonPath: .metadata.labels['machine\.openshift\.io/zone']
+          jsonPath: .metadata.labels['machine\.uccp\.io/zone']
           name: Zone
           type: string
         - description: Machine age
