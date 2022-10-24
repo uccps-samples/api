@@ -142,13 +142,13 @@ const (
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
 // +kubebuilder:printcolumn:name="Phase",type="string",JSONPath=".status.phase",description="Phase of machine"
-// +kubebuilder:printcolumn:name="Type",type="string",JSONPath=".metadata.labels['machine\\.openshift\\.io/instance-type']",description="Type of instance"
-// +kubebuilder:printcolumn:name="Region",type="string",JSONPath=".metadata.labels['machine\\.openshift\\.io/region']",description="Region associated with machine"
-// +kubebuilder:printcolumn:name="Zone",type="string",JSONPath=".metadata.labels['machine\\.openshift\\.io/zone']",description="Zone associated with machine"
+// +kubebuilder:printcolumn:name="Type",type="string",JSONPath=".metadata.labels['machine\\.uccp\\.io/instance-type']",description="Type of instance"
+// +kubebuilder:printcolumn:name="Region",type="string",JSONPath=".metadata.labels['machine\\.uccp\\.io/region']",description="Region associated with machine"
+// +kubebuilder:printcolumn:name="Zone",type="string",JSONPath=".metadata.labels['machine\\.uccp\\.io/zone']",description="Zone associated with machine"
 // +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp",description="Machine age"
 // +kubebuilder:printcolumn:name="Node",type="string",JSONPath=".status.nodeRef.name",description="Node associated with machine",priority=1
 // +kubebuilder:printcolumn:name="ProviderID",type="string",JSONPath=".spec.providerID",description="Provider ID of machine created in cloud provider",priority=1
-// +kubebuilder:printcolumn:name="State",type="string",JSONPath=".metadata.annotations['machine\\.openshift\\.io/instance-state']",description="State of instance",priority=1
+// +kubebuilder:printcolumn:name="State",type="string",JSONPath=".metadata.annotations['machine\\.uccp\\.io/instance-state']",description="State of instance",priority=1
 // Compatibility level 2: Stable within a major release for a minimum of 9 months or 3 minor releases (whichever is longer).
 // +openshift:compatibility-gen:level=2
 type Machine struct {
