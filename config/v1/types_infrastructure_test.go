@@ -11,7 +11,7 @@ import (
 const infraCRDFilePath = "0000_10_config-operator_01_infrastructure.crd.yaml"
 
 // TestInfrastructureStatusDefault verifies that the infrastructure CR status does not have default value
-// The admission code under https://github.com/openshift/kubernetes/pull/877 is expecting that the infrastructure status
+// The admission code under https://github.com/uccps-samples/kubernetes/pull/877 is expecting that the infrastructure status
 // field will not have a default value.
 // It allows separating between clean installation and the roll-back to the previous version of the cluster
 func TestInfrastructureStatusDefault(t *testing.T) {

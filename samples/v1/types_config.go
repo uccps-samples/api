@@ -39,7 +39,7 @@ type ConfigSpec struct {
 	ManagementState operatorv1.ManagementState `json:"managementState,omitempty" protobuf:"bytes,1,opt,name=managementState"`
 
 	// samplesRegistry allows for the specification of which registry is accessed
-	// by the ImageStreams for their image content.  Defaults on the content in https://github.com/openshift/library
+	// by the ImageStreams for their image content.  Defaults on the content in https://github.com/uccps-samples/library
 	// that are pulled into this github repository, but based on our pulling only ocp content it typically
 	// defaults to registry.redhat.io.
 	SamplesRegistry string `json:"samplesRegistry,omitempty" protobuf:"bytes,2,opt,name=samplesRegistry"`
@@ -79,7 +79,7 @@ type ConfigStatus struct {
 	Conditions []ConfigCondition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,2,rep,name=conditions"`
 
 	// samplesRegistry allows for the specification of which registry is accessed
-	// by the ImageStreams for their image content.  Defaults on the content in https://github.com/openshift/library
+	// by the ImageStreams for their image content.  Defaults on the content in https://github.com/uccps-samples/library
 	// that are pulled into this github repository, but based on our pulling only ocp content it typically
 	// defaults to registry.redhat.io.
 	// +patchMergeKey=type

@@ -5,7 +5,7 @@ all: build
 update-codegen-crds: update-scripts
 
 # Include the library makefile
-include $(addprefix ./vendor/github.com/openshift/build-machinery-go/make/, \
+include $(addprefix ./vendor/github.com/uccps-samples/build-machinery-go/make/, \
 	golang.mk \
 	targets/openshift/deps.mk \
 	targets/openshift/crd-schema-gen.mk \

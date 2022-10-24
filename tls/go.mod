@@ -1,3 +1,3 @@
-module github.com/openshift/api/tls
+module github.com/uccps-samples/api/tls
 
 go 1.16
