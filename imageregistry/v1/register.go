@@ -8,7 +8,7 @@ import (
 
 const (
 	version   = "v1"
-	groupName = "imageregistry.operator.openshift.io"
+	groupName = "imageregistry.operator.uccp.io"
 )
 
 var (

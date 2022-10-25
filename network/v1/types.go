@@ -165,9 +165,9 @@ type NetNamespaceEgressIP string
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// NetNamespace describes a single isolated network. When using the redhat/openshift-ovs-multitenant
+// NetNamespace describes a single isolated network. When using the redhat/uccp-ovs-multitenant
 // plugin, every Namespace will have a corresponding NetNamespace object with the same name.
-// (When using redhat/openshift-ovs-subnet, NetNamespaces are not used.)
+// (When using redhat/uccp-ovs-subnet, NetNamespaces are not used.)
 //
 // Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).
 // +kubebuilder:printcolumn:name="NetID",type=integer,JSONPath=`.netid`,description="The network identifier of the network namespace"
@@ -219,7 +219,7 @@ const (
 type EgressNetworkPolicyPeer struct {
 	// CIDRSelector is the CIDR range to allow/deny traffic to. If this is set, dnsName must be unset
 	// Ideally we would have liked to use the cidr openapi format for this property.
-	// But openshift-sdn only supports v4 while specifying the cidr format allows both v4 and v6 cidrs
+	// But uccp-sdn only supports v4 while specifying the cidr format allows both v4 and v6 cidrs
 	// We are therefore using a regex pattern to validate instead.
 	// +kubebuilder:validation:Pattern=`^(([0-9]|[0-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[0-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/([0-9]|[12][0-9]|3[0-2])$`
 	CIDRSelector string `json:"cidrSelector,omitempty" protobuf:"bytes,1,rep,name=cidrSelector"`
@@ -246,7 +246,7 @@ type EgressNetworkPolicySpec struct {
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // EgressNetworkPolicy describes the current egress network policy for a Namespace. When using
-// the 'redhat/openshift-ovs-multitenant' network plugin, traffic from a pod to an IP address
+// the 'redhat/uccp-ovs-multitenant' network plugin, traffic from a pod to an IP address
 // outside the cluster will be checked against each EgressNetworkPolicyRule in the pod's
 // namespace's EgressNetworkPolicy, in order. If no rule matches (or no EgressNetworkPolicy
 // is present) then the traffic will be allowed by default.

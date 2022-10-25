@@ -29,13 +29,13 @@ type InfrastructureSpec struct {
 	// cloudConfig is a reference to a ConfigMap containing the cloud provider configuration file.
 	// This configuration file is used to configure the Kubernetes cloud provider integration
 	// when using the built-in cloud provider integration or the external cloud controller manager.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	//
 	// cloudConfig should only be consumed by the kube_cloud_config controller.
 	// The controller is responsible for using the user configuration in the spec
 	// for various platforms and combining that with the user provided ConfigMap in this field
 	// to create a stitched kube cloud config.
-	// The controller generates a ConfigMap `kube-cloud-config` in `openshift-config-managed` namespace
+	// The controller generates a ConfigMap `kube-cloud-config` in `uccp-config-managed` namespace
 	// with the kube cloud config is stored in `cloud.conf` key.
 	// All the clients are expected to use the generated ConfigMap only.
 	//
@@ -446,7 +446,7 @@ type BareMetalPlatformSpec struct{}
 
 // BareMetalPlatformStatus holds the current status of the BareMetal infrastructure provider.
 // For more information about the network architecture used with the BareMetal platform type, see:
-// https://github.com/openshift/installer/blob/master/docs/design/baremetal/networking-infrastructure.md
+// https://github.com/uccps-samples/installer/blob/master/docs/design/baremetal/networking-infrastructure.md
 type BareMetalPlatformStatus struct {
 	// apiServerInternalIP is an IP address to contact the Kubernetes API server that can be used
 	// by components inside the cluster, like kubelets using the infrastructure rather

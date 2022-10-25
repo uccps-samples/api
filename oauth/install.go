@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	oauthv1 "github.com/openshift/api/oauth/v1"
+	oauthv1 "github.com/uccps-samples/api/oauth/v1"
 )
 
 const (
-	GroupName = "oauth.openshift.io"
+	GroupName = "oauth.uccp.io"
 )
 
 var (

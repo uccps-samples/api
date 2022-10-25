@@ -1,4 +1,4 @@
-// Package v1 is an api version in the apiserver.openshift.io group
+// Package v1 is an api version in the apiserver.uccp.io group
 package v1
 
 import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -6,7 +6,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 const (
 	// RemovedInReleaseLabel is a label which can be used to select APIRequestCounts based on the release
 	// in which they are removed.  The value is equivalent to .status.removedInRelease.
-	RemovedInReleaseLabel = "apirequestcounts.apiserver.openshift.io/removedInRelease"
+	RemovedInReleaseLabel = "apirequestcounts.apiserver.uccp.io/removedInRelease"
 )
 
 // +genclient

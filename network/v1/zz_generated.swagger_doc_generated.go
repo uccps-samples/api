@@ -46,7 +46,7 @@ func (ClusterNetworkList) SwaggerDoc() map[string]string {
 }
 
 var map_EgressNetworkPolicy = map[string]string{
-	"":     "EgressNetworkPolicy describes the current egress network policy for a Namespace. When using the 'redhat/openshift-ovs-multitenant' network plugin, traffic from a pod to an IP address outside the cluster will be checked against each EgressNetworkPolicyRule in the pod's namespace's EgressNetworkPolicy, in order. If no rule matches (or no EgressNetworkPolicy is present) then the traffic will be allowed by default.\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
+	"":     "EgressNetworkPolicy describes the current egress network policy for a Namespace. When using the 'redhat/uccp-ovs-multitenant' network plugin, traffic from a pod to an IP address outside the cluster will be checked against each EgressNetworkPolicyRule in the pod's namespace's EgressNetworkPolicy, in order. If no rule matches (or no EgressNetworkPolicy is present) then the traffic will be allowed by default.\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
 	"spec": "spec is the specification of the current egress network policy",
 }
 
@@ -65,7 +65,7 @@ func (EgressNetworkPolicyList) SwaggerDoc() map[string]string {
 
 var map_EgressNetworkPolicyPeer = map[string]string{
 	"":             "EgressNetworkPolicyPeer specifies a target to apply egress network policy to",
-	"cidrSelector": "CIDRSelector is the CIDR range to allow/deny traffic to. If this is set, dnsName must be unset Ideally we would have liked to use the cidr openapi format for this property. But openshift-sdn only supports v4 while specifying the cidr format allows both v4 and v6 cidrs We are therefore using a regex pattern to validate instead.",
+	"cidrSelector": "CIDRSelector is the CIDR range to allow/deny traffic to. If this is set, dnsName must be unset Ideally we would have liked to use the cidr openapi format for this property. But uccp-sdn only supports v4 while specifying the cidr format allows both v4 and v6 cidrs We are therefore using a regex pattern to validate instead.",
 	"dnsName":      "DNSName is the domain name to allow/deny traffic to. If this is set, cidrSelector must be unset",
 }
 
@@ -115,7 +115,7 @@ func (HostSubnetList) SwaggerDoc() map[string]string {
 }
 
 var map_NetNamespace = map[string]string{
-	"":          "NetNamespace describes a single isolated network. When using the redhat/openshift-ovs-multitenant plugin, every Namespace will have a corresponding NetNamespace object with the same name. (When using redhat/openshift-ovs-subnet, NetNamespaces are not used.)\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
+	"":          "NetNamespace describes a single isolated network. When using the redhat/uccp-ovs-multitenant plugin, every Namespace will have a corresponding NetNamespace object with the same name. (When using redhat/uccp-ovs-subnet, NetNamespaces are not used.)\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
 	"netname":   "NetName is the name of the network namespace. (This is the same as the object's name, but both fields must be set.)",
 	"netid":     "NetID is the network identifier of the network namespace assigned to each overlay network packet. This can be manipulated with the \"oc adm pod-network\" commands.",
 	"egressIPs": "EgressIPs is a list of reserved IPs that will be used as the source for external traffic coming from pods in this namespace. (If empty, external traffic will be masqueraded to Node IPs.)",

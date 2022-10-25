@@ -10,7 +10,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 )
 
 var testScheme = runtime.NewScheme()
@@ -79,7 +79,7 @@ func TestStringSourceUnmarshaling(t *testing.T) {
 	for k, tc := range testcases {
 		t.Run(k, func(t *testing.T) {
 			// Wrap in a dummy object we can deserialize
-			input := fmt.Sprintf(`{"kind":"GitHubIdentityProvider","apiVersion":"osin.config.openshift.io/v1","clientSecret":%s}`, tc.JSON)
+			input := fmt.Sprintf(`{"kind":"GitHubIdentityProvider","apiVersion":"osin.config.uccp.io/v1","clientSecret":%s}`, tc.JSON)
 			githubProvider := &GitHubIdentityProvider{}
 			err := runtime.DecodeInto(codec, []byte(input), githubProvider)
 			if len(tc.ExpectedError) > 0 && (err == nil || !strings.Contains(err.Error(), tc.ExpectedError)) {
@@ -140,7 +140,7 @@ func TestStringSourceMarshaling(t *testing.T) {
 		}
 
 		// Wrap in a dummy JSON from the surrounding object
-		input := fmt.Sprintf(`{"kind":"GitHubIdentityProvider","apiVersion":"osin.config.openshift.io/v1","clientID":"","clientSecret":%s,"organizations":null,"teams":null,"hostname":"","ca":""}`, tc.ExpectedJSON)
+		input := fmt.Sprintf(`{"kind":"GitHubIdentityProvider","apiVersion":"osin.config.uccp.io/v1","clientID":"","clientSecret":%s,"organizations":null,"teams":null,"hostname":"","ca":""}`, tc.ExpectedJSON)
 		if strings.TrimSpace(string(json)) != input {
 			t.Log(len(input), len(json))
 			t.Errorf("%s: expected\n%s\ngot\n%s", k, input, string(json))

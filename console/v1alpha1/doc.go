@@ -2,5 +2,5 @@
 // +k8s:defaulter-gen=TypeMeta
 // +k8s:openapi-gen=true
 
-// +groupName=console.openshift.io
+// +groupName=console.uccp.io
 package v1alpha1

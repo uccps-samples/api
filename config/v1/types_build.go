@@ -29,10 +29,10 @@ type Build struct {
 type BuildSpec struct {
 	// AdditionalTrustedCA is a reference to a ConfigMap containing additional CAs that
 	// should be trusted for image pushes and pulls during builds.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	//
 	// DEPRECATED: Additional CAs for image pull and push should be set on
-	// image.config.openshift.io/cluster instead.
+	// image.config.uccp.io/cluster instead.
 	//
 	// +optional
 	AdditionalTrustedCA ConfigMapNameReference `json:"additionalTrustedCA"`

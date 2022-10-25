@@ -49,7 +49,7 @@ LAST_COMMIT=$(git rev-parse HEAD~1)
 git checkout $LAST_COMMIT
 for f in $(find . -name "*.yaml" -type f); do
     grep -qre "kind:\(.*\)CustomResourceDefinition" || continue
-    grep -qre "name:\(.*\).openshift.io"  || continue
+    grep -qre "name:\(.*\).uccp.io"  || continue
     if [[ $(./_output/tools/bin/yq r $f apiVersion) == "apiextensions.k8s.io/v1beta1" ]]; then
         v1beta1CRDName=$(./_output/tools/bin/yq r $f metadata.name)
         v1beta1CRDNames=("${v1beta1CRDNames[*]}" $v1beta1CRDName)
@@ -64,7 +64,7 @@ FALSE=false
 git checkout $CURRENT_BRANCH
 for f in $(find . -name "*.yaml" -type f); do
     grep -qre "kind:\(.*\)CustomResourceDefinition" || continue
-    grep -qre "name:\(.*\).openshift.io"  || continue
+    grep -qre "name:\(.*\).uccp.io"  || continue
     if [[ $(./_output/tools/bin/yq r $f apiVersion) == "apiextensions.k8s.io/v1" ]]; then
         v1CRDName=$(./_output/tools/bin/yq r $f metadata.name)
         $KUBECTL apply -f $f || FALSE=true

@@ -40,7 +40,7 @@ type ConsoleExternalLogLinkSpec struct {
 	// +kubebuilder:validation:Pattern=`^https://`
 	HrefTemplate string `json:"hrefTemplate"`
 	// namespaceFilter is a regular expression used to restrict a log link to a
-	// matching set of namespaces (e.g., `^openshift-`). The string is converted
+	// matching set of namespaces (e.g., `^uccp-`). The string is converted
 	// into a regular expression using the JavaScript RegExp constructor.
 	// If not specified, links will be displayed for all the namespaces.
 	// +optional

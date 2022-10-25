@@ -1,14 +1,14 @@
 package v1
 
 import (
-	configv1 "github.com/openshift/api/config/v1"
-	osinv1 "github.com/openshift/api/osin/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
+	osinv1 "github.com/uccps-samples/api/osin/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
 var (
-	GroupName     = "openshiftcontrolplane.config.openshift.io"
+	GroupName     = "uccpcontrolplane.config.uccp.io"
 	GroupVersion  = schema.GroupVersion{Group: GroupName, Version: "v1"}
 	schemeBuilder = runtime.NewSchemeBuilder(addKnownTypes, osinv1.Install, configv1.Install)
 	// Install is a function which adds this version to a scheme

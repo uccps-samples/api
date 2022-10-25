@@ -2,13 +2,13 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    api-approved.openshift.io: https://github.com/openshift/api/pull/470
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
-    include.release.openshift.io/single-node-developer: "true"
-  name: apiservers.config.openshift.io
+    api-approved.uccp.io: https://github.com/uccps-samples/api/pull/470
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
+    include.release.uccp.io/single-node-developer: "true"
+  name: apiservers.config.uccp.io
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   names:
     kind: APIServer
     listKind: APIServerList
@@ -19,7 +19,7 @@ spec:
     - name: v1
       schema:
         openAPIV3Schema:
-          description: "APIServer holds configuration (like serving certificates, client CA and CORS domains) shared by all API servers in the system, among them especially kube-apiserver and openshift-apiserver. The canonical name of an instance is 'cluster'. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
+          description: "APIServer holds configuration (like serving certificates, client CA and CORS domains) shared by all API servers in the system, among them especially kube-apiserver and uccp-apiserver. The canonical name of an instance is 'cluster'. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
           type: object
           required:
             - spec
@@ -42,7 +42,7 @@ spec:
                   items:
                     type: string
                 audit:
-                  description: audit specifies the settings for audit configuration to be applied to all OpenShift-provided API servers in the cluster.
+                  description: audit specifies the settings for audit configuration to be applied to all Uccp-provided API servers in the cluster.
                   type: object
                   default:
                     profile: Default
@@ -62,7 +62,7 @@ spec:
                             type: string
                             minLength: 1
                           profile:
-                            description: "profile specifies the name of the desired audit policy configuration to be deployed to all OpenShift-provided API servers in the cluster. \n The following profiles are provided: - Default: the existing default policy. - WriteRequestBodies: like 'Default', but logs request and response HTTP payloads for write requests (create, update, patch). - AllRequestBodies: like 'WriteRequestBodies', but also logs request and response HTTP payloads for read requests (get, list). - None: no requests are logged at all, not even oauthaccesstokens and oauthauthorizetokens. \n If unset, the 'Default' profile is used as the default."
+                            description: "profile specifies the name of the desired audit policy configuration to be deployed to all Uccp-provided API servers in the cluster. \n The following profiles are provided: - Default: the existing default policy. - WriteRequestBodies: like 'Default', but logs request and response HTTP payloads for write requests (create, update, patch). - AllRequestBodies: like 'WriteRequestBodies', but also logs request and response HTTP payloads for read requests (get, list). - None: no requests are logged at all, not even oauthaccesstokens and oauthauthorizetokens. \n If unset, the 'Default' profile is used as the default."
                             type: string
                             enum:
                               - Default
@@ -73,7 +73,7 @@ spec:
                         - group
                       x-kubernetes-list-type: map
                     profile:
-                      description: "profile specifies the name of the desired top-level audit profile to be applied to all requests sent to any of the OpenShift-provided API servers in the cluster (kube-apiserver, openshift-apiserver and oauth-apiserver), with the exception of those requests that match one or more of the customRules. \n The following profiles are provided: - Default: default policy which means MetaData level logging with the exception of events   (not logged at all), oauthaccesstokens and oauthauthorizetokens (both logged at RequestBody   level). - WriteRequestBodies: like 'Default', but logs request and response HTTP payloads for write requests (create, update, patch). - AllRequestBodies: like 'WriteRequestBodies', but also logs request and response HTTP payloads for read requests (get, list). - None: no requests are logged at all, not even oauthaccesstokens and oauthauthorizetokens. \n Warning: It is not recommended to disable audit logging by using the `None` profile unless you are fully aware of the risks of not logging data that can be beneficial when troubleshooting issues. If you disable audit logging and a support situation arises, you might need to enable audit logging and reproduce the issue in order to troubleshoot properly. \n If unset, the 'Default' profile is used as the default."
+                      description: "profile specifies the name of the desired top-level audit profile to be applied to all requests sent to any of the Uccp-provided API servers in the cluster (kube-apiserver, uccp-apiserver and oauth-apiserver), with the exception of those requests that match one or more of the customRules. \n The following profiles are provided: - Default: default policy which means MetaData level logging with the exception of events   (not logged at all), oauthaccesstokens and oauthauthorizetokens (both logged at RequestBody   level). - WriteRequestBodies: like 'Default', but logs request and response HTTP payloads for write requests (create, update, patch). - AllRequestBodies: like 'WriteRequestBodies', but also logs request and response HTTP payloads for read requests (get, list). - None: no requests are logged at all, not even oauthaccesstokens and oauthauthorizetokens. \n Warning: It is not recommended to disable audit logging by using the `None` profile unless you are fully aware of the risks of not logging data that can be beneficial when troubleshooting issues. If you disable audit logging and a support situation arises, you might need to enable audit logging and reproduce the issue in order to troubleshoot properly. \n If unset, the 'Default' profile is used as the default."
                       type: string
                       default: Default
                       enum:
@@ -82,7 +82,7 @@ spec:
                         - AllRequestBodies
                         - None
                 clientCA:
-                  description: 'clientCA references a ConfigMap containing a certificate bundle for the signers that will be recognized for incoming client certificates in addition to the operator managed signers. If this is empty, then only operator managed signers are valid. You usually only have to set this if you have your own PKI you wish to honor client certificates from. The ConfigMap must exist in the openshift-config namespace and contain the following required fields: - ConfigMap.Data["ca-bundle.crt"] - CA bundle.'
+                  description: 'clientCA references a ConfigMap containing a certificate bundle for the signers that will be recognized for incoming client certificates in addition to the operator managed signers. If this is empty, then only operator managed signers are valid. You usually only have to set this if you have your own PKI you wish to honor client certificates from. The ConfigMap must exist in the uccp-config namespace and contain the following required fields: - ConfigMap.Data["ca-bundle.crt"] - CA bundle.'
                   type: object
                   required:
                     - name
@@ -95,7 +95,7 @@ spec:
                   type: object
                   properties:
                     type:
-                      description: "type defines what encryption type should be used to encrypt resources at the datastore layer. When this field is unset (i.e. when it is set to the empty string), identity is implied. The behavior of unset can and will change over time.  Even if encryption is enabled by default, the meaning of unset may change to a different encryption type based on changes in best practices. \n When encryption is enabled, all sensitive resources shipped with the platform are encrypted. This list of sensitive resources can and will change over time.  The current authoritative list is: \n   1. secrets   2. configmaps   3. routes.route.openshift.io   4. oauthaccesstokens.oauth.openshift.io   5. oauthauthorizetokens.oauth.openshift.io"
+                      description: "type defines what encryption type should be used to encrypt resources at the datastore layer. When this field is unset (i.e. when it is set to the empty string), identity is implied. The behavior of unset can and will change over time.  Even if encryption is enabled by default, the meaning of unset may change to a different encryption type based on changes in best practices. \n When encryption is enabled, all sensitive resources shipped with the platform are encrypted. This list of sensitive resources can and will change over time.  The current authoritative list is: \n   1. secrets   2. configmaps   3. routes.route.uccp.io   4. oauthaccesstokens.oauth.uccp.io   5. oauthauthorizetokens.oauth.uccp.io"
                       type: string
                       enum:
                         - ""
@@ -118,7 +118,7 @@ spec:
                             items:
                               type: string
                           servingCertificate:
-                            description: 'servingCertificate references a kubernetes.io/tls type secret containing the TLS cert info for serving secure traffic. The secret must exist in the openshift-config namespace and contain the following required fields: - Secret.Data["tls.key"] - TLS private key. - Secret.Data["tls.crt"] - TLS certificate.'
+                            description: 'servingCertificate references a kubernetes.io/tls type secret containing the TLS cert info for serving secure traffic. The secret must exist in the uccp-config namespace and contain the following required fields: - Secret.Data["tls.key"] - TLS private key. - Secret.Data["tls.crt"] - TLS certificate.'
                             type: object
                             required:
                               - name

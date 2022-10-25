@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	cloudnetworkv1 "github.com/openshift/api/cloudnetwork/v1"
+	cloudnetworkv1 "github.com/uccps-samples/api/cloudnetwork/v1"
 )
 
 const (
-	GroupName = "cloud.network.openshift.io"
+	GroupName = "cloud.network.uccp.io"
 )
 
 var (

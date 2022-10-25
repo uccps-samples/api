@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	baseTagName     = "openshift:compatibility-gen"
+	baseTagName     = "uccp:compatibility-gen"
 	levelTagName    = baseTagName + ":level"
 	internalTagName = baseTagName + ":internal"
 )

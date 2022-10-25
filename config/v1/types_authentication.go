@@ -42,7 +42,7 @@ type AuthenticationSpec struct {
 	// The key "oauthMetadata" is used to locate the data.
 	// If specified and the config map or expected key is not found, no metadata is served.
 	// If the specified metadata is not valid, no metadata is served.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	OAuthMetadata ConfigMapNameReference `json:"oauthMetadata"`
 
@@ -82,7 +82,7 @@ type AuthenticationStatus struct {
 	// The key "oauthMetadata" is used to locate the data.
 	// If the config map or expected key is not found, no metadata is served.
 	// If the specified metadata is not valid, no metadata is served.
-	// The namespace for this config map is openshift-config-managed.
+	// The namespace for this config map is uccp-config-managed.
 	IntegratedOAuthMetadata ConfigMapNameReference `json:"integratedOAuthMetadata"`
 
 	// TODO if we add support for an in-cluster operator managed Keycloak instance
@@ -133,7 +133,7 @@ type DeprecatedWebhookTokenAuthenticator struct {
 type WebhookTokenAuthenticator struct {
 	// kubeConfig references a secret that contains kube config file data which
 	// describes how to access the remote webhook service.
-	// The namespace for the referenced secret is openshift-config.
+	// The namespace for the referenced secret is uccp-config.
 	//
 	// For further details, see:
 	//

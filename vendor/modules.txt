@@ -74,16 +74,16 @@ github.com/mailru/easyjson/jwriter
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v1.0.1
 github.com/modern-go/reflect2
-# github.com/openshift/build-machinery-go v0.0.0-20210712174854-1bb7fd1518d3
+# github.com/uccps-samples/build-machinery-go v0.0.0-20210712174854-1bb7fd1518d3
 ## explicit
-github.com/openshift/build-machinery-go
-github.com/openshift/build-machinery-go/make
-github.com/openshift/build-machinery-go/make/lib
-github.com/openshift/build-machinery-go/make/targets
-github.com/openshift/build-machinery-go/make/targets/golang
-github.com/openshift/build-machinery-go/make/targets/openshift
-github.com/openshift/build-machinery-go/make/targets/openshift/operator
-github.com/openshift/build-machinery-go/scripts
+github.com/uccps-samples/build-machinery-go
+github.com/uccps-samples/build-machinery-go/make
+github.com/uccps-samples/build-machinery-go/make/lib
+github.com/uccps-samples/build-machinery-go/make/targets
+github.com/uccps-samples/build-machinery-go/make/targets/golang
+github.com/uccps-samples/build-machinery-go/make/targets/openshift
+github.com/uccps-samples/build-machinery-go/make/targets/openshift/operator
+github.com/uccps-samples/build-machinery-go/scripts
 # github.com/spf13/pflag v1.0.5
 ## explicit
 github.com/spf13/pflag

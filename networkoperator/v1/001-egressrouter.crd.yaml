@@ -2,13 +2,13 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    api-approved.openshift.io: https://github.com/openshift/api/pull/851
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
+    api-approved.uccp.io: https://github.com/uccps-samples/api/pull/851
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
   creationTimestamp: null
-  name: egressrouters.network.operator.openshift.io
+  name: egressrouters.network.operator.uccp.io
 spec:
-  group: network.operator.openshift.io
+  group: network.operator.uccp.io
   names:
     kind: EgressRouter
     listKind: EgressRouterList

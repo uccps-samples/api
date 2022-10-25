@@ -10,7 +10,7 @@ FAILS=false
 
 for f in $(find . -name "*.yaml" -type f); do
     grep -qre "kind:\(.*\)CustomResourceDefinition" || continue
-    grep -qre "name:\(.*\).openshift.io"  || continue
+    grep -qre "name:\(.*\).uccp.io"  || continue
 
     if [[ $(./_output/tools/bin/yq r $f apiVersion) == "apiextensions.k8s.io/v1beta1" ]]; then
         if [[ $(./_output/tools/bin/yq r $f spec.validation.openAPIV3Schema.properties.metadata.description) != "null" ]]; then
@@ -24,8 +24,8 @@ for f in $(find . -name "*.yaml" -type f); do
         fi
     fi
 
-    if [[ $(./_output/tools/bin/yq r $f metadata.annotations[api-approved.openshift.io]) == "null" ]]; then
-        echo "Error: missing 'api-approved.openshift.io' annotation pointing to openshift/api pull request in $f"
+    if [[ $(./_output/tools/bin/yq r $f metadata.annotations[api-approved.uccp.io]) == "null" ]]; then
+        echo "Error: missing 'api-approved.uccp.io' annotation pointing to openshift/api pull request in $f"
         FAILS=true
     fi
 done

@@ -2,6 +2,6 @@
 // +k8s:defaulter-gen=TypeMeta
 // +k8s:openapi-gen=true
 
-// +groupName=openshiftcontrolplane.config.openshift.io
+// +groupName=uccpcontrolplane.config.uccp.io
 // Package v1 is the v1 version of the API.
 package v1

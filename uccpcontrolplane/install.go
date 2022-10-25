@@ -1,18 +1,18 @@
-package openshiftcontrolplane
+package uccpcontrolplane
 
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	openshiftcontrolplanev1 "github.com/openshift/api/openshiftcontrolplane/v1"
+	uccpcontrolplanev1 "github.com/uccps-samples/api/uccpcontrolplane/v1"
 )
 
 const (
-	GroupName = "openshiftcontrolplane.config.openshift.io"
+	GroupName = "uccpcontrolplane.config.uccp.io"
 )
 
 var (
-	schemeBuilder = runtime.NewSchemeBuilder(openshiftcontrolplanev1.Install)
+	schemeBuilder = runtime.NewSchemeBuilder(uccpcontrolplanev1.Install)
 	// Install is a function which adds every version of this group to a scheme
 	Install = schemeBuilder.AddToScheme
 )

@@ -94,7 +94,7 @@ type NetworkSpec struct {
 
 	// kubeProxyConfig lets us configure desired proxy configuration.
 	// If not specified, sensible defaults will be chosen by OpenShift directly.
-	// Not consumed by all network providers - currently only openshift-sdn.
+	// Not consumed by all network providers - currently only uccp-sdn.
 	KubeProxyConfig *ProxyConfig `json:"kubeProxyConfig,omitempty"`
 
 	// exportNetworkFlows enables and configures the export of network flow metadata from the pod network
@@ -135,7 +135,7 @@ type DefaultNetworkDefinition struct {
 	// All NetworkTypes are supported except for NetworkTypeRaw
 	Type NetworkType `json:"type"`
 
-	// openShiftSDNConfig configures the openshift-sdn plugin
+	// openShiftSDNConfig configures the uccp-sdn plugin
 	// +optional
 	OpenShiftSDNConfig *OpenShiftSDNConfig `json:"openshiftSDNConfig,omitempty"`
 
@@ -253,7 +253,7 @@ type AdditionalNetworkDefinition struct {
 	SimpleMacvlanConfig *SimpleMacvlanConfig `json:"simpleMacvlanConfig,omitempty"`
 }
 
-// OpenShiftSDNConfig configures the three openshift-sdn plugins
+// OpenShiftSDNConfig configures the three uccp-sdn plugins
 type OpenShiftSDNConfig struct {
 	// mode is one of "Multitenant", "Subnet", or "NetworkPolicy"
 	Mode SDNMode `json:"mode"`
@@ -486,7 +486,7 @@ type ProxyConfig struct {
 }
 
 const (
-	// NetworkTypeOpenShiftSDN means the openshift-sdn plugin will be configured
+	// NetworkTypeOpenShiftSDN means the uccp-sdn plugin will be configured
 	NetworkTypeOpenShiftSDN NetworkType = "OpenShiftSDN"
 
 	// NetworkTypeOVNKubernetes means the ovn-kubernetes project will be configured.
@@ -503,7 +503,7 @@ const (
 	NetworkTypeSimpleMacvlan NetworkType = "SimpleMacvlan"
 )
 
-// SDNMode is the Mode the openshift-sdn plugin is in
+// SDNMode is the Mode the uccp-sdn plugin is in
 type SDNMode string
 
 const (

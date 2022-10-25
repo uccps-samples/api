@@ -2,13 +2,13 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    api-approved.openshift.io: https://github.com/openshift/api/pull/486
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
-    include.release.openshift.io/single-node-developer: "true"
-  name: consoles.operator.openshift.io
+    api-approved.uccp.io: https://github.com/uccps-samples/api/pull/486
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
+    include.release.uccp.io/single-node-developer: "true"
+  name: consoles.operator.uccp.io
 spec:
-  group: operator.openshift.io
+  group: operator.uccp.io
   names:
     kind: Console
     listKind: ConsoleList
@@ -55,7 +55,7 @@ spec:
                       type: string
                       pattern: ^$|^(ocp|origin|okd|dedicated|online|azure)$
                     customLogoFile:
-                      description: 'customLogoFile replaces the default OpenShift logo in the masthead and about dialog. It is a reference to a ConfigMap in the openshift-config namespace. This can be created with a command like ''oc create configmap custom-logo --from-file=/path/to/file -n openshift-config''. Image size must be less than 1 MB due to constraints on the ConfigMap size. The ConfigMap key should include a file extension so that the console serves the file with the correct MIME type. Recommended logo specifications: Dimensions: Max height of 68px and max width of 200px SVG format preferred'
+                      description: 'customLogoFile replaces the default Uccp logo in the masthead and about dialog. It is a reference to a ConfigMap in the uccp-config namespace. This can be created with a command like ''oc create configmap custom-logo --from-file=/path/to/file -n uccp-config''. Image size must be less than 1 MB due to constraints on the ConfigMap size. The ConfigMap key should include a file extension so that the console serves the file with the correct MIME type. Recommended logo specifications: Dimensions: Max height of 68px and max width of 200px SVG format preferred'
                       type: object
                       properties:
                         key:
@@ -64,7 +64,7 @@ spec:
                         name:
                           type: string
                     customProductName:
-                      description: customProductName is the name that will be displayed in page titles, logo alt text, and the about dialog instead of the normal OpenShift product name.
+                      description: customProductName is the name that will be displayed in page titles, logo alt text, and the about dialog instead of the normal Uccp product name.
                       type: string
                     developerCatalog:
                       description: developerCatalog allows to configure the shown developer catalog categories.
@@ -197,7 +197,7 @@ spec:
                       description: hostname is the desired custom domain under which console will be available.
                       type: string
                     secret:
-                      description: 'secret points to secret in the openshift-config namespace that contains custom certificate and key and needs to be created manually by the cluster admin. Referenced Secret is required to contain following key value pairs: - "tls.crt" - to specifies custom certificate - "tls.key" - to specifies private key of the custom certificate If the custom hostname uses the default routing suffix of the cluster, the Secret specification for a serving certificate will not be needed.'
+                      description: 'secret points to secret in the uccp-config namespace that contains custom certificate and key and needs to be created manually by the cluster admin. Referenced Secret is required to contain following key value pairs: - "tls.crt" - to specifies custom certificate - "tls.key" - to specifies private key of the custom certificate If the custom hostname uses the default routing suffix of the cluster, the Secret specification for a serving certificate will not be needed.'
                       type: object
                       required:
                         - name

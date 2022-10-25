@@ -2,15 +2,15 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    api-approved.openshift.io: https://github.com/openshift/api/pull/481
-    description: Extension for configuring openshift web console command line interface (CLI) downloads.
+    api-approved.uccp.io: https://github.com/uccps-samples/api/pull/481
+    description: Extension for configuring uccp web console command line interface (CLI) downloads.
     displayName: ConsoleCLIDownload
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
-    include.release.openshift.io/single-node-developer: "true"
-  name: consoleclidownloads.console.openshift.io
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
+    include.release.uccp.io/single-node-developer: "true"
+  name: consoleclidownloads.console.uccp.io
 spec:
-  group: console.openshift.io
+  group: console.uccp.io
   names:
     kind: ConsoleCLIDownload
     listKind: ConsoleCLIDownloadList
@@ -28,7 +28,7 @@ spec:
       name: v1
       schema:
         openAPIV3Schema:
-          description: "ConsoleCLIDownload is an extension for configuring openshift web console command line interface (CLI) downloads. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
+          description: "ConsoleCLIDownload is an extension for configuring uccp web console command line interface (CLI) downloads. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
           type: object
           required:
             - spec

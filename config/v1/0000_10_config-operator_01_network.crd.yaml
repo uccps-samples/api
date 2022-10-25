@@ -2,13 +2,13 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    api-approved.openshift.io: https://github.com/openshift/api/pull/470
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
-    include.release.openshift.io/single-node-developer: "true"
-  name: networks.config.openshift.io
+    api-approved.uccp.io: https://github.com/uccps-samples/api/pull/470
+    include.release.uccp.io/ibm-cloud-managed: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
+    include.release.uccp.io/single-node-developer: "true"
+  name: networks.config.uccp.io
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   names:
     kind: Network
     listKind: NetworkList
@@ -57,7 +57,7 @@ spec:
                   type: object
                   properties:
                     autoAssignCIDRs:
-                      description: autoAssignCIDRs is a list of CIDRs from which to automatically assign Service.ExternalIP. These are assigned when the service is of type LoadBalancer. In general, this is only useful for bare-metal clusters. In Openshift 3.x, this was misleadingly called "IngressIPs". Automatically assigned External IPs are not affected by any ExternalIPPolicy rules. Currently, only one entry may be provided.
+                      description: autoAssignCIDRs is a list of CIDRs from which to automatically assign Service.ExternalIP. These are assigned when the service is of type LoadBalancer. In general, this is only useful for bare-metal clusters. In Uccp 3.x, this was misleadingly called "IngressIPs". Automatically assigned External IPs are not affected by any ExternalIPPolicy rules. Currently, only one entry may be provided.
                       type: array
                       items:
                         type: string
@@ -76,7 +76,7 @@ spec:
                           items:
                             type: string
                 networkType:
-                  description: 'NetworkType is the plugin that is to be deployed (e.g. OpenShiftSDN). This should match a value that the cluster-network-operator understands, or else no networking will be installed. Currently supported values are: - OpenShiftSDN This field is immutable after installation.'
+                  description: 'NetworkType is the plugin that is to be deployed (e.g. UccpSDN). This should match a value that the cluster-network-operator understands, or else no networking will be installed. Currently supported values are: - UccpSDN This field is immutable after installation.'
                   type: string
                 serviceNetwork:
                   description: IP address pool for services. Currently, we only support a single entry here. This field is immutable after installation.
@@ -114,13 +114,13 @@ spec:
                   type: object
                   properties:
                     networkType:
-                      description: 'NetworkType is the target plugin that is to be deployed. Currently supported values are: OpenShiftSDN, OVNKubernetes'
+                      description: 'NetworkType is the target plugin that is to be deployed. Currently supported values are: UccpSDN, OVNKubernetes'
                       type: string
                       enum:
-                        - OpenShiftSDN
+                        - UccpSDN
                         - OVNKubernetes
                 networkType:
-                  description: NetworkType is the plugin that is deployed (e.g. OpenShiftSDN).
+                  description: NetworkType is the plugin that is deployed (e.g. UccpSDN).
                   type: string
                 serviceNetwork:
                   description: IP address pool for services. Currently, we only support a single entry here.

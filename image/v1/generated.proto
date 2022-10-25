@@ -3,7 +3,7 @@
 
 syntax = "proto2";
 
-package github.com.openshift.api.image.v1;
+package github.com.uccps-samples.api.image.v1;
 
 import "k8s.io/api/core/v1/generated.proto";
 import "k8s.io/apimachinery/pkg/apis/meta/v1/generated.proto";
@@ -562,7 +562,7 @@ message SignatureGenericEntity {
   // Organization name.
   optional string organization = 1;
 
-  // Common name (e.g. openshift-signing-service).
+  // Common name (e.g. uccp-signing-service).
   optional string commonName = 2;
 }
 

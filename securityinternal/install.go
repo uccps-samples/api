@@ -1,13 +1,13 @@
 package security
 
 import (
-	securityinternalv1 "github.com/openshift/api/securityinternal/v1"
+	securityinternalv1 "github.com/uccps-samples/api/securityinternal/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
 const (
-	GroupName = "security.internal.openshift.io"
+	GroupName = "security.internal.uccp.io"
 )
 
 var (

@@ -78,7 +78,7 @@ func validPackage(pkg *packages.Package) bool {
 }
 
 func main() {
-	flag.Var(&excludedFields, "excluded", "exclude the field from being checked (e.g. -excluded=github.com/openshift/api/image/dockerpre012.ImagePre012:Created), can be used multiple times")
+	flag.Var(&excludedFields, "excluded", "exclude the field from being checked (e.g. -excluded=github.com/uccps-samples/api/image/dockerpre012.ImagePre012:Created), can be used multiple times")
 	flag.StringVar(&typesWhitelist, "whitelist", "", "regular expression that specifies allowed types")
 	flag.Parse()
 

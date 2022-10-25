@@ -3,5 +3,5 @@
 // +k8s:openapi-gen=true
 
 // +kubebuilder:validation:Optional
-// +groupName=operator.openshift.io
+// +groupName=operator.uccp.io
 package v1

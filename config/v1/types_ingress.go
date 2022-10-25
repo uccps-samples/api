@@ -64,8 +64,8 @@ type IngressSpec struct {
 	// annotation, and affect route admission.
 	//
 	// A candidate route is checked for HSTS Policies if it has the HSTS Policy route annotation:
-	// "haproxy.router.openshift.io/hsts_header"
-	// E.g. haproxy.router.openshift.io/hsts_header: max-age=31536000;preload;includeSubDomains
+	// "haproxy.router.uccp.io/hsts_header"
+	// E.g. haproxy.router.uccp.io/hsts_header: max-age=31536000;preload;includeSubDomains
 	//
 	// - For each candidate route, if it matches a requiredHSTSPolicy domainPattern and optional namespaceSelector,
 	// then the maxAge, preloadPolicy, and includeSubdomainsPolicy must be valid to be admitted.  Otherwise, the route
@@ -129,7 +129,7 @@ type ComponentRouteSpec struct {
 	// +required
 	Hostname Hostname `json:"hostname"`
 
-	// servingCertKeyPairSecret is a reference to a secret of type `kubernetes.io/tls` in the openshift-config namespace.
+	// servingCertKeyPairSecret is a reference to a secret of type `kubernetes.io/tls` in the uccp-config namespace.
 	// The serving cert/key pair must match and will be used by the operator to fulfill the intent of serving with this name.
 	// If the custom hostname uses the default routing suffix of the cluster,
 	// the Secret specification for a serving certificate will not be needed.

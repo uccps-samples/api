@@ -4,12 +4,12 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	consolev1 "github.com/openshift/api/console/v1"
-	consolev1alpha1 "github.com/openshift/api/console/v1alpha1"
+	consolev1 "github.com/uccps-samples/api/console/v1"
+	consolev1alpha1 "github.com/uccps-samples/api/console/v1alpha1"
 )
 
 const (
-	GroupName = "console.openshift.io"
+	GroupName = "console.uccp.io"
 )
 
 var (

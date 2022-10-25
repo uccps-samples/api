@@ -21,14 +21,14 @@ type ProjectList struct {
 
 const (
 	// These are internal finalizer values to Origin
-	FinalizerOrigin corev1.FinalizerName = "openshift.io/origin"
+	FinalizerOrigin corev1.FinalizerName = "uccp.io/origin"
 	// ProjectNodeSelector is an annotation that holds the node selector;
 	// the node selector annotation determines which nodes will have pods from this project scheduled to them
-	ProjectNodeSelector = "openshift.io/node-selector"
+	ProjectNodeSelector = "uccp.io/node-selector"
 
 	// ProjectRequesterAnnotation is the username that requested a given project.  Its not guaranteed to be present,
 	// but it is set by the default project template.
-	ProjectRequesterAnnotation = "openshift.io/requester"
+	ProjectRequesterAnnotation = "uccp.io/requester"
 )
 
 // ProjectSpec describes the attributes on a Project
