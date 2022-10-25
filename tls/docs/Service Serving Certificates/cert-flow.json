@@ -6,43 +6,43 @@
       {
         "LogicalName": "service-ca",
         "Description": "CA for recognizing serving certificates for services that were signed by our service-ca controller.",
-        "Name": "openshift-service-serving-signer@1622133570",
+        "Name": "uccp-service-serving-signer@1622133570",
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "service-ca"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca-2"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca-3"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca-4"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca-5"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca-6"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "service-ca-7"
             },
             {
-              "Namespace": "openshift-service-ca",
+              "Namespace": "uccp-service-ca",
               "Name": "signing-cabundle"
             }
           ],
@@ -86,10 +86,10 @@
           "CertificateMetadata": [
             {
               "CertIdentifier": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "5446463666206287945",
                 "Issuer": {
-                  "CommonName": "openshift-service-serving-signer@1622133570",
+                  "CommonName": "uccp-service-serving-signer@1622133570",
                   "SerialNumber": "",
                   "Issuer": null
                 }
@@ -116,23 +116,23 @@
   "CertKeyPairs": {
     "Items": [
       {
-        "LogicalName": "metrics.openshift-ingress-operator.svc",
+        "LogicalName": "metrics.uccp-ingress-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-ingress-operator.svc::8279326142192924063",
+        "Name": "metrics.uccp-ingress-operator.svc::8279326142192924063",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-ingress-operator",
+              "Namespace": "uccp-ingress-operator",
               "Name": "metrics-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-ingress-operator.svc",
+              "CommonName": "metrics.uccp-ingress-operator.svc",
               "SerialNumber": "8279326142192924063",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -154,8 +154,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-ingress-operator.svc",
-                "metrics.openshift-ingress-operator.svc.cluster.local"
+                "metrics.uccp-ingress-operator.svc",
+                "metrics.uccp-ingress-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -169,21 +169,21 @@
       {
         "LogicalName": "service-serving-signer",
         "Description": "Signer used by service-ca to sign serving certificates for internal service DNS names.",
-        "Name": "openshift-service-serving-signer@1622133570::5446463666206287945",
+        "Name": "uccp-service-serving-signer@1622133570::5446463666206287945",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-service-ca",
+              "Namespace": "uccp-service-ca",
               "Name": "signing-key"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "openshift-service-serving-signer@1622133570",
+              "CommonName": "uccp-service-serving-signer@1622133570",
               "SerialNumber": "5446463666206287945",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -211,23 +211,23 @@
         }
       },
       {
-        "LogicalName": "node-tuning-operator.openshift-cluster-node-tuning-operator.svc",
+        "LogicalName": "node-tuning-operator.uccp-cluster-node-tuning-operator.svc",
         "Description": "",
-        "Name": "node-tuning-operator.openshift-cluster-node-tuning-operator.svc::7832843275082956404",
+        "Name": "node-tuning-operator.uccp-cluster-node-tuning-operator.svc::7832843275082956404",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cluster-node-tuning-operator",
+              "Namespace": "uccp-cluster-node-tuning-operator",
               "Name": "node-tuning-operator-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "node-tuning-operator.openshift-cluster-node-tuning-operator.svc",
+              "CommonName": "node-tuning-operator.uccp-cluster-node-tuning-operator.svc",
               "SerialNumber": "7832843275082956404",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -249,8 +249,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "node-tuning-operator.openshift-cluster-node-tuning-operator.svc",
-                "node-tuning-operator.openshift-cluster-node-tuning-operator.svc.cluster.local"
+                "node-tuning-operator.uccp-cluster-node-tuning-operator.svc",
+                "node-tuning-operator.uccp-cluster-node-tuning-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -262,23 +262,23 @@
         }
       },
       {
-        "LogicalName": "multus-admission-controller.openshift-multus.svc",
+        "LogicalName": "multus-admission-controller.uccp-multus.svc",
         "Description": "",
-        "Name": "multus-admission-controller.openshift-multus.svc::4660313081021989101",
+        "Name": "multus-admission-controller.uccp-multus.svc::4660313081021989101",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-multus",
+              "Namespace": "uccp-multus",
               "Name": "multus-admission-controller-secret"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "multus-admission-controller.openshift-multus.svc",
+              "CommonName": "multus-admission-controller.uccp-multus.svc",
               "SerialNumber": "4660313081021989101",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -300,8 +300,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "multus-admission-controller.openshift-multus.svc",
-                "multus-admission-controller.openshift-multus.svc.cluster.local"
+                "multus-admission-controller.uccp-multus.svc",
+                "multus-admission-controller.uccp-multus.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -313,27 +313,27 @@
         }
       },
       {
-        "LogicalName": "prometheus-adapter.openshift-monitoring.svc",
+        "LogicalName": "prometheus-adapter.uccp-monitoring.svc",
         "Description": "",
-        "Name": "prometheus-adapter.openshift-monitoring.svc::2945501834265381842",
+        "Name": "prometheus-adapter.uccp-monitoring.svc::2945501834265381842",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-adapter-8tkqrsmu9afpe"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-adapter-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "prometheus-adapter.openshift-monitoring.svc",
+              "CommonName": "prometheus-adapter.uccp-monitoring.svc",
               "SerialNumber": "2945501834265381842",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -355,8 +355,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "prometheus-adapter.openshift-monitoring.svc",
-                "prometheus-adapter.openshift-monitoring.svc.cluster.local"
+                "prometheus-adapter.uccp-monitoring.svc",
+                "prometheus-adapter.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -368,23 +368,23 @@
         }
       },
       {
-        "LogicalName": "cluster-autoscaler-operator.openshift-machine-api.svc",
+        "LogicalName": "cluster-autoscaler-operator.uccp-machine-api.svc",
         "Description": "",
-        "Name": "cluster-autoscaler-operator.openshift-machine-api.svc::8305498258745803921",
+        "Name": "cluster-autoscaler-operator.uccp-machine-api.svc::8305498258745803921",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-machine-api",
+              "Namespace": "uccp-machine-api",
               "Name": "cluster-autoscaler-operator-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "cluster-autoscaler-operator.openshift-machine-api.svc",
+              "CommonName": "cluster-autoscaler-operator.uccp-machine-api.svc",
               "SerialNumber": "8305498258745803921",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -406,8 +406,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "cluster-autoscaler-operator.openshift-machine-api.svc",
-                "cluster-autoscaler-operator.openshift-machine-api.svc.cluster.local"
+                "cluster-autoscaler-operator.uccp-machine-api.svc",
+                "cluster-autoscaler-operator.uccp-machine-api.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -419,23 +419,23 @@
         }
       },
       {
-        "LogicalName": "dns-default.openshift-dns.svc",
+        "LogicalName": "dns-default.uccp-dns.svc",
         "Description": "",
-        "Name": "dns-default.openshift-dns.svc::495137039081958925",
+        "Name": "dns-default.uccp-dns.svc::495137039081958925",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-dns",
+              "Namespace": "uccp-dns",
               "Name": "dns-default-metrics-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "dns-default.openshift-dns.svc",
+              "CommonName": "dns-default.uccp-dns.svc",
               "SerialNumber": "495137039081958925",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -457,8 +457,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "dns-default.openshift-dns.svc",
-                "dns-default.openshift-dns.svc.cluster.local"
+                "dns-default.uccp-dns.svc",
+                "dns-default.uccp-dns.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -470,23 +470,23 @@
         }
       },
       {
-        "LogicalName": "router-internal-default.openshift-ingress.svc",
+        "LogicalName": "router-internal-default.uccp-ingress.svc",
         "Description": "",
-        "Name": "router-internal-default.openshift-ingress.svc::5035056584329763135",
+        "Name": "router-internal-default.uccp-ingress.svc::5035056584329763135",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-ingress",
+              "Namespace": "uccp-ingress",
               "Name": "router-metrics-certs-default"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "router-internal-default.openshift-ingress.svc",
+              "CommonName": "router-internal-default.uccp-ingress.svc",
               "SerialNumber": "5035056584329763135",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -508,8 +508,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "router-internal-default.openshift-ingress.svc",
-                "router-internal-default.openshift-ingress.svc.cluster.local"
+                "router-internal-default.uccp-ingress.svc",
+                "router-internal-default.uccp-ingress.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -521,23 +521,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-service-ca-operator.svc",
+        "LogicalName": "metrics.uccp-service-ca-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-service-ca-operator.svc::8465006101141555491",
+        "Name": "metrics.uccp-service-ca-operator.svc::8465006101141555491",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-service-ca-operator",
+              "Namespace": "uccp-service-ca-operator",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-service-ca-operator.svc",
+              "CommonName": "metrics.uccp-service-ca-operator.svc",
               "SerialNumber": "8465006101141555491",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -559,8 +559,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-service-ca-operator.svc",
-                "metrics.openshift-service-ca-operator.svc.cluster.local"
+                "metrics.uccp-service-ca-operator.svc",
+                "metrics.uccp-service-ca-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -572,23 +572,23 @@
         }
       },
       {
-        "LogicalName": "node-exporter.openshift-monitoring.svc",
+        "LogicalName": "node-exporter.uccp-monitoring.svc",
         "Description": "",
-        "Name": "node-exporter.openshift-monitoring.svc::6997256025626337803",
+        "Name": "node-exporter.uccp-monitoring.svc::6997256025626337803",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "node-exporter-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "node-exporter.openshift-monitoring.svc",
+              "CommonName": "node-exporter.uccp-monitoring.svc",
               "SerialNumber": "6997256025626337803",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -610,8 +610,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "node-exporter.openshift-monitoring.svc",
-                "node-exporter.openshift-monitoring.svc.cluster.local"
+                "node-exporter.uccp-monitoring.svc",
+                "node-exporter.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -623,23 +623,23 @@
         }
       },
       {
-        "LogicalName": "grafana.openshift-monitoring.svc",
+        "LogicalName": "grafana.uccp-monitoring.svc",
         "Description": "",
-        "Name": "grafana.openshift-monitoring.svc::5127637701693466147",
+        "Name": "grafana.uccp-monitoring.svc::5127637701693466147",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "grafana-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "grafana.openshift-monitoring.svc",
+              "CommonName": "grafana.uccp-monitoring.svc",
               "SerialNumber": "5127637701693466147",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -661,8 +661,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "grafana.openshift-monitoring.svc",
-                "grafana.openshift-monitoring.svc.cluster.local"
+                "grafana.uccp-monitoring.svc",
+                "grafana.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -674,23 +674,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-kube-scheduler-operator.svc",
+        "LogicalName": "metrics.uccp-kube-scheduler-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-kube-scheduler-operator.svc::5130875085637374527",
+        "Name": "metrics.uccp-kube-scheduler-operator.svc::5130875085637374527",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-scheduler-operator",
+              "Namespace": "uccp-kube-scheduler-operator",
               "Name": "kube-scheduler-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-kube-scheduler-operator.svc",
+              "CommonName": "metrics.uccp-kube-scheduler-operator.svc",
               "SerialNumber": "5130875085637374527",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -712,8 +712,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-kube-scheduler-operator.svc",
-                "metrics.openshift-kube-scheduler-operator.svc.cluster.local"
+                "metrics.uccp-kube-scheduler-operator.svc",
+                "metrics.uccp-kube-scheduler-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -725,33 +725,33 @@
         }
       },
       {
-        "LogicalName": "scheduler.openshift-kube-scheduler.svc",
+        "LogicalName": "scheduler.uccp-kube-scheduler.svc",
         "Description": "",
-        "Name": "scheduler.openshift-kube-scheduler.svc::6657891906279326247",
+        "Name": "scheduler.uccp-kube-scheduler.svc::6657891906279326247",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serving-cert"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serving-cert-2"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serving-cert-3"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serving-cert-4"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serving-cert-5"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serving-cert-6"
             }
           ],
@@ -839,10 +839,10 @@
           ],
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "scheduler.openshift-kube-scheduler.svc",
+              "CommonName": "scheduler.uccp-kube-scheduler.svc",
               "SerialNumber": "6657891906279326247",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -864,8 +864,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "scheduler.openshift-kube-scheduler.svc",
-                "scheduler.openshift-kube-scheduler.svc.cluster.local"
+                "scheduler.uccp-kube-scheduler.svc",
+                "scheduler.uccp-kube-scheduler.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -877,23 +877,23 @@
         }
       },
       {
-        "LogicalName": "machine-config-daemon.openshift-machine-config-operator.svc",
+        "LogicalName": "machine-config-daemon.uccp-machine-config-operator.svc",
         "Description": "",
-        "Name": "machine-config-daemon.openshift-machine-config-operator.svc::894043062816778974",
+        "Name": "machine-config-daemon.uccp-machine-config-operator.svc::894043062816778974",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-machine-config-operator",
+              "Namespace": "uccp-machine-config-operator",
               "Name": "proxy-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "machine-config-daemon.openshift-machine-config-operator.svc",
+              "CommonName": "machine-config-daemon.uccp-machine-config-operator.svc",
               "SerialNumber": "894043062816778974",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -915,8 +915,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "machine-config-daemon.openshift-machine-config-operator.svc",
-                "machine-config-daemon.openshift-machine-config-operator.svc.cluster.local"
+                "machine-config-daemon.uccp-machine-config-operator.svc",
+                "machine-config-daemon.uccp-machine-config-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -928,23 +928,23 @@
         }
       },
       {
-        "LogicalName": "kube-state-metrics.openshift-monitoring.svc",
+        "LogicalName": "kube-state-metrics.uccp-monitoring.svc",
         "Description": "",
-        "Name": "kube-state-metrics.openshift-monitoring.svc::2719079659670312610",
+        "Name": "kube-state-metrics.uccp-monitoring.svc::2719079659670312610",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "kube-state-metrics-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "kube-state-metrics.openshift-monitoring.svc",
+              "CommonName": "kube-state-metrics.uccp-monitoring.svc",
               "SerialNumber": "2719079659670312610",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -966,8 +966,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "kube-state-metrics.openshift-monitoring.svc",
-                "kube-state-metrics.openshift-monitoring.svc.cluster.local"
+                "kube-state-metrics.uccp-monitoring.svc",
+                "kube-state-metrics.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -979,23 +979,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-insights.svc",
+        "LogicalName": "metrics.uccp-insights.svc",
         "Description": "",
-        "Name": "metrics.openshift-insights.svc::6511383752257504790",
+        "Name": "metrics.uccp-insights.svc::6511383752257504790",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-insights",
-              "Name": "openshift-insights-serving-cert"
+              "Namespace": "uccp-insights",
+              "Name": "uccp-insights-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-insights.svc",
+              "CommonName": "metrics.uccp-insights.svc",
               "SerialNumber": "6511383752257504790",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1017,8 +1017,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-insights.svc",
-                "metrics.openshift-insights.svc.cluster.local"
+                "metrics.uccp-insights.svc",
+                "metrics.uccp-insights.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1030,23 +1030,23 @@
         }
       },
       {
-        "LogicalName": "telemeter-client.openshift-monitoring.svc",
+        "LogicalName": "telemeter-client.uccp-monitoring.svc",
         "Description": "",
-        "Name": "telemeter-client.openshift-monitoring.svc::1112524969442289252",
+        "Name": "telemeter-client.uccp-monitoring.svc::1112524969442289252",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "telemeter-client-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "telemeter-client.openshift-monitoring.svc",
+              "CommonName": "telemeter-client.uccp-monitoring.svc",
               "SerialNumber": "1112524969442289252",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1068,8 +1068,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "telemeter-client.openshift-monitoring.svc",
-                "telemeter-client.openshift-monitoring.svc.cluster.local"
+                "telemeter-client.uccp-monitoring.svc",
+                "telemeter-client.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1081,23 +1081,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-authentication-operator.svc",
+        "LogicalName": "metrics.uccp-authentication-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-authentication-operator.svc::6301067254016768819",
+        "Name": "metrics.uccp-authentication-operator.svc::6301067254016768819",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-authentication-operator",
+              "Namespace": "uccp-authentication-operator",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-authentication-operator.svc",
+              "CommonName": "metrics.uccp-authentication-operator.svc",
               "SerialNumber": "6301067254016768819",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1119,8 +1119,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-authentication-operator.svc",
-                "metrics.openshift-authentication-operator.svc.cluster.local"
+                "metrics.uccp-authentication-operator.svc",
+                "metrics.uccp-authentication-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1132,23 +1132,23 @@
         }
       },
       {
-        "LogicalName": "catalog-operator-metrics.openshift-operator-lifecycle-manager.svc",
+        "LogicalName": "catalog-operator-metrics.uccp-operator-lifecycle-manager.svc",
         "Description": "",
-        "Name": "catalog-operator-metrics.openshift-operator-lifecycle-manager.svc::5069841447494153423",
+        "Name": "catalog-operator-metrics.uccp-operator-lifecycle-manager.svc::5069841447494153423",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-operator-lifecycle-manager",
+              "Namespace": "uccp-operator-lifecycle-manager",
               "Name": "catalog-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "catalog-operator-metrics.openshift-operator-lifecycle-manager.svc",
+              "CommonName": "catalog-operator-metrics.uccp-operator-lifecycle-manager.svc",
               "SerialNumber": "5069841447494153423",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1170,8 +1170,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "catalog-operator-metrics.openshift-operator-lifecycle-manager.svc",
-                "catalog-operator-metrics.openshift-operator-lifecycle-manager.svc.cluster.local"
+                "catalog-operator-metrics.uccp-operator-lifecycle-manager.svc",
+                "catalog-operator-metrics.uccp-operator-lifecycle-manager.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1183,23 +1183,23 @@
         }
       },
       {
-        "LogicalName": "openshift-state-metrics.openshift-monitoring.svc",
+        "LogicalName": "uccp-state-metrics.uccp-monitoring.svc",
         "Description": "",
-        "Name": "openshift-state-metrics.openshift-monitoring.svc::7882046295044958152",
+        "Name": "uccp-state-metrics.uccp-monitoring.svc::7882046295044958152",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
-              "Name": "openshift-state-metrics-tls"
+              "Namespace": "uccp-monitoring",
+              "Name": "uccp-state-metrics-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "openshift-state-metrics.openshift-monitoring.svc",
+              "CommonName": "uccp-state-metrics.uccp-monitoring.svc",
               "SerialNumber": "7882046295044958152",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1221,8 +1221,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "openshift-state-metrics.openshift-monitoring.svc",
-                "openshift-state-metrics.openshift-monitoring.svc.cluster.local"
+                "uccp-state-metrics.uccp-monitoring.svc",
+                "uccp-state-metrics.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1234,23 +1234,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-kube-controller-manager-operator.svc",
+        "LogicalName": "metrics.uccp-kube-controller-manager-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-kube-controller-manager-operator.svc::1704350015219690809",
+        "Name": "metrics.uccp-kube-controller-manager-operator.svc::1704350015219690809",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-controller-manager-operator",
+              "Namespace": "uccp-kube-controller-manager-operator",
               "Name": "kube-controller-manager-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-kube-controller-manager-operator.svc",
+              "CommonName": "metrics.uccp-kube-controller-manager-operator.svc",
               "SerialNumber": "1704350015219690809",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1272,8 +1272,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-kube-controller-manager-operator.svc",
-                "metrics.openshift-kube-controller-manager-operator.svc.cluster.local"
+                "metrics.uccp-kube-controller-manager-operator.svc",
+                "metrics.uccp-kube-controller-manager-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1285,23 +1285,23 @@
         }
       },
       {
-        "LogicalName": "console.openshift-console.svc",
+        "LogicalName": "console.uccp-console.svc",
         "Description": "",
-        "Name": "console.openshift-console.svc::2317112508926355245",
+        "Name": "console.uccp-console.svc::2317112508926355245",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-console",
+              "Namespace": "uccp-console",
               "Name": "console-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "console.openshift-console.svc",
+              "CommonName": "console.uccp-console.svc",
               "SerialNumber": "2317112508926355245",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1323,8 +1323,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "console.openshift-console.svc",
-                "console.openshift-console.svc.cluster.local"
+                "console.uccp-console.svc",
+                "console.uccp-console.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1336,23 +1336,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-apiserver-operator.svc",
+        "LogicalName": "metrics.uccp-apiserver-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-apiserver-operator.svc::7400757488192498955",
+        "Name": "metrics.uccp-apiserver-operator.svc::7400757488192498955",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-apiserver-operator",
-              "Name": "openshift-apiserver-operator-serving-cert"
+              "Namespace": "uccp-apiserver-operator",
+              "Name": "uccp-apiserver-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-apiserver-operator.svc",
+              "CommonName": "metrics.uccp-apiserver-operator.svc",
               "SerialNumber": "7400757488192498955",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1374,8 +1374,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-apiserver-operator.svc",
-                "metrics.openshift-apiserver-operator.svc.cluster.local"
+                "metrics.uccp-apiserver-operator.svc",
+                "metrics.uccp-apiserver-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1387,23 +1387,23 @@
         }
       },
       {
-        "LogicalName": "sdn.openshift-sdn.svc",
+        "LogicalName": "sdn.uccp-sdn.svc",
         "Description": "",
-        "Name": "sdn.openshift-sdn.svc::2625658655664643767",
+        "Name": "sdn.uccp-sdn.svc::2625658655664643767",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-sdn",
+              "Namespace": "uccp-sdn",
               "Name": "sdn-metrics-certs"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "sdn.openshift-sdn.svc",
+              "CommonName": "sdn.uccp-sdn.svc",
               "SerialNumber": "2625658655664643767",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1425,8 +1425,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "sdn.openshift-sdn.svc",
-                "sdn.openshift-sdn.svc.cluster.local"
+                "sdn.uccp-sdn.svc",
+                "sdn.uccp-sdn.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1438,23 +1438,23 @@
         }
       },
       {
-        "LogicalName": "machine-api-operator.openshift-machine-api.svc",
+        "LogicalName": "machine-api-operator.uccp-machine-api.svc",
         "Description": "",
-        "Name": "machine-api-operator.openshift-machine-api.svc::5923902699021639505",
+        "Name": "machine-api-operator.uccp-machine-api.svc::5923902699021639505",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-machine-api",
+              "Namespace": "uccp-machine-api",
               "Name": "machine-api-operator-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "machine-api-operator.openshift-machine-api.svc",
+              "CommonName": "machine-api-operator.uccp-machine-api.svc",
               "SerialNumber": "5923902699021639505",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1476,8 +1476,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "machine-api-operator.openshift-machine-api.svc",
-                "machine-api-operator.openshift-machine-api.svc.cluster.local"
+                "machine-api-operator.uccp-machine-api.svc",
+                "machine-api-operator.uccp-machine-api.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1489,23 +1489,23 @@
         }
       },
       {
-        "LogicalName": "controller-manager.openshift-controller-manager.svc",
+        "LogicalName": "controller-manager.uccp-controller-manager.svc",
         "Description": "",
-        "Name": "controller-manager.openshift-controller-manager.svc::8478506552664981432",
+        "Name": "controller-manager.uccp-controller-manager.svc::8478506552664981432",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-controller-manager",
+              "Namespace": "uccp-controller-manager",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "controller-manager.openshift-controller-manager.svc",
+              "CommonName": "controller-manager.uccp-controller-manager.svc",
               "SerialNumber": "8478506552664981432",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1527,8 +1527,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "controller-manager.openshift-controller-manager.svc",
-                "controller-manager.openshift-controller-manager.svc.cluster.local"
+                "controller-manager.uccp-controller-manager.svc",
+                "controller-manager.uccp-controller-manager.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1540,23 +1540,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-config-operator.svc",
+        "LogicalName": "metrics.uccp-config-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-config-operator.svc::1282522901324235330",
+        "Name": "metrics.uccp-config-operator.svc::1282522901324235330",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-config-operator",
+              "Namespace": "uccp-config-operator",
               "Name": "config-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-config-operator.svc",
+              "CommonName": "metrics.uccp-config-operator.svc",
               "SerialNumber": "1282522901324235330",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1578,8 +1578,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-config-operator.svc",
-                "metrics.openshift-config-operator.svc.cluster.local"
+                "metrics.uccp-config-operator.svc",
+                "metrics.uccp-config-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1591,23 +1591,23 @@
         }
       },
       {
-        "LogicalName": "machine-api-operator-webhook.openshift-machine-api.svc",
+        "LogicalName": "machine-api-operator-webhook.uccp-machine-api.svc",
         "Description": "",
-        "Name": "machine-api-operator-webhook.openshift-machine-api.svc::2625486651396182955",
+        "Name": "machine-api-operator-webhook.uccp-machine-api.svc::2625486651396182955",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-machine-api",
+              "Namespace": "uccp-machine-api",
               "Name": "machine-api-operator-webhook-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "machine-api-operator-webhook.openshift-machine-api.svc",
+              "CommonName": "machine-api-operator-webhook.uccp-machine-api.svc",
               "SerialNumber": "2625486651396182955",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1629,8 +1629,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "machine-api-operator-webhook.openshift-machine-api.svc",
-                "machine-api-operator-webhook.openshift-machine-api.svc.cluster.local"
+                "machine-api-operator-webhook.uccp-machine-api.svc",
+                "machine-api-operator-webhook.uccp-machine-api.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1642,23 +1642,23 @@
         }
       },
       {
-        "LogicalName": "cluster-monitoring-operator.openshift-monitoring.svc",
+        "LogicalName": "cluster-monitoring-operator.uccp-monitoring.svc",
         "Description": "",
-        "Name": "cluster-monitoring-operator.openshift-monitoring.svc::8944425219050445342",
+        "Name": "cluster-monitoring-operator.uccp-monitoring.svc::8944425219050445342",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "cluster-monitoring-operator-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "cluster-monitoring-operator.openshift-monitoring.svc",
+              "CommonName": "cluster-monitoring-operator.uccp-monitoring.svc",
               "SerialNumber": "8944425219050445342",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1680,8 +1680,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "cluster-monitoring-operator.openshift-monitoring.svc",
-                "cluster-monitoring-operator.openshift-monitoring.svc.cluster.local"
+                "cluster-monitoring-operator.uccp-monitoring.svc",
+                "cluster-monitoring-operator.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1693,23 +1693,23 @@
         }
       },
       {
-        "LogicalName": "cluster-storage-operator-metrics.openshift-cluster-storage-operator.svc",
+        "LogicalName": "cluster-storage-operator-metrics.uccp-cluster-storage-operator.svc",
         "Description": "",
-        "Name": "cluster-storage-operator-metrics.openshift-cluster-storage-operator.svc::5294915743012167366",
+        "Name": "cluster-storage-operator-metrics.uccp-cluster-storage-operator.svc::5294915743012167366",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cluster-storage-operator",
+              "Namespace": "uccp-cluster-storage-operator",
               "Name": "cluster-storage-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "cluster-storage-operator-metrics.openshift-cluster-storage-operator.svc",
+              "CommonName": "cluster-storage-operator-metrics.uccp-cluster-storage-operator.svc",
               "SerialNumber": "5294915743012167366",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1731,8 +1731,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "cluster-storage-operator-metrics.openshift-cluster-storage-operator.svc",
-                "cluster-storage-operator-metrics.openshift-cluster-storage-operator.svc.cluster.local"
+                "cluster-storage-operator-metrics.uccp-cluster-storage-operator.svc",
+                "cluster-storage-operator-metrics.uccp-cluster-storage-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1744,23 +1744,23 @@
         }
       },
       {
-        "LogicalName": "prometheus-k8s.openshift-monitoring.svc",
+        "LogicalName": "prometheus-k8s.uccp-monitoring.svc",
         "Description": "",
-        "Name": "prometheus-k8s.openshift-monitoring.svc::8353222847585982884",
+        "Name": "prometheus-k8s.uccp-monitoring.svc::8353222847585982884",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-k8s-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "prometheus-k8s.openshift-monitoring.svc",
+              "CommonName": "prometheus-k8s.uccp-monitoring.svc",
               "SerialNumber": "8353222847585982884",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1782,8 +1782,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "prometheus-k8s.openshift-monitoring.svc",
-                "prometheus-k8s.openshift-monitoring.svc.cluster.local"
+                "prometheus-k8s.uccp-monitoring.svc",
+                "prometheus-k8s.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1795,23 +1795,23 @@
         }
       },
       {
-        "LogicalName": "prometheus-k8s-thanos-sidecar.openshift-monitoring.svc",
+        "LogicalName": "prometheus-k8s-thanos-sidecar.uccp-monitoring.svc",
         "Description": "",
-        "Name": "prometheus-k8s-thanos-sidecar.openshift-monitoring.svc::8595435866243050124",
+        "Name": "prometheus-k8s-thanos-sidecar.uccp-monitoring.svc::8595435866243050124",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-k8s-thanos-sidecar-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "prometheus-k8s-thanos-sidecar.openshift-monitoring.svc",
+              "CommonName": "prometheus-k8s-thanos-sidecar.uccp-monitoring.svc",
               "SerialNumber": "8595435866243050124",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1833,8 +1833,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "prometheus-k8s-thanos-sidecar.openshift-monitoring.svc",
-                "prometheus-k8s-thanos-sidecar.openshift-monitoring.svc.cluster.local"
+                "prometheus-k8s-thanos-sidecar.uccp-monitoring.svc",
+                "prometheus-k8s-thanos-sidecar.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1846,23 +1846,23 @@
         }
       },
       {
-        "LogicalName": "image-registry.openshift-image-registry.svc",
+        "LogicalName": "image-registry.uccp-image-registry.svc",
         "Description": "",
-        "Name": "image-registry.openshift-image-registry.svc::7911780555769594156",
+        "Name": "image-registry.uccp-image-registry.svc::7911780555769594156",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-image-registry",
+              "Namespace": "uccp-image-registry",
               "Name": "image-registry-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "image-registry.openshift-image-registry.svc",
+              "CommonName": "image-registry.uccp-image-registry.svc",
               "SerialNumber": "7911780555769594156",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1884,8 +1884,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "image-registry.openshift-image-registry.svc",
-                "image-registry.openshift-image-registry.svc.cluster.local"
+                "image-registry.uccp-image-registry.svc",
+                "image-registry.uccp-image-registry.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1897,23 +1897,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-etcd-operator.svc",
+        "LogicalName": "metrics.uccp-etcd-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-etcd-operator.svc::3978805962409959490",
+        "Name": "metrics.uccp-etcd-operator.svc::3978805962409959490",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd-operator",
+              "Namespace": "uccp-etcd-operator",
               "Name": "etcd-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-etcd-operator.svc",
+              "CommonName": "metrics.uccp-etcd-operator.svc",
               "SerialNumber": "3978805962409959490",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1935,8 +1935,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-etcd-operator.svc",
-                "metrics.openshift-etcd-operator.svc.cluster.local"
+                "metrics.uccp-etcd-operator.svc",
+                "metrics.uccp-etcd-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1948,23 +1948,23 @@
         }
       },
       {
-        "LogicalName": "etcd.openshift-etcd.svc",
+        "LogicalName": "etcd.uccp-etcd.svc",
         "Description": "",
-        "Name": "etcd.openshift-etcd.svc::1695572914480243966",
+        "Name": "etcd.uccp-etcd.svc::1695572914480243966",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "etcd.openshift-etcd.svc",
+              "CommonName": "etcd.uccp-etcd.svc",
               "SerialNumber": "1695572914480243966",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1986,8 +1986,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local"
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -1999,23 +1999,23 @@
         }
       },
       {
-        "LogicalName": "csi-snapshot-webhook.openshift-cluster-storage-operator.svc",
+        "LogicalName": "csi-snapshot-webhook.uccp-cluster-storage-operator.svc",
         "Description": "",
-        "Name": "csi-snapshot-webhook.openshift-cluster-storage-operator.svc::1282769300244468729",
+        "Name": "csi-snapshot-webhook.uccp-cluster-storage-operator.svc::1282769300244468729",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cluster-storage-operator",
+              "Namespace": "uccp-cluster-storage-operator",
               "Name": "csi-snapshot-webhook-secret"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "csi-snapshot-webhook.openshift-cluster-storage-operator.svc",
+              "CommonName": "csi-snapshot-webhook.uccp-cluster-storage-operator.svc",
               "SerialNumber": "1282769300244468729",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2037,8 +2037,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "csi-snapshot-webhook.openshift-cluster-storage-operator.svc",
-                "csi-snapshot-webhook.openshift-cluster-storage-operator.svc.cluster.local"
+                "csi-snapshot-webhook.uccp-cluster-storage-operator.svc",
+                "csi-snapshot-webhook.uccp-cluster-storage-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2050,23 +2050,23 @@
         }
       },
       {
-        "LogicalName": "api.openshift-apiserver.svc",
+        "LogicalName": "api.uccp-apiserver.svc",
         "Description": "",
-        "Name": "api.openshift-apiserver.svc::2115297822024425807",
+        "Name": "api.uccp-apiserver.svc::2115297822024425807",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-apiserver",
+              "Namespace": "uccp-apiserver",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "api.openshift-apiserver.svc",
+              "CommonName": "api.uccp-apiserver.svc",
               "SerialNumber": "2115297822024425807",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2088,8 +2088,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "api.openshift-apiserver.svc",
-                "api.openshift-apiserver.svc.cluster.local"
+                "api.uccp-apiserver.svc",
+                "api.uccp-apiserver.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2101,23 +2101,23 @@
         }
       },
       {
-        "LogicalName": "marketplace-operator-metrics.openshift-marketplace.svc",
+        "LogicalName": "marketplace-operator-metrics.uccp-marketplace.svc",
         "Description": "",
-        "Name": "marketplace-operator-metrics.openshift-marketplace.svc::9089605778427485628",
+        "Name": "marketplace-operator-metrics.uccp-marketplace.svc::9089605778427485628",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-marketplace",
+              "Namespace": "uccp-marketplace",
               "Name": "marketplace-operator-metrics"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "marketplace-operator-metrics.openshift-marketplace.svc",
+              "CommonName": "marketplace-operator-metrics.uccp-marketplace.svc",
               "SerialNumber": "9089605778427485628",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2139,8 +2139,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "marketplace-operator-metrics.openshift-marketplace.svc",
-                "marketplace-operator-metrics.openshift-marketplace.svc.cluster.local"
+                "marketplace-operator-metrics.uccp-marketplace.svc",
+                "marketplace-operator-metrics.uccp-marketplace.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2152,23 +2152,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-kube-apiserver-operator.svc",
+        "LogicalName": "metrics.uccp-kube-apiserver-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-kube-apiserver-operator.svc::29949893468932305",
+        "Name": "metrics.uccp-kube-apiserver-operator.svc::29949893468932305",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "kube-apiserver-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-kube-apiserver-operator.svc",
+              "CommonName": "metrics.uccp-kube-apiserver-operator.svc",
               "SerialNumber": "29949893468932305",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2190,8 +2190,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-kube-apiserver-operator.svc",
-                "metrics.openshift-kube-apiserver-operator.svc.cluster.local"
+                "metrics.uccp-kube-apiserver-operator.svc",
+                "metrics.uccp-kube-apiserver-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2203,23 +2203,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-kube-storage-version-migrator-operator.svc",
+        "LogicalName": "metrics.uccp-kube-storage-version-migrator-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-kube-storage-version-migrator-operator.svc::5764379107559423336",
+        "Name": "metrics.uccp-kube-storage-version-migrator-operator.svc::5764379107559423336",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-storage-version-migrator-operator",
+              "Namespace": "uccp-kube-storage-version-migrator-operator",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-kube-storage-version-migrator-operator.svc",
+              "CommonName": "metrics.uccp-kube-storage-version-migrator-operator.svc",
               "SerialNumber": "5764379107559423336",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2241,8 +2241,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-kube-storage-version-migrator-operator.svc",
-                "metrics.openshift-kube-storage-version-migrator-operator.svc.cluster.local"
+                "metrics.uccp-kube-storage-version-migrator-operator.svc",
+                "metrics.uccp-kube-storage-version-migrator-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2254,23 +2254,23 @@
         }
       },
       {
-        "LogicalName": "prometheus-operator.openshift-monitoring.svc",
+        "LogicalName": "prometheus-operator.uccp-monitoring.svc",
         "Description": "",
-        "Name": "prometheus-operator.openshift-monitoring.svc::4178324176483245369",
+        "Name": "prometheus-operator.uccp-monitoring.svc::4178324176483245369",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-operator-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "prometheus-operator.openshift-monitoring.svc",
+              "CommonName": "prometheus-operator.uccp-monitoring.svc",
               "SerialNumber": "4178324176483245369",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2292,8 +2292,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "prometheus-operator.openshift-monitoring.svc",
-                "prometheus-operator.openshift-monitoring.svc.cluster.local"
+                "prometheus-operator.uccp-monitoring.svc",
+                "prometheus-operator.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2305,23 +2305,23 @@
         }
       },
       {
-        "LogicalName": "csi-snapshot-controller-operator-metrics.openshift-cluster-storage-operator.svc",
+        "LogicalName": "csi-snapshot-controller-operator-metrics.uccp-cluster-storage-operator.svc",
         "Description": "",
-        "Name": "csi-snapshot-controller-operator-metrics.openshift-cluster-storage-operator.svc::5025200834724127258",
+        "Name": "csi-snapshot-controller-operator-metrics.uccp-cluster-storage-operator.svc::5025200834724127258",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cluster-storage-operator",
+              "Namespace": "uccp-cluster-storage-operator",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "csi-snapshot-controller-operator-metrics.openshift-cluster-storage-operator.svc",
+              "CommonName": "csi-snapshot-controller-operator-metrics.uccp-cluster-storage-operator.svc",
               "SerialNumber": "5025200834724127258",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2343,8 +2343,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "csi-snapshot-controller-operator-metrics.openshift-cluster-storage-operator.svc",
-                "csi-snapshot-controller-operator-metrics.openshift-cluster-storage-operator.svc.cluster.local"
+                "csi-snapshot-controller-operator-metrics.uccp-cluster-storage-operator.svc",
+                "csi-snapshot-controller-operator-metrics.uccp-cluster-storage-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2356,23 +2356,23 @@
         }
       },
       {
-        "LogicalName": "olm-operator-metrics.openshift-operator-lifecycle-manager.svc",
+        "LogicalName": "olm-operator-metrics.uccp-operator-lifecycle-manager.svc",
         "Description": "",
-        "Name": "olm-operator-metrics.openshift-operator-lifecycle-manager.svc::8800549647405875654",
+        "Name": "olm-operator-metrics.uccp-operator-lifecycle-manager.svc::8800549647405875654",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-operator-lifecycle-manager",
+              "Namespace": "uccp-operator-lifecycle-manager",
               "Name": "olm-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "olm-operator-metrics.openshift-operator-lifecycle-manager.svc",
+              "CommonName": "olm-operator-metrics.uccp-operator-lifecycle-manager.svc",
               "SerialNumber": "8800549647405875654",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2394,8 +2394,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "olm-operator-metrics.openshift-operator-lifecycle-manager.svc",
-                "olm-operator-metrics.openshift-operator-lifecycle-manager.svc.cluster.local"
+                "olm-operator-metrics.uccp-operator-lifecycle-manager.svc",
+                "olm-operator-metrics.uccp-operator-lifecycle-manager.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2407,23 +2407,23 @@
         }
       },
       {
-        "LogicalName": "machine-api-controllers.openshift-machine-api.svc",
+        "LogicalName": "machine-api-controllers.uccp-machine-api.svc",
         "Description": "",
-        "Name": "machine-api-controllers.openshift-machine-api.svc::7828335248087138693",
+        "Name": "machine-api-controllers.uccp-machine-api.svc::7828335248087138693",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-machine-api",
+              "Namespace": "uccp-machine-api",
               "Name": "machine-api-controllers-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "machine-api-controllers.openshift-machine-api.svc",
+              "CommonName": "machine-api-controllers.uccp-machine-api.svc",
               "SerialNumber": "7828335248087138693",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2445,8 +2445,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "machine-api-controllers.openshift-machine-api.svc",
-                "machine-api-controllers.openshift-machine-api.svc.cluster.local"
+                "machine-api-controllers.uccp-machine-api.svc",
+                "machine-api-controllers.uccp-machine-api.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2458,37 +2458,37 @@
         }
       },
       {
-        "LogicalName": "kube-controller-manager.openshift-kube-controller-manager.svc",
+        "LogicalName": "kube-controller-manager.uccp-kube-controller-manager.svc",
         "Description": "",
-        "Name": "kube-controller-manager.openshift-kube-controller-manager.svc::4706016511474554482",
+        "Name": "kube-controller-manager.uccp-kube-controller-manager.svc::4706016511474554482",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert-2"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert-3"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert-4"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert-5"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert-6"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serving-cert-7"
             }
           ],
@@ -2576,10 +2576,10 @@
           ],
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "kube-controller-manager.openshift-kube-controller-manager.svc",
+              "CommonName": "kube-controller-manager.uccp-kube-controller-manager.svc",
               "SerialNumber": "4706016511474554482",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2601,8 +2601,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "kube-controller-manager.openshift-kube-controller-manager.svc",
-                "kube-controller-manager.openshift-kube-controller-manager.svc.cluster.local"
+                "kube-controller-manager.uccp-kube-controller-manager.svc",
+                "kube-controller-manager.uccp-kube-controller-manager.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2614,23 +2614,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-controller-manager-operator.svc",
+        "LogicalName": "metrics.uccp-controller-manager-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-controller-manager-operator.svc::7895726074443218984",
+        "Name": "metrics.uccp-controller-manager-operator.svc::7895726074443218984",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-controller-manager-operator",
-              "Name": "openshift-controller-manager-operator-serving-cert"
+              "Namespace": "uccp-controller-manager-operator",
+              "Name": "uccp-controller-manager-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-controller-manager-operator.svc",
+              "CommonName": "metrics.uccp-controller-manager-operator.svc",
               "SerialNumber": "7895726074443218984",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2652,8 +2652,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-controller-manager-operator.svc",
-                "metrics.openshift-controller-manager-operator.svc.cluster.local"
+                "metrics.uccp-controller-manager-operator.svc",
+                "metrics.uccp-controller-manager-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2665,23 +2665,23 @@
         }
       },
       {
-        "LogicalName": "api.openshift-oauth-apiserver.svc",
+        "LogicalName": "api.uccp-oauth-apiserver.svc",
         "Description": "",
-        "Name": "api.openshift-oauth-apiserver.svc::485864516996010702",
+        "Name": "api.uccp-oauth-apiserver.svc::485864516996010702",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-oauth-apiserver",
+              "Namespace": "uccp-oauth-apiserver",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "api.openshift-oauth-apiserver.svc",
+              "CommonName": "api.uccp-oauth-apiserver.svc",
               "SerialNumber": "485864516996010702",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2703,8 +2703,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "api.openshift-oauth-apiserver.svc",
-                "api.openshift-oauth-apiserver.svc.cluster.local"
+                "api.uccp-oauth-apiserver.svc",
+                "api.uccp-oauth-apiserver.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2716,23 +2716,23 @@
         }
       },
       {
-        "LogicalName": "oauth-openshift.openshift-authentication.svc",
+        "LogicalName": "oauth-openshift.uccp-authentication.svc",
         "Description": "",
-        "Name": "oauth-openshift.openshift-authentication.svc::455687257200358236",
+        "Name": "oauth-openshift.uccp-authentication.svc::455687257200358236",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-authentication",
+              "Namespace": "uccp-authentication",
               "Name": "v4-0-config-system-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "oauth-openshift.openshift-authentication.svc",
+              "CommonName": "oauth-openshift.uccp-authentication.svc",
               "SerialNumber": "455687257200358236",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2754,8 +2754,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "oauth-openshift.openshift-authentication.svc",
-                "oauth-openshift.openshift-authentication.svc.cluster.local"
+                "oauth-openshift.uccp-authentication.svc",
+                "oauth-openshift.uccp-authentication.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2767,23 +2767,23 @@
         }
       },
       {
-        "LogicalName": "machine-approver.openshift-cluster-machine-approver.svc",
+        "LogicalName": "machine-approver.uccp-cluster-machine-approver.svc",
         "Description": "",
-        "Name": "machine-approver.openshift-cluster-machine-approver.svc::1831298527724831562",
+        "Name": "machine-approver.uccp-cluster-machine-approver.svc::1831298527724831562",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cluster-machine-approver",
+              "Namespace": "uccp-cluster-machine-approver",
               "Name": "machine-approver-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "machine-approver.openshift-cluster-machine-approver.svc",
+              "CommonName": "machine-approver.uccp-cluster-machine-approver.svc",
               "SerialNumber": "1831298527724831562",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2805,8 +2805,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "machine-approver.openshift-cluster-machine-approver.svc",
-                "machine-approver.openshift-cluster-machine-approver.svc.cluster.local"
+                "machine-approver.uccp-cluster-machine-approver.svc",
+                "machine-approver.uccp-cluster-machine-approver.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2818,23 +2818,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-console-operator.svc",
+        "LogicalName": "metrics.uccp-console-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-console-operator.svc::4841722672729242428",
+        "Name": "metrics.uccp-console-operator.svc::4841722672729242428",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-console-operator",
+              "Namespace": "uccp-console-operator",
               "Name": "serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-console-operator.svc",
+              "CommonName": "metrics.uccp-console-operator.svc",
               "SerialNumber": "4841722672729242428",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2856,8 +2856,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-console-operator.svc",
-                "metrics.openshift-console-operator.svc.cluster.local"
+                "metrics.uccp-console-operator.svc",
+                "metrics.uccp-console-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2869,23 +2869,23 @@
         }
       },
       {
-        "LogicalName": "thanos-querier.openshift-monitoring.svc",
+        "LogicalName": "thanos-querier.uccp-monitoring.svc",
         "Description": "",
-        "Name": "thanos-querier.openshift-monitoring.svc::2348697830836353775",
+        "Name": "thanos-querier.uccp-monitoring.svc::2348697830836353775",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "thanos-querier-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "thanos-querier.openshift-monitoring.svc",
+              "CommonName": "thanos-querier.uccp-monitoring.svc",
               "SerialNumber": "2348697830836353775",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2907,8 +2907,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "thanos-querier.openshift-monitoring.svc",
-                "thanos-querier.openshift-monitoring.svc.cluster.local"
+                "thanos-querier.uccp-monitoring.svc",
+                "thanos-querier.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2920,23 +2920,23 @@
         }
       },
       {
-        "LogicalName": "alertmanager-main.openshift-monitoring.svc",
+        "LogicalName": "alertmanager-main.uccp-monitoring.svc",
         "Description": "",
-        "Name": "alertmanager-main.openshift-monitoring.svc::7889519590428116393",
+        "Name": "alertmanager-main.uccp-monitoring.svc::7889519590428116393",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "alertmanager-main-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "alertmanager-main.openshift-monitoring.svc",
+              "CommonName": "alertmanager-main.uccp-monitoring.svc",
               "SerialNumber": "7889519590428116393",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -2958,8 +2958,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "alertmanager-main.openshift-monitoring.svc",
-                "alertmanager-main.openshift-monitoring.svc.cluster.local"
+                "alertmanager-main.uccp-monitoring.svc",
+                "alertmanager-main.uccp-monitoring.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -2971,23 +2971,23 @@
         }
       },
       {
-        "LogicalName": "cco-metrics.openshift-cloud-credential-operator.svc",
+        "LogicalName": "cco-metrics.uccp-cloud-credential-operator.svc",
         "Description": "",
-        "Name": "cco-metrics.openshift-cloud-credential-operator.svc::6893942648061066111",
+        "Name": "cco-metrics.uccp-cloud-credential-operator.svc::6893942648061066111",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cloud-credential-operator",
+              "Namespace": "uccp-cloud-credential-operator",
               "Name": "cloud-credential-operator-serving-cert"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "cco-metrics.openshift-cloud-credential-operator.svc",
+              "CommonName": "cco-metrics.uccp-cloud-credential-operator.svc",
               "SerialNumber": "6893942648061066111",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -3009,8 +3009,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "cco-metrics.openshift-cloud-credential-operator.svc",
-                "cco-metrics.openshift-cloud-credential-operator.svc.cluster.local"
+                "cco-metrics.uccp-cloud-credential-operator.svc",
+                "cco-metrics.uccp-cloud-credential-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -3022,23 +3022,23 @@
         }
       },
       {
-        "LogicalName": "network-metrics-service.openshift-multus.svc",
+        "LogicalName": "network-metrics-service.uccp-multus.svc",
         "Description": "",
-        "Name": "network-metrics-service.openshift-multus.svc::1889672894063829328",
+        "Name": "network-metrics-service.uccp-multus.svc::1889672894063829328",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-multus",
+              "Namespace": "uccp-multus",
               "Name": "metrics-daemon-secret"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "network-metrics-service.openshift-multus.svc",
+              "CommonName": "network-metrics-service.uccp-multus.svc",
               "SerialNumber": "1889672894063829328",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -3060,8 +3060,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "network-metrics-service.openshift-multus.svc",
-                "network-metrics-service.openshift-multus.svc.cluster.local"
+                "network-metrics-service.uccp-multus.svc",
+                "network-metrics-service.uccp-multus.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -3073,23 +3073,23 @@
         }
       },
       {
-        "LogicalName": "image-registry-operator.openshift-image-registry.svc",
+        "LogicalName": "image-registry-operator.uccp-image-registry.svc",
         "Description": "",
-        "Name": "image-registry-operator.openshift-image-registry.svc::4967320171357519668",
+        "Name": "image-registry-operator.uccp-image-registry.svc::4967320171357519668",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-image-registry",
+              "Namespace": "uccp-image-registry",
               "Name": "image-registry-operator-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "image-registry-operator.openshift-image-registry.svc",
+              "CommonName": "image-registry-operator.uccp-image-registry.svc",
               "SerialNumber": "4967320171357519668",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -3111,8 +3111,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "image-registry-operator.openshift-image-registry.svc",
-                "image-registry-operator.openshift-image-registry.svc.cluster.local"
+                "image-registry-operator.uccp-image-registry.svc",
+                "image-registry-operator.uccp-image-registry.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -3124,23 +3124,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-dns-operator.svc",
+        "LogicalName": "metrics.uccp-dns-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-dns-operator.svc::7601847597278589785",
+        "Name": "metrics.uccp-dns-operator.svc::7601847597278589785",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-dns-operator",
+              "Namespace": "uccp-dns-operator",
               "Name": "metrics-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-dns-operator.svc",
+              "CommonName": "metrics.uccp-dns-operator.svc",
               "SerialNumber": "7601847597278589785",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -3162,8 +3162,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-dns-operator.svc",
-                "metrics.openshift-dns-operator.svc.cluster.local"
+                "metrics.uccp-dns-operator.svc",
+                "metrics.uccp-dns-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },
@@ -3175,23 +3175,23 @@
         }
       },
       {
-        "LogicalName": "metrics.openshift-cluster-samples-operator.svc",
+        "LogicalName": "metrics.uccp-cluster-samples-operator.svc",
         "Description": "",
-        "Name": "metrics.openshift-cluster-samples-operator.svc::2686164050326297964",
+        "Name": "metrics.uccp-cluster-samples-operator.svc::2686164050326297964",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-cluster-samples-operator",
+              "Namespace": "uccp-cluster-samples-operator",
               "Name": "samples-operator-tls"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "metrics.openshift-cluster-samples-operator.svc",
+              "CommonName": "metrics.uccp-cluster-samples-operator.svc",
               "SerialNumber": "2686164050326297964",
               "Issuer": {
-                "CommonName": "openshift-service-serving-signer@1622133570",
+                "CommonName": "uccp-service-serving-signer@1622133570",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -3213,8 +3213,8 @@
             "SignerDetails": null,
             "ServingCertDetails": {
               "DNSNames": [
-                "metrics.openshift-cluster-samples-operator.svc",
-                "metrics.openshift-cluster-samples-operator.svc.cluster.local"
+                "metrics.uccp-cluster-samples-operator.svc",
+                "metrics.uccp-cluster-samples-operator.svc.cluster.local"
               ],
               "IPAddresses": null
             },

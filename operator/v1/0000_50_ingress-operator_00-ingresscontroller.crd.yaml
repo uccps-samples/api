@@ -20,7 +20,7 @@ spec:
     schema:
       openAPIV3Schema:
         description: "IngressController describes a managed ingress controller for
-          the cluster. The controller can service OpenShift Route and Kubernetes Ingress
+          the cluster. The controller can service Uccp Route and Kubernetes Ingress
           resources. \n When an IngressController is created, a new ingress controller
           deployment is created to allow external traffic to reach the services that
           expose Ingress or Route resources. Updating this resource may lead to disruption
@@ -109,7 +109,7 @@ spec:
                   another route and that is likely to fail. This behaviour is generally
                   known as connection coalescing. \n The in-use certificate (whether
                   generated or user-specified) will be automatically integrated with
-                  OpenShift's built-in OAuth server."
+                  Uccp's built-in OAuth server."
                 properties:
                   name:
                     description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
@@ -317,7 +317,7 @@ spec:
                       a Kubernetes NodePort Service. \n In this configuration, the
                       ingress controller deployment uses container networking. A NodePort
                       Service is created to publish the deployment. The specific node
-                      ports are dynamically allocated by OpenShift; however, to support
+                      ports are dynamically allocated by Uccp; however, to support
                       static port allocations, user changes to the node port field
                       of the managed NodePort Service will preserved."
                     enum:
@@ -400,7 +400,7 @@ spec:
                   HTTP error code. For example, "error-page-503.http" defines an error
                   page for HTTP 503 responses. Currently only error pages for 503
                   and 404 responses can be customized. Each value in the configmap
-                  should be the full response, including HTTP headers. Eg- https://raw.githubusercontent.com/openshift/router/fadab45747a9b30cc3f0a4b41ad2871f95827a93/images/router/haproxy/conf/error-page-503.http
+                  should be the full response, including HTTP headers. Eg- https://raw.githubusercontent.com/uccp/router/fadab45747a9b30cc3f0a4b41ad2871f95827a93/images/router/haproxy/conf/error-page-503.http
                   If this field is empty, the ingress controller uses the default
                   error pages.
                 properties:
@@ -1406,7 +1406,7 @@ spec:
                       a Kubernetes NodePort Service. \n In this configuration, the
                       ingress controller deployment uses container networking. A NodePort
                       Service is created to publish the deployment. The specific node
-                      ports are dynamically allocated by OpenShift; however, to support
+                      ports are dynamically allocated by Uccp; however, to support
                       static port allocations, user changes to the node port field
                       of the managed NodePort Service will preserved."
                     enum:

@@ -6,21 +6,21 @@ metadata:
     include.release.uccp.io/ibm-cloud-managed: "true"
     include.release.uccp.io/self-managed-high-availability: "true"
     include.release.uccp.io/single-node-developer: "true"
-  name: openshiftapiservers.operator.uccp.io
+  name: uccpapiservers.operator.uccp.io
 spec:
   group: operator.uccp.io
   names:
     categories:
       - coreoperators
-    kind: OpenShiftAPIServer
-    plural: openshiftapiservers
-    singular: openshiftapiserver
+    kind: UccpAPIServer
+    plural: uccpapiservers
+    singular: uccpapiserver
   scope: Cluster
   versions:
     - name: v1
       schema:
         openAPIV3Schema:
-          description: "OpenShiftAPIServer provides information to configure an operator to manage uccp-apiserver. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
+          description: "UccpAPIServer provides information to configure an operator to manage uccp-apiserver. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
           type: object
           required:
             - spec
@@ -34,7 +34,7 @@ spec:
             metadata:
               type: object
             spec:
-              description: spec is the specification of the desired behavior of the OpenShift API Server.
+              description: spec is the specification of the desired behavior of the Uccp API Server.
               type: object
               properties:
                 logLevel:
@@ -72,7 +72,7 @@ spec:
                   nullable: true
                   x-kubernetes-preserve-unknown-fields: true
             status:
-              description: status defines the observed status of the OpenShift API Server.
+              description: status defines the observed status of the Uccp API Server.
               type: object
               properties:
                 conditions:

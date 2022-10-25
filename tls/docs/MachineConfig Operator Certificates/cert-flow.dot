@@ -6,7 +6,7 @@ digraph "OpenShift Certificates" {
     fillcolor="#c7bfff"
   ];
   1 [
-    label="certkeypair/mco-mystery-cert\n\nsecret/machine-config-server-tls -nopenshift-machine-config-operator\n"
+    label="certkeypair/mco-mystery-cert\n\nsecret/machine-config-server-tls -nuccp-machine-config-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];

@@ -48,7 +48,7 @@ spec:
           priority: 1
           type: string
         - description: State of instance
-          jsonPath: .metadata.annotations['machine\.openshift\.io/instance-state']
+          jsonPath: .metadata.annotations['machine\.uccp\.io/instance-state']
           name: State
           priority: 1
           type: string

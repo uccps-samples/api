@@ -37,7 +37,7 @@ Signer for the kube-apiserver to create client certificates for aggregated apise
 #### aggregator-front-proxy-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | aggregator-client-signer |
+| uccp-kube-apiserver-operator | aggregator-client-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -50,14 +50,14 @@ Signer for the kube-apiserver to create client certificates for aggregated apise
 
 
 ### aggregator-front-proxy-client
-![PKI Graph](subcert-systemopenshift-aggregator8112884492387709090.png)
+![PKI Graph](subcert-systemuccp-aggregator8112884492387709090.png)
 
 Client certificate used by the kube-apiserver to communicate to aggregated apiservers.
 
 | Property | Value |
 | ----------- | ----------- |
 | Type | Client |
-| CommonName | system:openshift-aggregator |
+| CommonName | system:uccp-aggregator |
 | SerialNumber | 8112884492387709090 |
 | Issuer CommonName | [aggregator-front-proxy-signer](#aggregator-front-proxy-signer) |
 | Validity | 23h |
@@ -71,7 +71,7 @@ Client certificate used by the kube-apiserver to communicate to aggregated apise
 #### aggregator-front-proxy-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | aggregator-client |
+| uccp-kube-apiserver | aggregator-client |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -102,9 +102,9 @@ CA for aggregated apiservers to recognize kube-apiserver as front-proxy.
 #### aggregator-front-proxy-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config-managed | kube-apiserver-aggregator-client-ca |
-| openshift-kube-apiserver | aggregator-client-ca |
-| openshift-kube-controller-manager | aggregator-client-ca |
+| uccp-config-managed | kube-apiserver-aggregator-client-ca |
+| uccp-kube-apiserver | aggregator-client-ca |
+| uccp-kube-controller-manager | aggregator-client-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

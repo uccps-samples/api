@@ -1,12 +1,12 @@
 digraph "Local Certificate" {
   // Node definitions.
   0 [
-    label="certkeypair/kube-control-plane-signer\n\nsecret/kube-control-plane-signer -nopenshift-kube-apiserver-operator\n"
+    label="certkeypair/kube-control-plane-signer\n\nsecret/kube-control-plane-signer -nuccp-kube-apiserver-operator\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   3 [
-    label="certkeypair/kube-controller-manager-csr-signer-signer\n\nsecret/csr-signer-signer -nopenshift-kube-controller-manager-operator\n"
+    label="certkeypair/kube-controller-manager-csr-signer-signer\n\nsecret/csr-signer-signer -nuccp-kube-controller-manager-operator\n"
     style=filled
     fillcolor="#c7bfff"
   ];
@@ -21,12 +21,12 @@ digraph "Local Certificate" {
     fillcolor=white
   ];
   9 [
-    label="certkeypair/kube-apiserver-to-kubelet-signer\n\nsecret/kube-apiserver-to-kubelet-signer -nopenshift-kube-apiserver-operator\n"
+    label="certkeypair/kube-apiserver-to-kubelet-signer\n\nsecret/kube-apiserver-to-kubelet-signer -nuccp-kube-apiserver-operator\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   21 [
-    label="cabundle/kube-apiserver-from-installer-client-ca\n\nconfigmaps/initial-kube-apiserver-server-ca -nopenshift-config\n"
+    label="cabundle/kube-apiserver-from-installer-client-ca\n\nconfigmaps/initial-kube-apiserver-server-ca -nuccp-config\n"
     style=filled
     fillcolor="#fda172"
   ];

@@ -10,7 +10,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "kube-control-plane-signer-ca"
             }
           ],
@@ -46,23 +46,23 @@
       {
         "LogicalName": "kube-apiserver-total-client-ca",
         "Description": "CA for kube-apiserver to recognize all known certificate based clients.",
-        "Name": "admin-kubeconfig-signer|kube-csr-signer_@1622133566|kubelet-signer|kube-apiserver-to-kubelet-signer|kube-control-plane-signer|kubelet-bootstrap-kubeconfig-signer|openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+        "Name": "admin-kubeconfig-signer|kube-csr-signer_@1622133566|kubelet-signer|kube-apiserver-to-kubelet-signer|kube-control-plane-signer|kubelet-bootstrap-kubeconfig-signer|uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kube-apiserver-client-ca"
             },
             {
-              "Namespace": "openshift-controller-manager",
+              "Namespace": "uccp-controller-manager",
               "Name": "client-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "client-ca"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "client-ca"
             }
           ],
@@ -211,10 +211,10 @@
             },
             {
               "CertIdentifier": {
-                "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
                 "SerialNumber": "6813199752010173373",
                 "Issuer": {
-                  "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+                  "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
                   "SerialNumber": "",
                   "Issuer": null
                 }
@@ -243,39 +243,39 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "csr-controller-ca"
             },
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kubelet-serving-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-serving-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-serving-ca-2"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-serving-ca-3"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-serving-ca-4"
             },
             {
-              "Namespace": "openshift-kube-controller-manager-operator",
+              "Namespace": "uccp-kube-controller-manager-operator",
               "Name": "csr-controller-ca"
             },
             {
-              "Namespace": "openshift-kube-controller-manager-operator",
+              "Namespace": "uccp-kube-controller-manager-operator",
               "Name": "csr-signer-ca"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "kubelet-serving-ca-bundle"
             }
           ],
@@ -358,7 +358,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-controller-manager-operator",
+              "Namespace": "uccp-kube-controller-manager-operator",
               "Name": "csr-controller-signer-ca"
             }
           ],
@@ -398,7 +398,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "admin-kubeconfig-client-ca"
             }
           ],
@@ -434,11 +434,11 @@
       {
         "LogicalName": "kube-apiserver-per-master-debugging-client-ca",
         "Description": "CA for kube-apiserver to recognize local system:masters rendered to each master.",
-        "Name": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+        "Name": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "node-system-admin-ca"
             }
           ],
@@ -446,10 +446,10 @@
           "CertificateMetadata": [
             {
               "CertIdentifier": {
-                "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
                 "SerialNumber": "6813199752010173373",
                 "Issuer": {
-                  "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+                  "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
                   "SerialNumber": "",
                   "Issuer": null
                 }
@@ -478,7 +478,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kubelet-bootstrap-kubeconfig"
             }
           ],
@@ -518,7 +518,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "kube-apiserver-to-kubelet-client-ca"
             }
           ],
@@ -558,7 +558,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "initial-kube-apiserver-server-ca"
             }
           ],
@@ -686,7 +686,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "kube-control-plane-signer"
             }
           ],
@@ -730,11 +730,11 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kube-scheduler-client-cert-key"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "kube-scheduler-client-cert-key"
             }
           ],
@@ -798,11 +798,11 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kube-controller-manager-client-cert-key"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "kube-controller-manager-client-cert-key"
             }
           ],
@@ -866,7 +866,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-controller-manager-operator",
+              "Namespace": "uccp-kube-controller-manager-operator",
               "Name": "csr-signer-signer"
             }
           ],
@@ -910,11 +910,11 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "csr-signer"
             },
             {
-              "Namespace": "openshift-kube-controller-manager-operator",
+              "Namespace": "uccp-kube-controller-manager-operator",
               "Name": "csr-signer"
             }
           ],
@@ -1027,21 +1027,21 @@
       {
         "LogicalName": "per-master-debugging-signer",
         "Description": "Signer for the per-master-debugging-client.",
-        "Name": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567::6813199752010173373",
+        "Name": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567::6813199752010173373",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "node-system-admin-signer"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+              "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
               "SerialNumber": "6813199752010173373",
               "Issuer": {
-                "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1075,7 +1075,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "node-system-admin-client"
             }
           ],
@@ -1085,7 +1085,7 @@
               "CommonName": "system:admin",
               "SerialNumber": "8705727548059760835",
               "Issuer": {
-                "CommonName": "openshift-kube-apiserver-operator_node-system-admin-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_node-system-admin-signer@1622133567",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -1155,7 +1155,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "kube-apiserver-to-kubelet-signer"
             }
           ],
@@ -1199,19 +1199,19 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-client"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-client-2"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-client-3"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kubelet-client-4"
             }
           ],
@@ -1309,7 +1309,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "control-plane-node-admin-client-cert-key"
             }
           ],
@@ -1371,11 +1371,11 @@
       {
         "LogicalName": "kube-apiserver-check-endpoints",
         "Description": "Client certificate used by the network connectivity checker of the kube-apiserver.",
-        "Name": "system:serviceaccount:openshift-kube-apiserver:check-endpoints::7616933575479319771",
+        "Name": "system:serviceaccount:uccp-kube-apiserver:check-endpoints::7616933575479319771",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "check-endpoints-client-cert-key"
             }
           ],
@@ -1399,7 +1399,7 @@
           ],
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "system:serviceaccount:openshift-kube-apiserver:check-endpoints",
+              "CommonName": "system:serviceaccount:uccp-kube-apiserver:check-endpoints",
               "SerialNumber": "7616933575479319771",
               "Issuer": {
                 "CommonName": "kube-control-plane-signer",

@@ -1,12 +1,12 @@
 digraph "Local Certificate" {
   // Node definitions.
   1 [
-    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nopenshift-service-ca\n"
+    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nuccp-service-ca\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   10 [
-    label="certkeypair/grafana.openshift-monitoring.svc\n\nsecret/grafana-tls -nopenshift-monitoring\n"
+    label="certkeypair/grafana.uccp-monitoring.svc\n\nsecret/grafana-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];

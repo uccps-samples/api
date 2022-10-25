@@ -1,12 +1,12 @@
 digraph "Local Certificate" {
   // Node definitions.
   0 [
-    label="certkeypair/metrics.openshift-ingress-operator.svc\n\nsecret/metrics-tls -nopenshift-ingress-operator\n"
+    label="certkeypair/metrics.uccp-ingress-operator.svc\n\nsecret/metrics-tls -nuccp-ingress-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   1 [
-    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nopenshift-service-ca\n"
+    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nuccp-service-ca\n"
     style=filled
     fillcolor="#c7bfff"
   ];

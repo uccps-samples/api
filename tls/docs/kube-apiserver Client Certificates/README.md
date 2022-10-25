@@ -86,7 +86,7 @@ Signer for the kube-apiserver-to-kubelet-client so kubelets can recognize the ku
 #### kube-apiserver-to-kubelet-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | kube-apiserver-to-kubelet-signer |
+| uccp-kube-apiserver-operator | kube-apiserver-to-kubelet-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -115,7 +115,7 @@ Signer for kube-controller-manager and kube-scheduler client certificates.
 #### kube-control-plane-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | kube-control-plane-signer |
+| uccp-kube-apiserver-operator | kube-control-plane-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -144,7 +144,7 @@ Signer used by the kube-controller-manager-operator to sign signing certificates
 #### kube-controller-manager-csr-signer-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-controller-manager-operator | csr-signer-signer |
+| uccp-kube-controller-manager-operator | csr-signer-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -173,8 +173,8 @@ Signer used by the kube-controller-manager to sign CSR API requests.
 #### kube-controller-manager-csr-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-controller-manager | csr-signer |
-| openshift-kube-controller-manager-operator | csr-signer |
+| uccp-kube-controller-manager | csr-signer |
+| uccp-kube-controller-manager-operator | csr-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -184,14 +184,14 @@ Signer used by the kube-controller-manager to sign CSR API requests.
 
 
 ### per-master-debugging-signer
-![PKI Graph](subcert-openshift-kube-apiserver-operator_node-system-admin-signer16221335676813199752010173373.png)
+![PKI Graph](subcert-uccp-kube-apiserver-operator_node-system-admin-signer16221335676813199752010173373.png)
 
 Signer for the per-master-debugging-client.
 
 | Property | Value |
 | ----------- | ----------- |
 | Type | Signer |
-| CommonName | openshift-kube-apiserver-operator_node-system-admin-signer@1622133567 |
+| CommonName | uccp-kube-apiserver-operator_node-system-admin-signer@1622133567 |
 | SerialNumber | 6813199752010173373 |
 | Issuer CommonName | [per-master-debugging-signer](#per-master-debugging-signer) |
 | Validity | 365d |
@@ -204,7 +204,7 @@ Signer for the per-master-debugging-client.
 #### per-master-debugging-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | node-system-admin-signer |
+| uccp-kube-apiserver-operator | node-system-admin-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -238,7 +238,7 @@ Client certificate (system:masters) placed on each master to allow communication
 #### per-master-debugging-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | node-system-admin-client |
+| uccp-kube-apiserver-operator | node-system-admin-client |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -268,7 +268,7 @@ Client certificate (system:masters) placed on each master to allow communication
 #### system:control-plane-node-admin Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | control-plane-node-admin-client-cert-key |
+| uccp-kube-apiserver | control-plane-node-admin-client-cert-key |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -299,10 +299,10 @@ Client certificate used by the kube-apiserver to authenticate to the kubelet for
 #### kube-apiserver-to-kubelet-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | kubelet-client |
-| openshift-kube-apiserver | kubelet-client-2 |
-| openshift-kube-apiserver | kubelet-client-3 |
-| openshift-kube-apiserver | kubelet-client-4 |
+| uccp-kube-apiserver | kubelet-client |
+| uccp-kube-apiserver | kubelet-client-2 |
+| uccp-kube-apiserver | kubelet-client-3 |
+| uccp-kube-apiserver | kubelet-client-4 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -337,8 +337,8 @@ Client certificate used by the kube-controller-manager to authenticate to the ku
 #### kube-controller-manager-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-config-managed | kube-controller-manager-client-cert-key |
-| openshift-kube-controller-manager | kube-controller-manager-client-cert-key |
+| uccp-config-managed | kube-controller-manager-client-cert-key |
+| uccp-kube-controller-manager | kube-controller-manager-client-cert-key |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -369,8 +369,8 @@ Client certificate used by the kube-scheduler to authenticate to the kube-apiser
 #### kube-scheduler-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-config-managed | kube-scheduler-client-cert-key |
-| openshift-kube-scheduler | kube-scheduler-client-cert-key |
+| uccp-config-managed | kube-scheduler-client-cert-key |
+| uccp-kube-scheduler | kube-scheduler-client-cert-key |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -380,14 +380,14 @@ Client certificate used by the kube-scheduler to authenticate to the kube-apiser
 
 
 ### kube-apiserver-check-endpoints
-![PKI Graph](subcert-systemserviceaccountopenshift-kube-apiservercheck-endpoints7616933575479319771.png)
+![PKI Graph](subcert-systemserviceaccountuccp-kube-apiservercheck-endpoints7616933575479319771.png)
 
 Client certificate used by the network connectivity checker of the kube-apiserver.
 
 | Property | Value |
 | ----------- | ----------- |
 | Type | Client |
-| CommonName | system:serviceaccount:openshift-kube-apiserver:check-endpoints |
+| CommonName | system:serviceaccount:uccp-kube-apiserver:check-endpoints |
 | SerialNumber | 7616933575479319771 |
 | Issuer CommonName | [kube-control-plane-signer](#kube-control-plane-signer) |
 | Validity | 30d |
@@ -401,7 +401,7 @@ Client certificate used by the network connectivity checker of the kube-apiserve
 #### kube-apiserver-check-endpoints Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | check-endpoints-client-cert-key |
+| uccp-kube-apiserver | check-endpoints-client-cert-key |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -461,7 +461,7 @@ CA for kube-apiserver to recognize the system:master created by the installer.
 #### kube-apiserver-admin-kubeconfig-client-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config | admin-kubeconfig-client-ca |
+| uccp-config | admin-kubeconfig-client-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -489,10 +489,10 @@ CA for kube-apiserver to recognize all known certificate based clients.
 #### kube-apiserver-total-client-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config-managed | kube-apiserver-client-ca |
-| openshift-controller-manager | client-ca |
-| openshift-kube-apiserver | client-ca |
-| openshift-kube-controller-manager | client-ca |
+| uccp-config-managed | kube-apiserver-client-ca |
+| uccp-controller-manager | client-ca |
+| uccp-kube-apiserver | client-ca |
+| uccp-kube-controller-manager | client-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -519,7 +519,7 @@ CA for the kube-apiserver to recognize clients created by the installer.
 #### kube-apiserver-from-installer-client-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config | initial-kube-apiserver-server-ca |
+| uccp-config | initial-kube-apiserver-server-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -541,7 +541,7 @@ CA for the kubelet to recognize the kube-apiserver client certificate.
 #### kubelet-to-recognize-kube-apiserver-client-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | kube-apiserver-to-kubelet-client-ca |
+| uccp-kube-apiserver-operator | kube-apiserver-to-kubelet-client-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -563,7 +563,7 @@ CA for kube-apiserver to recognize the kube-controller-manager and kube-schedule
 #### kube-apiserver-kcm-and-ks-client-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | kube-control-plane-signer-ca |
+| uccp-kube-apiserver-operator | kube-control-plane-signer-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -586,15 +586,15 @@ CA to recognize the CSRs (both serving and client) signed by the kube-controller
 #### kube-controller-manager-csr-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config-managed | csr-controller-ca |
-| openshift-config-managed | kubelet-serving-ca |
-| openshift-kube-apiserver | kubelet-serving-ca |
-| openshift-kube-apiserver | kubelet-serving-ca-2 |
-| openshift-kube-apiserver | kubelet-serving-ca-3 |
-| openshift-kube-apiserver | kubelet-serving-ca-4 |
-| openshift-kube-controller-manager-operator | csr-controller-ca |
-| openshift-kube-controller-manager-operator | csr-signer-ca |
-| openshift-monitoring | kubelet-serving-ca-bundle |
+| uccp-config-managed | csr-controller-ca |
+| uccp-config-managed | kubelet-serving-ca |
+| uccp-kube-apiserver | kubelet-serving-ca |
+| uccp-kube-apiserver | kubelet-serving-ca-2 |
+| uccp-kube-apiserver | kubelet-serving-ca-3 |
+| uccp-kube-apiserver | kubelet-serving-ca-4 |
+| uccp-kube-controller-manager-operator | csr-controller-ca |
+| uccp-kube-controller-manager-operator | csr-signer-ca |
+| uccp-monitoring | kubelet-serving-ca-bundle |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -618,7 +618,7 @@ CA to recognize the CSRs (both serving and client) signed by the kube-controller
 #### kubelet-bootstrap-kubeconfig-signer Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config-managed | kubelet-bootstrap-kubeconfig |
+| uccp-config-managed | kubelet-bootstrap-kubeconfig |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -640,7 +640,7 @@ CA to recognize the kube-controller-manager's signer for signing new CSR signing
 #### kube-controller-manager-csr-signer-signer-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-controller-manager-operator | csr-controller-signer-ca |
+| uccp-kube-controller-manager-operator | csr-controller-signer-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -662,7 +662,7 @@ CA for kube-apiserver to recognize local system:masters rendered to each master.
 #### kube-apiserver-per-master-debugging-client-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | node-system-admin-ca |
+| uccp-kube-apiserver-operator | node-system-admin-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

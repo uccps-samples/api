@@ -37,7 +37,7 @@ spec:
             metadata:
               type: object
             spec:
-              description: ConfigSpec contains the desired configuration and state for the Samples Operator, controlling various behavior around the imagestreams and templates it creates/updates in the openshift namespace.
+              description: ConfigSpec contains the desired configuration and state for the Samples Operator, controlling various behavior around the imagestreams and templates it creates/updates in the uccp namespace.
               type: object
               properties:
                 architectures:

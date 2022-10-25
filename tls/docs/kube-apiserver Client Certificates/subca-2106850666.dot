@@ -1,12 +1,12 @@
 digraph "Local Certificate" {
   // Node definitions.
   3 [
-    label="certkeypair/kube-controller-manager-csr-signer-signer\n\nsecret/csr-signer-signer -nopenshift-kube-controller-manager-operator\n"
+    label="certkeypair/kube-controller-manager-csr-signer-signer\n\nsecret/csr-signer-signer -nuccp-kube-controller-manager-operator\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   16 [
-    label="cabundle/kube-controller-manager-csr-signer-signer-ca\n\nconfigmaps/csr-controller-signer-ca -nopenshift-kube-controller-manager-operator\n"
+    label="cabundle/kube-controller-manager-csr-signer-signer-ca\n\nconfigmaps/csr-controller-signer-ca -nuccp-kube-controller-manager-operator\n"
     style=filled
     fillcolor="#fda172"
   ];

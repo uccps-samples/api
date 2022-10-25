@@ -55,7 +55,7 @@ spec:
                       type: string
                       pattern: ^$|^(ocp|origin|okd|dedicated|online|azure)$
                     customLogoFile:
-                      description: 'customLogoFile replaces the default OpenShift logo in the masthead and about dialog. It is a reference to a ConfigMap in the uccp-config namespace. This can be created with a command like ''oc create configmap custom-logo --from-file=/path/to/file -n uccp-config''. Image size must be less than 1 MB due to constraints on the ConfigMap size. The ConfigMap key should include a file extension so that the console serves the file with the correct MIME type. Recommended logo specifications: Dimensions: Max height of 68px and max width of 200px SVG format preferred'
+                      description: 'customLogoFile replaces the default Uccp logo in the masthead and about dialog. It is a reference to a ConfigMap in the uccp-config namespace. This can be created with a command like ''oc create configmap custom-logo --from-file=/path/to/file -n uccp-config''. Image size must be less than 1 MB due to constraints on the ConfigMap size. The ConfigMap key should include a file extension so that the console serves the file with the correct MIME type. Recommended logo specifications: Dimensions: Max height of 68px and max width of 200px SVG format preferred'
                       type: object
                       properties:
                         key:
@@ -64,7 +64,7 @@ spec:
                         name:
                           type: string
                     customProductName:
-                      description: customProductName is the name that will be displayed in page titles, logo alt text, and the about dialog instead of the normal OpenShift product name.
+                      description: customProductName is the name that will be displayed in page titles, logo alt text, and the about dialog instead of the normal Uccp product name.
                       type: string
                     developerCatalog:
                       description: developerCatalog allows to configure the shown developer catalog categories.

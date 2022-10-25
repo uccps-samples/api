@@ -115,7 +115,7 @@ spec:
                   description: availableUpdates contains updates recommended for this cluster. Updates which appear in conditionalUpdates but not in availableUpdates may expose this cluster to known issues. This list may be empty if no updates are recommended, if the update service is unavailable, or if an invalid channel has been specified.
                   type: array
                   items:
-                    description: Release represents an OpenShift release image and associated metadata.
+                    description: Release represents an Uccp release image and associated metadata.
                     type: object
                     properties:
                       channels:

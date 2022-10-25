@@ -243,7 +243,7 @@ spec:
                           description: region holds the default AWS region for new AWS resources created by the cluster.
                           type: string
                         resourceTags:
-                          description: resourceTags is a list of additional tags to apply to AWS resources created for the cluster. See https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html for information on tagging AWS resources. AWS supports a maximum of 50 tags per resource. OpenShift reserves 25 tags for its use, leaving 25 tags available for the user.
+                          description: resourceTags is a list of additional tags to apply to AWS resources created for the cluster. See https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html for information on tagging AWS resources. AWS supports a maximum of 50 tags per resource. Uccp reserves 25 tags for its use, leaving 25 tags available for the user.
                           type: array
                           maxItems: 25
                           items:

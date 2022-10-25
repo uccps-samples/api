@@ -6,7 +6,7 @@ digraph "Local Certificate" {
     fillcolor="#c7bfff"
   ];
   17 [
-    label="cabundle/kube-apiserver-admin-kubeconfig-client-ca\n\nconfigmaps/admin-kubeconfig-client-ca -nopenshift-config\n"
+    label="cabundle/kube-apiserver-admin-kubeconfig-client-ca\n\nconfigmaps/admin-kubeconfig-client-ca -nuccp-config\n"
     style=filled
     fillcolor="#fda172"
   ];

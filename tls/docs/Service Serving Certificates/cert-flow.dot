@@ -1,292 +1,292 @@
 digraph "OpenShift Certificates" {
   // Node definitions.
   0 [
-    label="certkeypair/metrics.openshift-ingress-operator.svc\n\nsecret/metrics-tls -nopenshift-ingress-operator\n"
+    label="certkeypair/metrics.uccp-ingress-operator.svc\n\nsecret/metrics-tls -nuccp-ingress-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   1 [
-    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nopenshift-service-ca\n"
+    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nuccp-service-ca\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   2 [
-    label="certkeypair/node-tuning-operator.openshift-cluster-node-tuning-operator.svc\n\nsecret/node-tuning-operator-tls -nopenshift-cluster-node-tuning-operator\n"
+    label="certkeypair/node-tuning-operator.uccp-cluster-node-tuning-operator.svc\n\nsecret/node-tuning-operator-tls -nuccp-cluster-node-tuning-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   3 [
-    label="certkeypair/multus-admission-controller.openshift-multus.svc\n\nsecret/multus-admission-controller-secret -nopenshift-multus\n"
+    label="certkeypair/multus-admission-controller.uccp-multus.svc\n\nsecret/multus-admission-controller-secret -nuccp-multus\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   4 [
-    label="certkeypair/prometheus-adapter.openshift-monitoring.svc\n\nsecret/prometheus-adapter-8tkqrsmu9afpe -nopenshift-monitoring\n    secret/prometheus-adapter-tls -nopenshift-monitoring\n"
+    label="certkeypair/prometheus-adapter.uccp-monitoring.svc\n\nsecret/prometheus-adapter-8tkqrsmu9afpe -nuccp-monitoring\n    secret/prometheus-adapter-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   5 [
-    label="certkeypair/cluster-autoscaler-operator.openshift-machine-api.svc\n\nsecret/cluster-autoscaler-operator-cert -nopenshift-machine-api\n"
+    label="certkeypair/cluster-autoscaler-operator.uccp-machine-api.svc\n\nsecret/cluster-autoscaler-operator-cert -nuccp-machine-api\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   6 [
-    label="certkeypair/dns-default.openshift-dns.svc\n\nsecret/dns-default-metrics-tls -nopenshift-dns\n"
+    label="certkeypair/dns-default.uccp-dns.svc\n\nsecret/dns-default-metrics-tls -nuccp-dns\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   7 [
-    label="certkeypair/router-internal-default.openshift-ingress.svc\n\nsecret/router-metrics-certs-default -nopenshift-ingress\n"
+    label="certkeypair/router-internal-default.uccp-ingress.svc\n\nsecret/router-metrics-certs-default -nuccp-ingress\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   8 [
-    label="certkeypair/metrics.openshift-service-ca-operator.svc\n\nsecret/serving-cert -nopenshift-service-ca-operator\n"
+    label="certkeypair/metrics.uccp-service-ca-operator.svc\n\nsecret/serving-cert -nuccp-service-ca-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   9 [
-    label="certkeypair/node-exporter.openshift-monitoring.svc\n\nsecret/node-exporter-tls -nopenshift-monitoring\n"
+    label="certkeypair/node-exporter.uccp-monitoring.svc\n\nsecret/node-exporter-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   10 [
-    label="certkeypair/grafana.openshift-monitoring.svc\n\nsecret/grafana-tls -nopenshift-monitoring\n"
+    label="certkeypair/grafana.uccp-monitoring.svc\n\nsecret/grafana-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   11 [
-    label="certkeypair/metrics.openshift-kube-scheduler-operator.svc\n\nsecret/kube-scheduler-operator-serving-cert -nopenshift-kube-scheduler-operator\n"
+    label="certkeypair/metrics.uccp-kube-scheduler-operator.svc\n\nsecret/kube-scheduler-operator-serving-cert -nuccp-kube-scheduler-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   12 [
-    label="certkeypair/scheduler.openshift-kube-scheduler.svc\n\nsecret/serving-cert -nopenshift-kube-scheduler\n    secret/serving-cert-2 -nopenshift-kube-scheduler\n    secret/serving-cert-3 -nopenshift-kube-scheduler\n    secret/serving-cert-4 -nopenshift-kube-scheduler\n    secret/serving-cert-5 -nopenshift-kube-scheduler\n    secret/serving-cert-6 -nopenshift-kube-scheduler\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-3/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-3/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-5/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-5/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-6/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-6/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-2/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-2/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-4/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-4/secrets/serving-cert/tls.crt/tls.key\n"
+    label="certkeypair/scheduler.uccp-kube-scheduler.svc\n\nsecret/serving-cert -nuccp-kube-scheduler\n    secret/serving-cert-2 -nuccp-kube-scheduler\n    secret/serving-cert-3 -nuccp-kube-scheduler\n    secret/serving-cert-4 -nuccp-kube-scheduler\n    secret/serving-cert-5 -nuccp-kube-scheduler\n    secret/serving-cert-6 -nuccp-kube-scheduler\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-3/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-3/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-5/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-5/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-6/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-6/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-2/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-2/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-4/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-scheduler-pod-4/secrets/serving-cert/tls.crt/tls.key\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   13 [
-    label="certkeypair/machine-config-daemon.openshift-machine-config-operator.svc\n\nsecret/proxy-tls -nopenshift-machine-config-operator\n"
+    label="certkeypair/machine-config-daemon.uccp-machine-config-operator.svc\n\nsecret/proxy-tls -nuccp-machine-config-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   14 [
-    label="certkeypair/kube-state-metrics.openshift-monitoring.svc\n\nsecret/kube-state-metrics-tls -nopenshift-monitoring\n"
+    label="certkeypair/kube-state-metrics.uccp-monitoring.svc\n\nsecret/kube-state-metrics-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   15 [
-    label="certkeypair/metrics.openshift-insights.svc\n\nsecret/openshift-insights-serving-cert -nopenshift-insights\n"
+    label="certkeypair/metrics.uccp-insights.svc\n\nsecret/uccp-insights-serving-cert -nuccp-insights\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   16 [
-    label="certkeypair/telemeter-client.openshift-monitoring.svc\n\nsecret/telemeter-client-tls -nopenshift-monitoring\n"
+    label="certkeypair/telemeter-client.uccp-monitoring.svc\n\nsecret/telemeter-client-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   17 [
-    label="certkeypair/metrics.openshift-authentication-operator.svc\n\nsecret/serving-cert -nopenshift-authentication-operator\n"
+    label="certkeypair/metrics.uccp-authentication-operator.svc\n\nsecret/serving-cert -nuccp-authentication-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   18 [
-    label="certkeypair/catalog-operator-metrics.openshift-operator-lifecycle-manager.svc\n\nsecret/catalog-operator-serving-cert -nopenshift-operator-lifecycle-manager\n"
+    label="certkeypair/catalog-operator-metrics.uccp-operator-lifecycle-manager.svc\n\nsecret/catalog-operator-serving-cert -nuccp-operator-lifecycle-manager\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   19 [
-    label="certkeypair/openshift-state-metrics.openshift-monitoring.svc\n\nsecret/openshift-state-metrics-tls -nopenshift-monitoring\n"
+    label="certkeypair/uccp-state-metrics.uccp-monitoring.svc\n\nsecret/uccp-state-metrics-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   20 [
-    label="certkeypair/metrics.openshift-kube-controller-manager-operator.svc\n\nsecret/kube-controller-manager-operator-serving-cert -nopenshift-kube-controller-manager-operator\n"
+    label="certkeypair/metrics.uccp-kube-controller-manager-operator.svc\n\nsecret/kube-controller-manager-operator-serving-cert -nuccp-kube-controller-manager-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   21 [
-    label="certkeypair/console.openshift-console.svc\n\nsecret/console-serving-cert -nopenshift-console\n"
+    label="certkeypair/console.uccp-console.svc\n\nsecret/console-serving-cert -nuccp-console\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   22 [
-    label="certkeypair/metrics.openshift-apiserver-operator.svc\n\nsecret/openshift-apiserver-operator-serving-cert -nopenshift-apiserver-operator\n"
+    label="certkeypair/metrics.uccp-apiserver-operator.svc\n\nsecret/uccp-apiserver-operator-serving-cert -nuccp-apiserver-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   23 [
-    label="certkeypair/sdn.openshift-sdn.svc\n\nsecret/sdn-metrics-certs -nopenshift-sdn\n"
+    label="certkeypair/sdn.uccp-sdn.svc\n\nsecret/sdn-metrics-certs -nuccp-sdn\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   24 [
-    label="certkeypair/machine-api-operator.openshift-machine-api.svc\n\nsecret/machine-api-operator-tls -nopenshift-machine-api\n"
+    label="certkeypair/machine-api-operator.uccp-machine-api.svc\n\nsecret/machine-api-operator-tls -nuccp-machine-api\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   25 [
-    label="certkeypair/controller-manager.openshift-controller-manager.svc\n\nsecret/serving-cert -nopenshift-controller-manager\n"
+    label="certkeypair/controller-manager.uccp-controller-manager.svc\n\nsecret/serving-cert -nuccp-controller-manager\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   26 [
-    label="certkeypair/metrics.openshift-config-operator.svc\n\nsecret/config-operator-serving-cert -nopenshift-config-operator\n"
+    label="certkeypair/metrics.uccp-config-operator.svc\n\nsecret/config-operator-serving-cert -nuccp-config-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   27 [
-    label="certkeypair/machine-api-operator-webhook.openshift-machine-api.svc\n\nsecret/machine-api-operator-webhook-cert -nopenshift-machine-api\n"
+    label="certkeypair/machine-api-operator-webhook.uccp-machine-api.svc\n\nsecret/machine-api-operator-webhook-cert -nuccp-machine-api\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   28 [
-    label="certkeypair/cluster-monitoring-operator.openshift-monitoring.svc\n\nsecret/cluster-monitoring-operator-tls -nopenshift-monitoring\n"
+    label="certkeypair/cluster-monitoring-operator.uccp-monitoring.svc\n\nsecret/cluster-monitoring-operator-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   29 [
-    label="certkeypair/cluster-storage-operator-metrics.openshift-cluster-storage-operator.svc\n\nsecret/cluster-storage-operator-serving-cert -nopenshift-cluster-storage-operator\n"
+    label="certkeypair/cluster-storage-operator-metrics.uccp-cluster-storage-operator.svc\n\nsecret/cluster-storage-operator-serving-cert -nuccp-cluster-storage-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   30 [
-    label="certkeypair/prometheus-k8s.openshift-monitoring.svc\n\nsecret/prometheus-k8s-tls -nopenshift-monitoring\n"
+    label="certkeypair/prometheus-k8s.uccp-monitoring.svc\n\nsecret/prometheus-k8s-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   31 [
-    label="certkeypair/prometheus-k8s-thanos-sidecar.openshift-monitoring.svc\n\nsecret/prometheus-k8s-thanos-sidecar-tls -nopenshift-monitoring\n"
+    label="certkeypair/prometheus-k8s-thanos-sidecar.uccp-monitoring.svc\n\nsecret/prometheus-k8s-thanos-sidecar-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   32 [
-    label="certkeypair/image-registry.openshift-image-registry.svc\n\nsecret/image-registry-tls -nopenshift-image-registry\n"
+    label="certkeypair/image-registry.uccp-image-registry.svc\n\nsecret/image-registry-tls -nuccp-image-registry\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   33 [
-    label="certkeypair/metrics.openshift-etcd-operator.svc\n\nsecret/etcd-operator-serving-cert -nopenshift-etcd-operator\n"
+    label="certkeypair/metrics.uccp-etcd-operator.svc\n\nsecret/etcd-operator-serving-cert -nuccp-etcd-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   34 [
-    label="certkeypair/etcd.openshift-etcd.svc\n\nsecret/serving-cert -nopenshift-etcd\n"
+    label="certkeypair/etcd.uccp-etcd.svc\n\nsecret/serving-cert -nuccp-etcd\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   35 [
-    label="certkeypair/csi-snapshot-webhook.openshift-cluster-storage-operator.svc\n\nsecret/csi-snapshot-webhook-secret -nopenshift-cluster-storage-operator\n"
+    label="certkeypair/csi-snapshot-webhook.uccp-cluster-storage-operator.svc\n\nsecret/csi-snapshot-webhook-secret -nuccp-cluster-storage-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   36 [
-    label="certkeypair/api.openshift-apiserver.svc\n\nsecret/serving-cert -nopenshift-apiserver\n"
+    label="certkeypair/api.uccp-apiserver.svc\n\nsecret/serving-cert -nuccp-apiserver\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   37 [
-    label="certkeypair/marketplace-operator-metrics.openshift-marketplace.svc\n\nsecret/marketplace-operator-metrics -nopenshift-marketplace\n"
+    label="certkeypair/marketplace-operator-metrics.uccp-marketplace.svc\n\nsecret/marketplace-operator-metrics -nuccp-marketplace\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   38 [
-    label="certkeypair/metrics.openshift-kube-apiserver-operator.svc\n\nsecret/kube-apiserver-operator-serving-cert -nopenshift-kube-apiserver-operator\n"
+    label="certkeypair/metrics.uccp-kube-apiserver-operator.svc\n\nsecret/kube-apiserver-operator-serving-cert -nuccp-kube-apiserver-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   39 [
-    label="certkeypair/metrics.openshift-kube-storage-version-migrator-operator.svc\n\nsecret/serving-cert -nopenshift-kube-storage-version-migrator-operator\n"
+    label="certkeypair/metrics.uccp-kube-storage-version-migrator-operator.svc\n\nsecret/serving-cert -nuccp-kube-storage-version-migrator-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   40 [
-    label="certkeypair/prometheus-operator.openshift-monitoring.svc\n\nsecret/prometheus-operator-tls -nopenshift-monitoring\n"
+    label="certkeypair/prometheus-operator.uccp-monitoring.svc\n\nsecret/prometheus-operator-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   41 [
-    label="certkeypair/csi-snapshot-controller-operator-metrics.openshift-cluster-storage-operator.svc\n\nsecret/serving-cert -nopenshift-cluster-storage-operator\n"
+    label="certkeypair/csi-snapshot-controller-operator-metrics.uccp-cluster-storage-operator.svc\n\nsecret/serving-cert -nuccp-cluster-storage-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   42 [
-    label="certkeypair/olm-operator-metrics.openshift-operator-lifecycle-manager.svc\n\nsecret/olm-operator-serving-cert -nopenshift-operator-lifecycle-manager\n"
+    label="certkeypair/olm-operator-metrics.uccp-operator-lifecycle-manager.svc\n\nsecret/olm-operator-serving-cert -nuccp-operator-lifecycle-manager\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   43 [
-    label="certkeypair/machine-api-controllers.openshift-machine-api.svc\n\nsecret/machine-api-controllers-tls -nopenshift-machine-api\n"
+    label="certkeypair/machine-api-controllers.uccp-machine-api.svc\n\nsecret/machine-api-controllers-tls -nuccp-machine-api\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   44 [
-    label="certkeypair/kube-controller-manager.openshift-kube-controller-manager.svc\n\nsecret/serving-cert -nopenshift-kube-controller-manager\n    secret/serving-cert-2 -nopenshift-kube-controller-manager\n    secret/serving-cert-3 -nopenshift-kube-controller-manager\n    secret/serving-cert-4 -nopenshift-kube-controller-manager\n    secret/serving-cert-5 -nopenshift-kube-controller-manager\n    secret/serving-cert-6 -nopenshift-kube-controller-manager\n    secret/serving-cert-7 -nopenshift-kube-controller-manager\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-3/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-3/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-5/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-5/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-6/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-6/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7/secrets/serving-cert/tls.crt/tls.key\n"
+    label="certkeypair/kube-controller-manager.uccp-kube-controller-manager.svc\n\nsecret/serving-cert -nuccp-kube-controller-manager\n    secret/serving-cert-2 -nuccp-kube-controller-manager\n    secret/serving-cert-3 -nuccp-kube-controller-manager\n    secret/serving-cert-4 -nuccp-kube-controller-manager\n    secret/serving-cert-5 -nuccp-kube-controller-manager\n    secret/serving-cert-6 -nuccp-kube-controller-manager\n    secret/serving-cert-7 -nuccp-kube-controller-manager\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-3/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-3/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-5/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-5/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-6/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-6/secrets/serving-cert/tls.crt/tls.key\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7/secrets/serving-cert/tls.crt/tls.crt,file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7/secrets/serving-cert/tls.crt/tls.key\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   45 [
-    label="certkeypair/metrics.openshift-controller-manager-operator.svc\n\nsecret/openshift-controller-manager-operator-serving-cert -nopenshift-controller-manager-operator\n"
+    label="certkeypair/metrics.uccp-controller-manager-operator.svc\n\nsecret/uccp-controller-manager-operator-serving-cert -nuccp-controller-manager-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   46 [
-    label="certkeypair/api.openshift-oauth-apiserver.svc\n\nsecret/serving-cert -nopenshift-oauth-apiserver\n"
+    label="certkeypair/api.uccp-oauth-apiserver.svc\n\nsecret/serving-cert -nuccp-oauth-apiserver\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   47 [
-    label="certkeypair/oauth-openshift.openshift-authentication.svc\n\nsecret/v4-0-config-system-serving-cert -nopenshift-authentication\n"
+    label="certkeypair/oauth-openshift.uccp-authentication.svc\n\nsecret/v4-0-config-system-serving-cert -nuccp-authentication\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   48 [
-    label="certkeypair/machine-approver.openshift-cluster-machine-approver.svc\n\nsecret/machine-approver-tls -nopenshift-cluster-machine-approver\n"
+    label="certkeypair/machine-approver.uccp-cluster-machine-approver.svc\n\nsecret/machine-approver-tls -nuccp-cluster-machine-approver\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   49 [
-    label="certkeypair/metrics.openshift-console-operator.svc\n\nsecret/serving-cert -nopenshift-console-operator\n"
+    label="certkeypair/metrics.uccp-console-operator.svc\n\nsecret/serving-cert -nuccp-console-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   50 [
-    label="certkeypair/thanos-querier.openshift-monitoring.svc\n\nsecret/thanos-querier-tls -nopenshift-monitoring\n"
+    label="certkeypair/thanos-querier.uccp-monitoring.svc\n\nsecret/thanos-querier-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   51 [
-    label="certkeypair/alertmanager-main.openshift-monitoring.svc\n\nsecret/alertmanager-main-tls -nopenshift-monitoring\n"
+    label="certkeypair/alertmanager-main.uccp-monitoring.svc\n\nsecret/alertmanager-main-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   52 [
-    label="certkeypair/cco-metrics.openshift-cloud-credential-operator.svc\n\nsecret/cloud-credential-operator-serving-cert -nopenshift-cloud-credential-operator\n"
+    label="certkeypair/cco-metrics.uccp-cloud-credential-operator.svc\n\nsecret/cloud-credential-operator-serving-cert -nuccp-cloud-credential-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   53 [
-    label="certkeypair/network-metrics-service.openshift-multus.svc\n\nsecret/metrics-daemon-secret -nopenshift-multus\n"
+    label="certkeypair/network-metrics-service.uccp-multus.svc\n\nsecret/metrics-daemon-secret -nuccp-multus\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   54 [
-    label="certkeypair/image-registry-operator.openshift-image-registry.svc\n\nsecret/image-registry-operator-tls -nopenshift-image-registry\n"
+    label="certkeypair/image-registry-operator.uccp-image-registry.svc\n\nsecret/image-registry-operator-tls -nuccp-image-registry\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   55 [
-    label="certkeypair/metrics.openshift-dns-operator.svc\n\nsecret/metrics-tls -nopenshift-dns-operator\n"
+    label="certkeypair/metrics.uccp-dns-operator.svc\n\nsecret/metrics-tls -nuccp-dns-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   56 [
-    label="certkeypair/metrics.openshift-cluster-samples-operator.svc\n\nsecret/samples-operator-tls -nopenshift-cluster-samples-operator\n"
+    label="certkeypair/metrics.uccp-cluster-samples-operator.svc\n\nsecret/samples-operator-tls -nuccp-cluster-samples-operator\n"
     style=filled
     fillcolor="#bdebfd"
   ];
   57 [
-    label="cabundle/service-ca\n\nconfigmaps/service-ca -nopenshift-config-managed\n    configmaps/service-ca -nopenshift-kube-controller-manager\n    configmaps/service-ca-2 -nopenshift-kube-controller-manager\n    configmaps/service-ca-3 -nopenshift-kube-controller-manager\n    configmaps/service-ca-4 -nopenshift-kube-controller-manager\n    configmaps/service-ca-5 -nopenshift-kube-controller-manager\n    configmaps/service-ca-6 -nopenshift-kube-controller-manager\n    configmaps/service-ca-7 -nopenshift-kube-controller-manager\n    configmaps/signing-cabundle -nopenshift-service-ca\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-3/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-5/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-6/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n"
+    label="cabundle/service-ca\n\nconfigmaps/service-ca -nuccp-config-managed\n    configmaps/service-ca -nuccp-kube-controller-manager\n    configmaps/service-ca-2 -nuccp-kube-controller-manager\n    configmaps/service-ca-3 -nuccp-kube-controller-manager\n    configmaps/service-ca-4 -nuccp-kube-controller-manager\n    configmaps/service-ca-5 -nuccp-kube-controller-manager\n    configmaps/service-ca-6 -nuccp-kube-controller-manager\n    configmaps/service-ca-7 -nuccp-kube-controller-manager\n    configmaps/signing-cabundle -nuccp-service-ca\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-3/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-4/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-5/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-6/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n    file:///etc/kubernetes/static-pod-resources/kube-controller-manager-pod-7/configmaps/service-ca/ca-bundle.crt/ca-bundle.crt\n"
     style=filled
     fillcolor="#fda172"
   ];

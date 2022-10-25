@@ -70,7 +70,7 @@ TODO: team needs to make description
 #### mco-mystery-cert Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-machine-config-operator | machine-config-server-tls |
+| uccp-machine-config-operator | machine-config-server-tls |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

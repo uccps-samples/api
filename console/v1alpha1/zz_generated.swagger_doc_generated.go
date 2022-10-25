@@ -12,7 +12,7 @@ package v1alpha1
 
 // AUTO-GENERATED FUNCTIONS START HERE
 var map_ConsolePlugin = map[string]string{
-	"": "ConsolePlugin is an extension for customizing OpenShift web console by dynamically loading code from another service running on the cluster.\n\nCompatibility level 4: No compatibility is provided, the API can change at any point for any reason. These capabilities should not be used by applications needing long term support.",
+	"": "ConsolePlugin is an extension for customizing Uccp web console by dynamically loading code from another service running on the cluster.\n\nCompatibility level 4: No compatibility is provided, the API can change at any point for any reason. These capabilities should not be used by applications needing long term support.",
 }
 
 func (ConsolePlugin) SwaggerDoc() map[string]string {
@@ -33,7 +33,7 @@ var map_ConsolePluginProxy = map[string]string{
 	"alias":         "alias is a proxy name that identifies the plugin's proxy. An alias name should be unique per plugin. The console backend exposes following proxy endpoint:\n\n/api/proxy/plugin/<plugin-name>/<proxy-alias>/<request-path>?<optional-query-parameters>\n\nRequest example path:\n\n/api/proxy/plugin/acm/search/pods?namespace=uccp-apiserver",
 	"service":       "service is an in-cluster Service that the plugin will connect to. The Service must use HTTPS. The console backend exposes an endpoint in order to proxy communication between the plugin and the Service. Note: service field is required for now, since currently only \"Service\" type is supported.",
 	"caCertificate": "caCertificate provides the cert authority certificate contents, in case the proxied Service is using custom service CA. By default, the service CA bundle provided by the service-ca operator is used. ",
-	"authorize":     "authorize indicates if the proxied request should contain the logged-in user's OpenShift access token in the \"Authorization\" request header. For example:\n\nAuthorization: Bearer sha256~kV46hPnEYhCWFnB85r5NrprAxggzgb6GOeLbgcKNsH0\n\nBy default the access token is not part of the proxied request.",
+	"authorize":     "authorize indicates if the proxied request should contain the logged-in user's Uccp access token in the \"Authorization\" request header. For example:\n\nAuthorization: Bearer sha256~kV46hPnEYhCWFnB85r5NrprAxggzgb6GOeLbgcKNsH0\n\nBy default the access token is not part of the proxied request.",
 }
 
 func (ConsolePluginProxy) SwaggerDoc() map[string]string {

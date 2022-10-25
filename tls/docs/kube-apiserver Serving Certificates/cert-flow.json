@@ -6,35 +6,35 @@
       {
         "LogicalName": "service-account-token-ca.crt",
         "Description": "CA for recognizing kube-apiserver.  This is injected into each service account token secret at ca.crt.",
-        "Name": "kube-apiserver-lb-signer|kube-apiserver-localhost-signer|kube-apiserver-service-network-signer|openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567|*.apps.ci-ln-z2l4snt-f76d1.origin-ci-int-gce.dev.openshift.com|ingress-operator@1622133677",
+        "Name": "kube-apiserver-lb-signer|kube-apiserver-localhost-signer|kube-apiserver-service-network-signer|uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567|*.apps.ci-ln-z2l4snt-f76d1.origin-ci-int-gce.dev.openshift.com|ingress-operator@1622133677",
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serviceaccount-ca"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serviceaccount-ca-5"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serviceaccount-ca-6"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serviceaccount-ca-7"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serviceaccount-ca"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serviceaccount-ca-5"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serviceaccount-ca-6"
             }
           ],
@@ -141,10 +141,10 @@
             },
             {
               "CertIdentifier": {
-                "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                 "SerialNumber": "2777012960471375622",
                 "Issuer": {
-                  "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                  "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                   "SerialNumber": "",
                   "Issuer": null
                 }
@@ -216,11 +216,11 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "default-ingress-cert"
             },
             {
-              "Namespace": "openshift-console",
+              "Namespace": "uccp-console",
               "Name": "default-ingress-cert"
             }
           ],
@@ -278,11 +278,11 @@
       {
         "LogicalName": "kube-apiserver-recovery-serving-ca",
         "Description": "CA for recognizing the kube-apiserver when connecting via the localhost recovery SNI ServerName.",
-        "Name": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+        "Name": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "localhost-recovery-serving-ca"
             }
           ],
@@ -290,10 +290,10 @@
           "CertificateMetadata": [
             {
               "CertIdentifier": {
-                "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                 "SerialNumber": "2777012960471375622",
                 "Issuer": {
-                  "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                  "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                   "SerialNumber": "",
                   "Issuer": null
                 }
@@ -322,7 +322,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "localhost-serving-ca"
             }
           ],
@@ -362,7 +362,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "loadbalancer-serving-ca"
             }
           ],
@@ -402,7 +402,7 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "service-network-serving-ca"
             }
           ],
@@ -438,35 +438,35 @@
       {
         "LogicalName": "kube-apiserver-total-serving-ca",
         "Description": "CA for recognizing the kube-apiserver when connecting via any means.",
-        "Name": "kube-apiserver-lb-signer|kube-apiserver-localhost-signer|kube-apiserver-service-network-signer|openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+        "Name": "kube-apiserver-lb-signer|kube-apiserver-localhost-signer|kube-apiserver-service-network-signer|uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kube-apiserver-server-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kube-apiserver-server-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kube-apiserver-server-ca-2"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kube-apiserver-server-ca-3"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "kube-apiserver-server-ca-4"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "serviceaccount-ca-4"
             },
             {
-              "Namespace": "openshift-kube-scheduler",
+              "Namespace": "uccp-kube-scheduler",
               "Name": "serviceaccount-ca-4"
             }
           ],
@@ -573,10 +573,10 @@
             },
             {
               "CertIdentifier": {
-                "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                 "SerialNumber": "2777012960471375622",
                 "Issuer": {
-                  "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                  "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                   "SerialNumber": "",
                   "Issuer": null
                 }
@@ -609,7 +609,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "service-network-serving-certkey"
             }
           ],
@@ -686,7 +686,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "service-network-serving-signer"
             }
           ],
@@ -730,7 +730,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-ingress-operator",
+              "Namespace": "uccp-ingress-operator",
               "Name": "router-ca"
             }
           ],
@@ -774,7 +774,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-ingress",
+              "Namespace": "uccp-ingress",
               "Name": "router-certs-default"
             }
           ],
@@ -820,21 +820,21 @@
       {
         "LogicalName": "kube-apiserver-recovery-signer",
         "Description": "Signer used by the kube-apiserver to create serving certificates for the kube-apiserver via the localhost recovery SNI ServerName",
-        "Name": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567::2777012960471375622",
+        "Name": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567::2777012960471375622",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "localhost-recovery-serving-signer"
             }
           ],
           "OnDiskLocations": null,
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+              "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
               "SerialNumber": "2777012960471375622",
               "Issuer": {
-                "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -868,19 +868,19 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "localhost-recovery-serving-certkey"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "localhost-recovery-serving-certkey-2"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "localhost-recovery-serving-certkey-3"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "localhost-recovery-serving-certkey-4"
             }
           ],
@@ -939,7 +939,7 @@
               "CommonName": "localhost-recovery",
               "SerialNumber": "2333380766494227473",
               "Issuer": {
-                "CommonName": "openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
+                "CommonName": "uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567",
                 "SerialNumber": "",
                 "Issuer": null
               }
@@ -979,7 +979,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "localhost-serving-signer"
             }
           ],
@@ -1152,7 +1152,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "localhost-serving-cert-certkey"
             }
           ],
@@ -1222,7 +1222,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "loadbalancer-serving-signer"
             }
           ],
@@ -1427,7 +1427,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "internal-loadbalancer-serving-certkey"
             }
           ],
@@ -1494,7 +1494,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "external-loadbalancer-serving-certkey"
             }
           ],

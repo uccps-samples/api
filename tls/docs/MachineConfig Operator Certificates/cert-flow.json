@@ -69,7 +69,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-machine-config-operator",
+              "Namespace": "uccp-machine-config-operator",
               "Name": "machine-config-server-tls"
             }
           ],

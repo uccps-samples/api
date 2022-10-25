@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     api-approved.uccp.io: https://github.com/uccps-samples/api/pull/481
-    description: Extension for customizing OpenShift web console links
+    description: Extension for customizing Uccp web console links
     displayName: ConsoleLinks
     include.release.uccp.io/ibm-cloud-managed: "true"
     include.release.uccp.io/self-managed-high-availability: "true"
@@ -34,7 +34,7 @@ spec:
       name: v1
       schema:
         openAPIV3Schema:
-          description: "ConsoleLink is an extension for customizing OpenShift web console links. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
+          description: "ConsoleLink is an extension for customizing Uccp web console links. \n Compatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer)."
           type: object
           required:
             - spec

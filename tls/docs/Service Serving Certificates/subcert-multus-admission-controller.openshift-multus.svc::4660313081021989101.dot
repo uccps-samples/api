@@ -1,12 +1,12 @@
 digraph "Local Certificate" {
   // Node definitions.
   1 [
-    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nopenshift-service-ca\n"
+    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nuccp-service-ca\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   3 [
-    label="certkeypair/multus-admission-controller.openshift-multus.svc\n\nsecret/multus-admission-controller-secret -nopenshift-multus\n"
+    label="certkeypair/multus-admission-controller.uccp-multus.svc\n\nsecret/multus-admission-controller-secret -nuccp-multus\n"
     style=filled
     fillcolor="#bdebfd"
   ];

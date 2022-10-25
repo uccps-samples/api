@@ -208,6 +208,8 @@ type Brand string
 
 const (
 	// Branding for OpenShift
+	BrandUccp Brand = "uccp"
+	// Branding for OpenShift
 	BrandOpenShift Brand = "openshift"
 	// Branding for The Origin Community Distribution of Kubernetes
 	BrandOKD Brand = "okd"

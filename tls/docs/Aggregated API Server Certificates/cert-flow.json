@@ -10,15 +10,15 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "kube-apiserver-aggregator-client-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "aggregator-client-ca"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "aggregator-client-ca"
             }
           ],
@@ -77,7 +77,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver-operator",
+              "Namespace": "uccp-kube-apiserver-operator",
               "Name": "aggregator-client-signer"
             }
           ],
@@ -117,11 +117,11 @@
       {
         "LogicalName": "aggregator-front-proxy-client",
         "Description": "Client certificate used by the kube-apiserver to communicate to aggregated apiservers.",
-        "Name": "system:openshift-aggregator::8112884492387709090",
+        "Name": "system:uccp-aggregator::8112884492387709090",
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "aggregator-client"
             }
           ],
@@ -145,7 +145,7 @@
           ],
           "CertMetadata": {
             "CertIdentifier": {
-              "CommonName": "system:openshift-aggregator",
+              "CommonName": "system:uccp-aggregator",
               "SerialNumber": "8112884492387709090",
               "Issuer": {
                 "CommonName": "aggregator-signer",

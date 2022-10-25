@@ -10,111 +10,111 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-apiserver",
+              "Namespace": "uccp-apiserver",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-apiserver-operator",
+              "Namespace": "uccp-apiserver-operator",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-authentication",
+              "Namespace": "uccp-authentication",
               "Name": "v4-0-config-system-trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-authentication-operator",
+              "Namespace": "uccp-authentication-operator",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-cloud-credential-operator",
+              "Namespace": "uccp-cloud-credential-operator",
               "Name": "cco-trusted-ca"
             },
             {
-              "Namespace": "openshift-cluster-node-tuning-operator",
+              "Namespace": "uccp-cluster-node-tuning-operator",
               "Name": "trusted-ca"
             },
             {
-              "Namespace": "openshift-config-managed",
+              "Namespace": "uccp-config-managed",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-console",
+              "Namespace": "uccp-console",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-controller-manager",
-              "Name": "openshift-global-ca"
+              "Namespace": "uccp-controller-manager",
+              "Name": "uccp-global-ca"
             },
             {
-              "Namespace": "openshift-image-registry",
+              "Namespace": "uccp-image-registry",
               "Name": "trusted-ca"
             },
             {
-              "Namespace": "openshift-ingress-operator",
+              "Namespace": "uccp-ingress-operator",
               "Name": "trusted-ca"
             },
             {
-              "Namespace": "openshift-insights",
+              "Namespace": "uccp-insights",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-kube-controller-manager",
+              "Namespace": "uccp-kube-controller-manager",
               "Name": "trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-machine-api",
+              "Namespace": "uccp-machine-api",
               "Name": "cbo-trusted-ca"
             },
             {
-              "Namespace": "openshift-machine-api",
+              "Namespace": "uccp-machine-api",
               "Name": "mao-trusted-ca"
             },
             {
-              "Namespace": "openshift-marketplace",
+              "Namespace": "uccp-marketplace",
               "Name": "marketplace-trusted-ca"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "alertmanager-trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "alertmanager-trusted-ca-bundle-d34s91lhv300e"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "grafana-trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "grafana-trusted-ca-bundle-d34s91lhv300e"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "prometheus-trusted-ca-bundle-d34s91lhv300e"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "telemeter-trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "telemeter-trusted-ca-bundle-d34s91lhv300e"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "thanos-querier-trusted-ca-bundle"
             },
             {
-              "Namespace": "openshift-monitoring",
+              "Namespace": "uccp-monitoring",
               "Name": "thanos-querier-trusted-ca-bundle-d34s91lhv300e"
             }
           ],
@@ -2891,7 +2891,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-operator-lifecycle-manager",
+              "Namespace": "uccp-operator-lifecycle-manager",
               "Name": "packageserver-service-cert"
             }
           ],
@@ -2924,8 +2924,8 @@
             "SignerDetails": {},
             "ServingCertDetails": {
               "DNSNames": [
-                "packageserver-service.openshift-operator-lifecycle-manager",
-                "packageserver-service.openshift-operator-lifecycle-manager.svc"
+                "packageserver-service.uccp-operator-lifecycle-manager",
+                "packageserver-service.uccp-operator-lifecycle-manager.svc"
               ],
               "IPAddresses": null
             },

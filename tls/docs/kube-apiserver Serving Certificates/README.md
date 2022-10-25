@@ -52,7 +52,7 @@ Used by kube-apiserver clients to recognize the kube-apiserver.
 #### ingress-operator@1622133677 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-ingress-operator | router-ca |
+| uccp-ingress-operator | router-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -81,7 +81,7 @@ Signer used by the kube-apiserver operator to create serving certificates for th
 #### kube-apiserver-load-balancer-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | loadbalancer-serving-signer |
+| uccp-kube-apiserver-operator | loadbalancer-serving-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -129,7 +129,7 @@ Signer used by the kube-apiserver to create serving certificates for the kube-ap
 #### kube-apiserver-localhost-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | localhost-serving-signer |
+| uccp-kube-apiserver-operator | localhost-serving-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -173,7 +173,7 @@ Signer used by the kube-apiserver to create serving certificates for the kube-ap
 #### kube-apiserver-service-network-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | service-network-serving-signer |
+| uccp-kube-apiserver-operator | service-network-serving-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -182,14 +182,14 @@ Signer used by the kube-apiserver to create serving certificates for the kube-ap
 
 
 ### kube-apiserver-recovery-signer
-![PKI Graph](subcert-openshift-kube-apiserver-operator_localhost-recovery-serving-signer16221335672777012960471375622.png)
+![PKI Graph](subcert-uccp-kube-apiserver-operator_localhost-recovery-serving-signer16221335672777012960471375622.png)
 
 Signer used by the kube-apiserver to create serving certificates for the kube-apiserver via the localhost recovery SNI ServerName
 
 | Property | Value |
 | ----------- | ----------- |
 | Type | Signer |
-| CommonName | openshift-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567 |
+| CommonName | uccp-kube-apiserver-operator_localhost-recovery-serving-signer@1622133567 |
 | SerialNumber | 2777012960471375622 |
 | Issuer CommonName | [kube-apiserver-recovery-signer](#kube-apiserver-recovery-signer) |
 | Validity | 10y |
@@ -202,7 +202,7 @@ Signer used by the kube-apiserver to create serving certificates for the kube-ap
 #### kube-apiserver-recovery-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | localhost-recovery-serving-signer |
+| uccp-kube-apiserver-operator | localhost-recovery-serving-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -235,7 +235,7 @@ Signer used by the kube-apiserver to create serving certificates for the kube-ap
 #### *.apps.ci-ln-z2l4snt-f76d1.origin-ci-int-gce.dev.openshift.com Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-ingress | router-certs-default |
+| uccp-ingress | router-certs-default |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -266,7 +266,7 @@ Serving certificate used by the kube-apiserver to terminate requests via the int
 #### kube-apiserver-internal-load-balancer-serving Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | internal-loadbalancer-serving-certkey |
+| uccp-kube-apiserver | internal-loadbalancer-serving-certkey |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -298,7 +298,7 @@ Serving certificate used by the kube-apiserver to terminate requests via the ext
 #### kube-apiserver-external-load-balancer-serving Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | external-loadbalancer-serving-certkey |
+| uccp-kube-apiserver | external-loadbalancer-serving-certkey |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -330,7 +330,7 @@ Serving certificate used by the kube-apiserver to terminate requests via localho
 #### kube-apiserver-localhost-serving Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | localhost-serving-cert-certkey |
+| uccp-kube-apiserver | localhost-serving-cert-certkey |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -362,7 +362,7 @@ Serving certificate used by the kube-apiserver to terminate requests via the ser
 #### kube-apiserver-service-network-serving Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | service-network-serving-certkey |
+| uccp-kube-apiserver | service-network-serving-certkey |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -394,10 +394,10 @@ Serving certificate used by the kube-apiserver to terminate requests via the loc
 #### kube-apiserver-recovery-serving Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver | localhost-recovery-serving-certkey |
-| openshift-kube-apiserver | localhost-recovery-serving-certkey-2 |
-| openshift-kube-apiserver | localhost-recovery-serving-certkey-3 |
-| openshift-kube-apiserver | localhost-recovery-serving-certkey-4 |
+| uccp-kube-apiserver | localhost-recovery-serving-certkey |
+| uccp-kube-apiserver | localhost-recovery-serving-certkey-2 |
+| uccp-kube-apiserver | localhost-recovery-serving-certkey-3 |
+| uccp-kube-apiserver | localhost-recovery-serving-certkey-4 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -435,8 +435,8 @@ REVIEW: CA for recognizing the default router wildcard serving certificate.
 #### router-wildcard-serving-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config-managed | default-ingress-cert |
-| openshift-console | default-ingress-cert |
+| uccp-config-managed | default-ingress-cert |
+| uccp-console | default-ingress-cert |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -458,7 +458,7 @@ CA for recognizing the kube-apiserver when connecting via the internal or extern
 #### kube-apiserver-load-balancer-serving-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | loadbalancer-serving-ca |
+| uccp-kube-apiserver-operator | loadbalancer-serving-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -483,13 +483,13 @@ CA for recognizing the kube-apiserver when connecting via any means.
 #### kube-apiserver-total-serving-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config-managed | kube-apiserver-server-ca |
-| openshift-kube-apiserver | kube-apiserver-server-ca |
-| openshift-kube-apiserver | kube-apiserver-server-ca-2 |
-| openshift-kube-apiserver | kube-apiserver-server-ca-3 |
-| openshift-kube-apiserver | kube-apiserver-server-ca-4 |
-| openshift-kube-controller-manager | serviceaccount-ca-4 |
-| openshift-kube-scheduler | serviceaccount-ca-4 |
+| uccp-config-managed | kube-apiserver-server-ca |
+| uccp-kube-apiserver | kube-apiserver-server-ca |
+| uccp-kube-apiserver | kube-apiserver-server-ca-2 |
+| uccp-kube-apiserver | kube-apiserver-server-ca-3 |
+| uccp-kube-apiserver | kube-apiserver-server-ca-4 |
+| uccp-kube-controller-manager | serviceaccount-ca-4 |
+| uccp-kube-scheduler | serviceaccount-ca-4 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -520,13 +520,13 @@ CA for recognizing kube-apiserver.  This is injected into each service account t
 #### service-account-token-ca.crt Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-controller-manager | serviceaccount-ca |
-| openshift-kube-controller-manager | serviceaccount-ca-5 |
-| openshift-kube-controller-manager | serviceaccount-ca-6 |
-| openshift-kube-controller-manager | serviceaccount-ca-7 |
-| openshift-kube-scheduler | serviceaccount-ca |
-| openshift-kube-scheduler | serviceaccount-ca-5 |
-| openshift-kube-scheduler | serviceaccount-ca-6 |
+| uccp-kube-controller-manager | serviceaccount-ca |
+| uccp-kube-controller-manager | serviceaccount-ca-5 |
+| uccp-kube-controller-manager | serviceaccount-ca-6 |
+| uccp-kube-controller-manager | serviceaccount-ca-7 |
+| uccp-kube-scheduler | serviceaccount-ca |
+| uccp-kube-scheduler | serviceaccount-ca-5 |
+| uccp-kube-scheduler | serviceaccount-ca-6 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -552,7 +552,7 @@ CA for recognizing the kube-apiserver when connecting via localhost.
 #### kube-apiserver-localhost-serving-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | localhost-serving-ca |
+| uccp-kube-apiserver-operator | localhost-serving-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -574,7 +574,7 @@ CA for recognizing the kube-apiserver when connecting via the service network (k
 #### kube-apiserver-service-network-serving-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | service-network-serving-ca |
+| uccp-kube-apiserver-operator | service-network-serving-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -596,7 +596,7 @@ CA for recognizing the kube-apiserver when connecting via the localhost recovery
 #### kube-apiserver-recovery-serving-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-kube-apiserver-operator | localhost-recovery-serving-ca |
+| uccp-kube-apiserver-operator | localhost-recovery-serving-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

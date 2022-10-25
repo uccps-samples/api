@@ -1,12 +1,12 @@
 digraph "Local Certificate" {
   // Node definitions.
   1 [
-    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nopenshift-service-ca\n"
+    label="certkeypair/service-serving-signer\n\nsecret/signing-key -nuccp-service-ca\n"
     style=filled
     fillcolor="#c7bfff"
   ];
   4 [
-    label="certkeypair/prometheus-adapter.openshift-monitoring.svc\n\nsecret/prometheus-adapter-8tkqrsmu9afpe -nopenshift-monitoring\n    secret/prometheus-adapter-tls -nopenshift-monitoring\n"
+    label="certkeypair/prometheus-adapter.uccp-monitoring.svc\n\nsecret/prometheus-adapter-8tkqrsmu9afpe -nuccp-monitoring\n    secret/prometheus-adapter-tls -nuccp-monitoring\n"
     style=filled
     fillcolor="#bdebfd"
   ];

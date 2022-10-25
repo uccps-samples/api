@@ -49,7 +49,7 @@ Signer for etcd to create client and serving certificates.
 #### etcd-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-config | etcd-signer |
+| uccp-config | etcd-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -83,7 +83,7 @@ Signer for etcd to create client and serving certificates.
 #### system:etcd-peer:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
+| uccp-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -120,7 +120,7 @@ Signer for etcd to create client and serving certificates.
 #### system:etcd-peer:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
+| uccp-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -157,7 +157,7 @@ Signer for etcd to create client and serving certificates.
 #### system:etcd-peer:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
+| uccp-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -187,14 +187,14 @@ Signer for etcd to create client and serving certificates.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-servers |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### system:etcd-server:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
+| uccp-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -224,14 +224,14 @@ Signer for etcd to create client and serving certificates.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-servers |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### system:etcd-server:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
+| uccp-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -261,14 +261,14 @@ Signer for etcd to create client and serving certificates.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-servers |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### system:etcd-server:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
+| uccp-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -305,15 +305,15 @@ Signer for etcd to create client and serving certificates.
 #### etcd Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-apiserver | etcd-client |
-| openshift-config | etcd-client |
-| openshift-etcd | etcd-client |
-| openshift-etcd-operator | etcd-client |
-| openshift-kube-apiserver | etcd-client |
-| openshift-kube-apiserver | etcd-client-2 |
-| openshift-kube-apiserver | etcd-client-3 |
-| openshift-kube-apiserver | etcd-client-4 |
-| openshift-oauth-apiserver | etcd-client |
+| uccp-apiserver | etcd-client |
+| uccp-config | etcd-client |
+| uccp-etcd | etcd-client |
+| uccp-etcd-operator | etcd-client |
+| uccp-kube-apiserver | etcd-client |
+| uccp-kube-apiserver | etcd-client-2 |
+| uccp-kube-apiserver | etcd-client-3 |
+| uccp-kube-apiserver | etcd-client-4 |
+| uccp-oauth-apiserver | etcd-client |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -350,7 +350,7 @@ Signer for etcd to create client and serving certificates.
 #### system:etcd-peer:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
+| uccp-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -387,7 +387,7 @@ Signer for etcd to create client and serving certificates.
 #### system:etcd-peer:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
+| uccp-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -424,7 +424,7 @@ Signer for etcd to create client and serving certificates.
 #### system:etcd-peer:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
+| uccp-etcd | etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -454,14 +454,14 @@ Signer for etcd to create client and serving certificates.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-servers |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### system:etcd-server:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
+| uccp-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -491,14 +491,14 @@ Signer for etcd to create client and serving certificates.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-servers |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### system:etcd-server:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
+| uccp-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -528,14 +528,14 @@ Signer for etcd to create client and serving certificates.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-servers |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### system:etcd-server:etcd-client Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
+| uccp-etcd | etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -570,22 +570,22 @@ CA for recognizing etcd serving, peer, and client certificates.
 #### etcd-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-apiserver | etcd-serving-ca |
-| openshift-config | etcd-ca-bundle |
-| openshift-config | etcd-serving-ca |
-| openshift-etcd | etcd-ca-bundle |
-| openshift-etcd | etcd-peer-client-ca |
-| openshift-etcd | etcd-peer-client-ca-2 |
-| openshift-etcd | etcd-peer-client-ca-3 |
-| openshift-etcd | etcd-serving-ca |
-| openshift-etcd | etcd-serving-ca-2 |
-| openshift-etcd | etcd-serving-ca-3 |
-| openshift-etcd-operator | etcd-ca-bundle |
-| openshift-kube-apiserver | etcd-serving-ca |
-| openshift-kube-apiserver | etcd-serving-ca-2 |
-| openshift-kube-apiserver | etcd-serving-ca-3 |
-| openshift-kube-apiserver | etcd-serving-ca-4 |
-| openshift-oauth-apiserver | etcd-serving-ca |
+| uccp-apiserver | etcd-serving-ca |
+| uccp-config | etcd-ca-bundle |
+| uccp-config | etcd-serving-ca |
+| uccp-etcd | etcd-ca-bundle |
+| uccp-etcd | etcd-peer-client-ca |
+| uccp-etcd | etcd-peer-client-ca-2 |
+| uccp-etcd | etcd-peer-client-ca-3 |
+| uccp-etcd | etcd-serving-ca |
+| uccp-etcd | etcd-serving-ca-2 |
+| uccp-etcd | etcd-serving-ca-3 |
+| uccp-etcd-operator | etcd-ca-bundle |
+| uccp-kube-apiserver | etcd-serving-ca |
+| uccp-kube-apiserver | etcd-serving-ca-2 |
+| uccp-kube-apiserver | etcd-serving-ca-3 |
+| uccp-kube-apiserver | etcd-serving-ca-4 |
+| uccp-oauth-apiserver | etcd-serving-ca |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |

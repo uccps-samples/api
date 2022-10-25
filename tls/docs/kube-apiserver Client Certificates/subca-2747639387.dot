@@ -6,7 +6,7 @@ digraph "Local Certificate" {
     fillcolor=white
   ];
   19 [
-    label="cabundle/kubelet-bootstrap-kubeconfig-signer\n\nconfigmaps/kubelet-bootstrap-kubeconfig -nopenshift-config-managed\n"
+    label="cabundle/kubelet-bootstrap-kubeconfig-signer\n\nconfigmaps/kubelet-bootstrap-kubeconfig -nuccp-config-managed\n"
     style=filled
     fillcolor="#fda172"
   ];

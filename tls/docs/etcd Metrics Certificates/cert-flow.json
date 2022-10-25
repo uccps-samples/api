@@ -10,31 +10,31 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-metric-serving-ca"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-metrics-proxy-client-ca"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-metrics-proxy-client-ca-2"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-metrics-proxy-client-ca-3"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-metrics-proxy-serving-ca"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-metrics-proxy-serving-ca-2"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-metrics-proxy-serving-ca-3"
             }
           ],
@@ -121,7 +121,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-metric-signer"
             }
           ],
@@ -165,7 +165,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-metric-client"
             }
           ],
@@ -212,7 +212,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-2"
             }
           ],
@@ -296,8 +296,8 @@
               "DNSNames": [
                 "etcd.kube-system.svc",
                 "etcd.kube-system.svc.cluster.local",
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local",
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local",
                 "localhost",
                 "::1",
                 "10.0.0.5",
@@ -331,7 +331,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-1"
             }
           ],
@@ -415,8 +415,8 @@
               "DNSNames": [
                 "etcd.kube-system.svc",
                 "etcd.kube-system.svc.cluster.local",
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local",
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local",
                 "localhost",
                 "::1",
                 "10.0.0.3",
@@ -450,7 +450,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-0"
             }
           ],
@@ -534,8 +534,8 @@
               "DNSNames": [
                 "etcd.kube-system.svc",
                 "etcd.kube-system.svc.cluster.local",
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local",
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local",
                 "localhost",
                 "::1",
                 "10.0.0.4",

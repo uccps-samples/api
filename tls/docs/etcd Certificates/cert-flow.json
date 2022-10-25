@@ -10,67 +10,67 @@
         "Spec": {
           "ConfigMapLocations": [
             {
-              "Namespace": "openshift-apiserver",
+              "Namespace": "uccp-apiserver",
               "Name": "etcd-serving-ca"
             },
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-ca-bundle"
             },
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-serving-ca"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-ca-bundle"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-peer-client-ca"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-peer-client-ca-2"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-peer-client-ca-3"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-ca"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-ca-2"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-ca-3"
             },
             {
-              "Namespace": "openshift-etcd-operator",
+              "Namespace": "uccp-etcd-operator",
               "Name": "etcd-ca-bundle"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-serving-ca"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-serving-ca-2"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-serving-ca-3"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-serving-ca-4"
             },
             {
-              "Namespace": "openshift-oauth-apiserver",
+              "Namespace": "uccp-oauth-apiserver",
               "Name": "etcd-serving-ca"
             }
           ],
@@ -178,7 +178,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-0"
             }
           ],
@@ -287,7 +287,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-signer"
             }
           ],
@@ -331,7 +331,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-2"
             }
           ],
@@ -415,8 +415,8 @@
               "DNSNames": [
                 "etcd.kube-system.svc",
                 "etcd.kube-system.svc.cluster.local",
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local",
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local",
                 "localhost",
                 "::1",
                 "10.0.0.5",
@@ -450,7 +450,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-1"
             }
           ],
@@ -534,8 +534,8 @@
               "DNSNames": [
                 "etcd.kube-system.svc",
                 "etcd.kube-system.svc.cluster.local",
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local",
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local",
                 "localhost",
                 "::1",
                 "10.0.0.3",
@@ -569,7 +569,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-serving-ci-ln-z2l4snt-f76d1-prqp5-master-0"
             }
           ],
@@ -653,8 +653,8 @@
               "DNSNames": [
                 "etcd.kube-system.svc",
                 "etcd.kube-system.svc.cluster.local",
-                "etcd.openshift-etcd.svc",
-                "etcd.openshift-etcd.svc.cluster.local",
+                "etcd.uccp-etcd.svc",
+                "etcd.uccp-etcd.svc.cluster.local",
                 "localhost",
                 "::1",
                 "10.0.0.4",
@@ -688,7 +688,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-2"
             }
           ],
@@ -797,7 +797,7 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-peer-ci-ln-z2l4snt-f76d1-prqp5-master-1"
             }
           ],
@@ -906,39 +906,39 @@
         "Spec": {
           "SecretLocations": [
             {
-              "Namespace": "openshift-apiserver",
+              "Namespace": "uccp-apiserver",
               "Name": "etcd-client"
             },
             {
-              "Namespace": "openshift-config",
+              "Namespace": "uccp-config",
               "Name": "etcd-client"
             },
             {
-              "Namespace": "openshift-etcd",
+              "Namespace": "uccp-etcd",
               "Name": "etcd-client"
             },
             {
-              "Namespace": "openshift-etcd-operator",
+              "Namespace": "uccp-etcd-operator",
               "Name": "etcd-client"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-client"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-client-2"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-client-3"
             },
             {
-              "Namespace": "openshift-kube-apiserver",
+              "Namespace": "uccp-kube-apiserver",
               "Name": "etcd-client-4"
             },
             {
-              "Namespace": "openshift-oauth-apiserver",
+              "Namespace": "uccp-oauth-apiserver",
               "Name": "etcd-client"
             }
           ],

@@ -15,7 +15,7 @@ func NewDefaults() (*args.GeneratorArgs, *CustomArgs) {
 	genericArgs := args.Default().WithoutDefaultFlagParsing()
 	customArgs := &CustomArgs{}
 	genericArgs.CustomArgs = (*CustomArgs)(customArgs) // convert to upstream type to make type-casts work there
-	genericArgs.OutputFileBaseName = "zz_generated.openshift_compatibility"
+	genericArgs.OutputFileBaseName = "zz_generated.uccp_compatibility"
 	return genericArgs, customArgs
 }
 

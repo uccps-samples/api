@@ -43,7 +43,7 @@ Used to access etcd metrics using mTLS.
 #### etcd-metric-signer Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-config | etcd-metric-signer |
+| uccp-config | etcd-metric-signer |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -70,14 +70,14 @@ Used to access etcd metrics using mTLS.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-metrics |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### etcd-metrics-for-master-ci-ln-z2l4snt-f76d1-prqp5-master-2 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
+| uccp-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -107,14 +107,14 @@ Used to access etcd metrics using mTLS.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-metrics |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### etcd-metrics-for-master-ci-ln-z2l4snt-f76d1-prqp5-master-1 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
+| uccp-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -144,14 +144,14 @@ Used to access etcd metrics using mTLS.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-metrics |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### etcd-metrics-for-master-ci-ln-z2l4snt-f76d1-prqp5-master-0 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
+| uccp-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -188,7 +188,7 @@ Used to access etcd metrics using mTLS.
 #### etcd-metric Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-config | etcd-metric-client |
+| uccp-config | etcd-metric-client |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -213,14 +213,14 @@ Used to access etcd metrics using mTLS.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-metrics |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.5<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### etcd-metrics-for-master-ci-ln-z2l4snt-f76d1-prqp5-master-2 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
+| uccp-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-2 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -250,14 +250,14 @@ Used to access etcd metrics using mTLS.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-metrics |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.3<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### etcd-metrics-for-master-ci-ln-z2l4snt-f76d1-prqp5-master-1 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
+| uccp-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-1 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -287,14 +287,14 @@ Used to access etcd metrics using mTLS.
 | Usages | - KeyUsageDigitalSignature<br/>- KeyUsageKeyEncipherment |
 | ExtendedUsages | - ExtKeyUsageClientAuth<br/>- ExtKeyUsageServerAuth |
 | Organizations (User Groups) | - system:etcd-metrics |
-| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.openshift-etcd.svc<br/>- etcd.openshift-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
+| DNS Names | - etcd.kube-system.svc<br/>- etcd.kube-system.svc.cluster.local<br/>- etcd.uccp-etcd.svc<br/>- etcd.uccp-etcd.svc.cluster.local<br/>- localhost<br/>- ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 | IP Addresses | - ::1<br/>- 10.0.0.4<br/>- 127.0.0.1<br/>- ::1 |
 
 
 #### etcd-metrics-for-master-ci-ln-z2l4snt-f76d1-prqp5-master-0 Locations
 | Namespace | Secret Name |
 | ----------- | ----------- |
-| openshift-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
+| uccp-etcd | etcd-serving-metrics-ci-ln-z2l4snt-f76d1-prqp5-master-0 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -329,13 +329,13 @@ CA used to recognize etcd metrics serving and client certificates.
 #### etcd-metrics-ca Locations
 | Namespace | ConfigMap Name |
 | ----------- | ----------- |
-| openshift-config | etcd-metric-serving-ca |
-| openshift-etcd | etcd-metrics-proxy-client-ca |
-| openshift-etcd | etcd-metrics-proxy-client-ca-2 |
-| openshift-etcd | etcd-metrics-proxy-client-ca-3 |
-| openshift-etcd | etcd-metrics-proxy-serving-ca |
-| openshift-etcd | etcd-metrics-proxy-serving-ca-2 |
-| openshift-etcd | etcd-metrics-proxy-serving-ca-3 |
+| uccp-config | etcd-metric-serving-ca |
+| uccp-etcd | etcd-metrics-proxy-client-ca |
+| uccp-etcd | etcd-metrics-proxy-client-ca-2 |
+| uccp-etcd | etcd-metrics-proxy-client-ca-3 |
+| uccp-etcd | etcd-metrics-proxy-serving-ca |
+| uccp-etcd | etcd-metrics-proxy-serving-ca-2 |
+| uccp-etcd | etcd-metrics-proxy-serving-ca-3 |
 
 | File | Permissions | User | Group | SE Linux |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
