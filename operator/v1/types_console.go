@@ -3,7 +3,7 @@ package v1
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 )
 
 // +genclient
@@ -48,7 +48,7 @@ type ConsoleSpec struct {
 type ConsoleConfigRoute struct {
 	// hostname is the desired custom domain under which console will be available.
 	Hostname string `json:"hostname"`
-	// secret points to secret in the openshift-config namespace that contains custom
+	// secret points to secret in the uccp-config namespace that contains custom
 	// certificate and key and needs to be created manually by the cluster admin.
 	// Referenced Secret is required to contain following key value pairs:
 	// - "tls.crt" - to specifies custom certificate
@@ -96,8 +96,8 @@ type ConsoleCustomization struct {
 	// +optional
 	CustomProductName string `json:"customProductName,omitempty"`
 	// customLogoFile replaces the default OpenShift logo in the masthead and about dialog. It is a reference to a
-	// ConfigMap in the openshift-config namespace. This can be created with a command like
-	// 'oc create configmap custom-logo --from-file=/path/to/file -n openshift-config'.
+	// ConfigMap in the uccp-config namespace. This can be created with a command like
+	// 'oc create configmap custom-logo --from-file=/path/to/file -n uccp-config'.
 	// Image size must be less than 1 MB due to constraints on the ConfigMap size.
 	// The ConfigMap key should include a file extension so that the console serves the file
 	// with the correct MIME type.
@@ -114,7 +114,7 @@ type Brand string
 
 const (
 	// Branding for OpenShift
-	BrandOpenShift Brand = "openshift"
+	BrandOpenShift Brand = "uccp"
 	// Branding for The Origin Community Distribution of Kubernetes
 	BrandOKD Brand = "okd"
 	// Branding for OpenShift Online

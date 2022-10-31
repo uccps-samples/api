@@ -3,15 +3,15 @@ package v1alpha1
 const (
 	// IdledAtAnnotation indicates that a given object (endpoints or scalable object))
 	// is currently idled (and the time at which it was idled)
-	IdledAtAnnotation = "idling.alpha.openshift.io/idled-at"
+	IdledAtAnnotation = "idling.alpha.uccp.io/idled-at"
 
 	// UnidleTargetAnnotation contains the references and former scales for the scalable
 	// objects associated with the idled endpoints
-	UnidleTargetAnnotation = "idling.alpha.openshift.io/unidle-targets"
+	UnidleTargetAnnotation = "idling.alpha.uccp.io/unidle-targets"
 
 	// PreviousScaleAnnotation contains the previous scale of a scalable object
 	// (currently only applied by the idler)
-	PreviousScaleAnnotation = "idling.alpha.openshift.io/previous-scale"
+	PreviousScaleAnnotation = "idling.alpha.uccp.io/previous-scale"
 
 	// NeedPodsReason is the reason for the event emitted to indicate that endpoints should be unidled
 	NeedPodsReason = "NeedPods"

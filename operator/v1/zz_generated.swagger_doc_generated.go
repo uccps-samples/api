@@ -118,7 +118,7 @@ func (AuthenticationList) SwaggerDoc() map[string]string {
 }
 
 var map_AuthenticationStatus = map[string]string{
-	"managingOAuthAPIServer": "ManagingOAuthAPIServer indicates whether this operator is managing OAuth related APIs. Setting this field to true will cause OAS-O to step down. Note that this field will be removed in the future releases, once https://github.com/openshift/enhancements/blob/master/enhancements/authentication/separate-oauth-resources.md is fully implemented",
+	"managingOAuthAPIServer": "ManagingOAuthAPIServer indicates whether this operator is managing OAuth related APIs. Setting this field to true will cause OAS-O to step down. Note that this field will be removed in the future releases, once https://github.com/uccps-samples/enhancements/blob/master/enhancements/authentication/separate-oauth-resources.md is fully implemented",
 	"oauthAPIServer":         "OAuthAPIServer holds status specific only to oauth-apiserver",
 }
 
@@ -189,7 +189,7 @@ func (Console) SwaggerDoc() map[string]string {
 var map_ConsoleConfigRoute = map[string]string{
 	"":         "ConsoleConfigRoute holds information on external route access to console.",
 	"hostname": "hostname is the desired custom domain under which console will be available.",
-	"secret":   "secret points to secret in the openshift-config namespace that contains custom certificate and key and needs to be created manually by the cluster admin. Referenced Secret is required to contain following key value pairs: - \"tls.crt\" - to specifies custom certificate - \"tls.key\" - to specifies private key of the custom certificate If the custom hostname uses the default routing suffix of the cluster, the Secret specification for a serving certificate will not be needed.",
+	"secret":   "secret points to secret in the uccp-config namespace that contains custom certificate and key and needs to be created manually by the cluster admin. Referenced Secret is required to contain following key value pairs: - \"tls.crt\" - to specifies custom certificate - \"tls.key\" - to specifies private key of the custom certificate If the custom hostname uses the default routing suffix of the cluster, the Secret specification for a serving certificate will not be needed.",
 }
 
 func (ConsoleConfigRoute) SwaggerDoc() map[string]string {
@@ -201,7 +201,7 @@ var map_ConsoleCustomization = map[string]string{
 	"brand":                "brand is the default branding of the web console which can be overridden by providing the brand field.  There is a limited set of specific brand options. This field controls elements of the console such as the logo. Invalid value will prevent a console rollout.",
 	"documentationBaseURL": "documentationBaseURL links to external documentation are shown in various sections of the web console.  Providing documentationBaseURL will override the default documentation URL. Invalid value will prevent a console rollout.",
 	"customProductName":    "customProductName is the name that will be displayed in page titles, logo alt text, and the about dialog instead of the normal OpenShift product name.",
-	"customLogoFile":       "customLogoFile replaces the default OpenShift logo in the masthead and about dialog. It is a reference to a ConfigMap in the openshift-config namespace. This can be created with a command like 'oc create configmap custom-logo --from-file=/path/to/file -n openshift-config'. Image size must be less than 1 MB due to constraints on the ConfigMap size. The ConfigMap key should include a file extension so that the console serves the file with the correct MIME type. Recommended logo specifications: Dimensions: Max height of 68px and max width of 200px SVG format preferred",
+	"customLogoFile":       "customLogoFile replaces the default OpenShift logo in the masthead and about dialog. It is a reference to a ConfigMap in the uccp-config namespace. This can be created with a command like 'oc create configmap custom-logo --from-file=/path/to/file -n uccp-config'. Image size must be less than 1 MB due to constraints on the ConfigMap size. The ConfigMap key should include a file extension so that the console serves the file with the correct MIME type. Recommended logo specifications: Dimensions: Max height of 68px and max width of 200px SVG format preferred",
 }
 
 func (ConsoleCustomization) SwaggerDoc() map[string]string {
@@ -437,7 +437,7 @@ func (ContainerLoggingDestinationParameters) SwaggerDoc() map[string]string {
 
 var map_EndpointPublishingStrategy = map[string]string{
 	"":             "EndpointPublishingStrategy is a way to publish the endpoints of an IngressController, and represents the type and any additional configuration for a specific type.",
-	"type":         "type is the publishing strategy to use. Valid values are:\n\n* LoadBalancerService\n\nPublishes the ingress controller using a Kubernetes LoadBalancer Service.\n\nIn this configuration, the ingress controller deployment uses container networking. A LoadBalancer Service is created to publish the deployment.\n\nSee: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer\n\nIf domain is set, a wildcard DNS record will be managed to point at the LoadBalancer Service's external name. DNS records are managed only in DNS zones defined by dns.config.openshift.io/cluster .spec.publicZone and .spec.privateZone.\n\nWildcard DNS management is currently supported only on the AWS, Azure, and GCP platforms.\n\n* HostNetwork\n\nPublishes the ingress controller on node ports where the ingress controller is deployed.\n\nIn this configuration, the ingress controller deployment uses host networking, bound to node ports 80 and 443. The user is responsible for configuring an external load balancer to publish the ingress controller via the node ports.\n\n* Private\n\nDoes not publish the ingress controller.\n\nIn this configuration, the ingress controller deployment uses container networking, and is not explicitly published. The user must manually publish the ingress controller.\n\n* NodePortService\n\nPublishes the ingress controller using a Kubernetes NodePort Service.\n\nIn this configuration, the ingress controller deployment uses container networking. A NodePort Service is created to publish the deployment. The specific node ports are dynamically allocated by OpenShift; however, to support static port allocations, user changes to the node port field of the managed NodePort Service will preserved.",
+	"type":         "type is the publishing strategy to use. Valid values are:\n\n* LoadBalancerService\n\nPublishes the ingress controller using a Kubernetes LoadBalancer Service.\n\nIn this configuration, the ingress controller deployment uses container networking. A LoadBalancer Service is created to publish the deployment.\n\nSee: https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer\n\nIf domain is set, a wildcard DNS record will be managed to point at the LoadBalancer Service's external name. DNS records are managed only in DNS zones defined by dns.config.uccp.io/cluster .spec.publicZone and .spec.privateZone.\n\nWildcard DNS management is currently supported only on the AWS, Azure, and GCP platforms.\n\n* HostNetwork\n\nPublishes the ingress controller on node ports where the ingress controller is deployed.\n\nIn this configuration, the ingress controller deployment uses host networking, bound to node ports 80 and 443. The user is responsible for configuring an external load balancer to publish the ingress controller via the node ports.\n\n* Private\n\nDoes not publish the ingress controller.\n\nIn this configuration, the ingress controller deployment uses container networking, and is not explicitly published. The user must manually publish the ingress controller.\n\n* NodePortService\n\nPublishes the ingress controller using a Kubernetes NodePort Service.\n\nIn this configuration, the ingress controller deployment uses container networking. A NodePort Service is created to publish the deployment. The specific node ports are dynamically allocated by OpenShift; however, to support static port allocations, user changes to the node port field of the managed NodePort Service will preserved.",
 	"loadBalancer": "loadBalancer holds parameters for the load balancer. Present only if type is LoadBalancerService.",
 	"hostNetwork":  "hostNetwork holds parameters for the HostNetwork endpoint publishing strategy. Present only if type is HostNetwork.",
 	"private":      "private holds parameters for the Private endpoint publishing strategy. Present only if type is Private.",
@@ -537,14 +537,14 @@ func (IngressControllerLogging) SwaggerDoc() map[string]string {
 
 var map_IngressControllerSpec = map[string]string{
 	"":                           "IngressControllerSpec is the specification of the desired behavior of the IngressController.",
-	"domain":                     "domain is a DNS name serviced by the ingress controller and is used to configure multiple features:\n\n* For the LoadBalancerService endpoint publishing strategy, domain is\n  used to configure DNS records. See endpointPublishingStrategy.\n\n* When using a generated default certificate, the certificate will be valid\n  for domain and its subdomains. See defaultCertificate.\n\n* The value is published to individual Route statuses so that end-users\n  know where to target external DNS records.\n\ndomain must be unique among all IngressControllers, and cannot be updated.\n\nIf empty, defaults to ingress.config.openshift.io/cluster .spec.domain.",
+	"domain":                     "domain is a DNS name serviced by the ingress controller and is used to configure multiple features:\n\n* For the LoadBalancerService endpoint publishing strategy, domain is\n  used to configure DNS records. See endpointPublishingStrategy.\n\n* When using a generated default certificate, the certificate will be valid\n  for domain and its subdomains. See defaultCertificate.\n\n* The value is published to individual Route statuses so that end-users\n  know where to target external DNS records.\n\ndomain must be unique among all IngressControllers, and cannot be updated.\n\nIf empty, defaults to ingress.config.uccp.io/cluster .spec.domain.",
 	"replicas":                   "replicas is the desired number of ingress controller replicas. If unset, defaults to 2.",
-	"endpointPublishingStrategy": "endpointPublishingStrategy is used to publish the ingress controller endpoints to other networks, enable load balancer integrations, etc.\n\nIf unset, the default is based on infrastructure.config.openshift.io/cluster .status.platform:\n\n  AWS:      LoadBalancerService (with External scope)\n  Azure:    LoadBalancerService (with External scope)\n  GCP:      LoadBalancerService (with External scope)\n  IBMCloud: LoadBalancerService (with External scope)\n  Libvirt:  HostNetwork\n\nAny other platform types (including None) default to HostNetwork.\n\nendpointPublishingStrategy cannot be updated.",
+	"endpointPublishingStrategy": "endpointPublishingStrategy is used to publish the ingress controller endpoints to other networks, enable load balancer integrations, etc.\n\nIf unset, the default is based on infrastructure.config.uccp.io/cluster .status.platform:\n\n  AWS:      LoadBalancerService (with External scope)\n  Azure:    LoadBalancerService (with External scope)\n  GCP:      LoadBalancerService (with External scope)\n  IBMCloud: LoadBalancerService (with External scope)\n  Libvirt:  HostNetwork\n\nAny other platform types (including None) default to HostNetwork.\n\nendpointPublishingStrategy cannot be updated.",
 	"defaultCertificate":         "defaultCertificate is a reference to a secret containing the default certificate served by the ingress controller. When Routes don't specify their own certificate, defaultCertificate is used.\n\nThe secret must contain the following keys and data:\n\n  tls.crt: certificate file contents\n  tls.key: key file contents\n\nIf unset, a wildcard certificate is automatically generated and used. The certificate is valid for the ingress controller domain (and subdomains) and the generated certificate's CA will be automatically integrated with the cluster's trust store.\n\nIf a wildcard certificate is used and shared by multiple HTTP/2 enabled routes (which implies ALPN) then clients (i.e., notably browsers) are at liberty to reuse open connections. This means a client can reuse a connection to another route and that is likely to fail. This behaviour is generally known as connection coalescing.\n\nThe in-use certificate (whether generated or user-specified) will be automatically integrated with OpenShift's built-in OAuth server.",
 	"namespaceSelector":          "namespaceSelector is used to filter the set of namespaces serviced by the ingress controller. This is useful for implementing shards.\n\nIf unset, the default is no filtering.",
 	"routeSelector":              "routeSelector is used to filter the set of Routes serviced by the ingress controller. This is useful for implementing shards.\n\nIf unset, the default is no filtering.",
 	"nodePlacement":              "nodePlacement enables explicit control over the scheduling of the ingress controller.\n\nIf unset, defaults are used. See NodePlacement for more details.",
-	"tlsSecurityProfile":         "tlsSecurityProfile specifies settings for TLS connections for ingresscontrollers.\n\nIf unset, the default is based on the apiservers.config.openshift.io/cluster resource.\n\nNote that when using the Old, Intermediate, and Modern profile types, the effective profile configuration is subject to change between releases. For example, given a specification to use the Intermediate profile deployed on release X.Y.Z, an upgrade to release X.Y.Z+1 may cause a new profile configuration to be applied to the ingress controller, resulting in a rollout.\n\nNote that the minimum TLS version for ingress controllers is 1.1, and the maximum TLS version is 1.2.  An implication of this restriction is that the Modern TLS profile type cannot be used because it requires TLS 1.3.",
+	"tlsSecurityProfile":         "tlsSecurityProfile specifies settings for TLS connections for ingresscontrollers.\n\nIf unset, the default is based on the apiservers.config.uccp.io/cluster resource.\n\nNote that when using the Old, Intermediate, and Modern profile types, the effective profile configuration is subject to change between releases. For example, given a specification to use the Intermediate profile deployed on release X.Y.Z, an upgrade to release X.Y.Z+1 may cause a new profile configuration to be applied to the ingress controller, resulting in a rollout.\n\nNote that the minimum TLS version for ingress controllers is 1.1, and the maximum TLS version is 1.2.  An implication of this restriction is that the Modern TLS profile type cannot be used because it requires TLS 1.3.",
 	"routeAdmission":             "routeAdmission defines a policy for handling new route claims (for example, to allow or deny claims across namespaces).\n\nIf empty, defaults will be applied. See specific routeAdmission fields for details about their defaults.",
 	"logging":                    "logging defines parameters for what should be logged where.  If this field is empty, operational logs are enabled but access logs are disabled.",
 	"httpHeaders":                "httpHeaders defines policy for HTTP headers.\n\nIf this field is empty, the default values are used.",
@@ -560,7 +560,7 @@ var map_IngressControllerStatus = map[string]string{
 	"selector":                   "selector is a label selector, in string format, for ingress controller pods corresponding to the IngressController. The number of matching pods should equal the value of availableReplicas.",
 	"domain":                     "domain is the actual domain in use.",
 	"endpointPublishingStrategy": "endpointPublishingStrategy is the actual strategy in use.",
-	"conditions":                 "conditions is a list of conditions and their status.\n\nAvailable means the ingress controller deployment is available and servicing route and ingress resources (i.e, .status.availableReplicas equals .spec.replicas)\n\nThere are additional conditions which indicate the status of other ingress controller features and capabilities.\n\n  * LoadBalancerManaged\n  - True if the following conditions are met:\n    * The endpoint publishing strategy requires a service load balancer.\n  - False if any of those conditions are unsatisfied.\n\n  * LoadBalancerReady\n  - True if the following conditions are met:\n    * A load balancer is managed.\n    * The load balancer is ready.\n  - False if any of those conditions are unsatisfied.\n\n  * DNSManaged\n  - True if the following conditions are met:\n    * The endpoint publishing strategy and platform support DNS.\n    * The ingress controller domain is set.\n    * dns.config.openshift.io/cluster configures DNS zones.\n  - False if any of those conditions are unsatisfied.\n\n  * DNSReady\n  - True if the following conditions are met:\n    * DNS is managed.\n    * DNS records have been successfully created.\n  - False if any of those conditions are unsatisfied.",
+	"conditions":                 "conditions is a list of conditions and their status.\n\nAvailable means the ingress controller deployment is available and servicing route and ingress resources (i.e, .status.availableReplicas equals .spec.replicas)\n\nThere are additional conditions which indicate the status of other ingress controller features and capabilities.\n\n  * LoadBalancerManaged\n  - True if the following conditions are met:\n    * The endpoint publishing strategy requires a service load balancer.\n  - False if any of those conditions are unsatisfied.\n\n  * LoadBalancerReady\n  - True if the following conditions are met:\n    * A load balancer is managed.\n    * The load balancer is ready.\n  - False if any of those conditions are unsatisfied.\n\n  * DNSManaged\n  - True if the following conditions are met:\n    * The endpoint publishing strategy and platform support DNS.\n    * The ingress controller domain is set.\n    * dns.config.uccp.io/cluster configures DNS zones.\n  - False if any of those conditions are unsatisfied.\n\n  * DNSReady\n  - True if the following conditions are met:\n    * DNS is managed.\n    * DNS records have been successfully created.\n  - False if any of those conditions are unsatisfied.",
 	"tlsProfile":                 "tlsProfile is the TLS connection configuration that is in effect.",
 	"observedGeneration":         "observedGeneration is the most recent generation observed.",
 }
@@ -629,7 +629,7 @@ func (ProviderLoadBalancerParameters) SwaggerDoc() map[string]string {
 var map_RouteAdmissionPolicy = map[string]string{
 	"":                   "RouteAdmissionPolicy is an admission policy for allowing new route claims.",
 	"namespaceOwnership": "namespaceOwnership describes how host name claims across namespaces should be handled.\n\nValue must be one of:\n\n- Strict: Do not allow routes in different namespaces to claim the same host.\n\n- InterNamespaceAllowed: Allow routes to claim different paths of the same\n  host name across namespaces.\n\nIf empty, the default is Strict.",
-	"wildcardPolicy":     "wildcardPolicy describes how routes with wildcard policies should be handled for the ingress controller. WildcardPolicy controls use of routes [1] exposed by the ingress controller based on the route's wildcard policy.\n\n[1] https://github.com/openshift/api/blob/master/route/v1/types.go\n\nNote: Updating WildcardPolicy from WildcardsAllowed to WildcardsDisallowed will cause admitted routes with a wildcard policy of Subdomain to stop working. These routes must be updated to a wildcard policy of None to be readmitted by the ingress controller.\n\nWildcardPolicy supports WildcardsAllowed and WildcardsDisallowed values.\n\nIf empty, defaults to \"WildcardsDisallowed\".",
+	"wildcardPolicy":     "wildcardPolicy describes how routes with wildcard policies should be handled for the ingress controller. WildcardPolicy controls use of routes [1] exposed by the ingress controller based on the route's wildcard policy.\n\n[1] https://github.com/uccps-samples/api/blob/master/route/v1/types.go\n\nNote: Updating WildcardPolicy from WildcardsAllowed to WildcardsDisallowed will cause admitted routes with a wildcard policy of Subdomain to stop working. These routes must be updated to a wildcard policy of None to be readmitted by the ingress controller.\n\nWildcardPolicy supports WildcardsAllowed and WildcardsDisallowed values.\n\nIf empty, defaults to \"WildcardsDisallowed\".",
 }
 
 func (RouteAdmissionPolicy) SwaggerDoc() map[string]string {
@@ -726,7 +726,7 @@ func (ClusterNetworkEntry) SwaggerDoc() map[string]string {
 var map_DefaultNetworkDefinition = map[string]string{
 	"":                    "DefaultNetworkDefinition represents a single network plugin's configuration. type must be specified, along with exactly one \"Config\" that matches the type.",
 	"type":                "type is the type of network All NetworkTypes are supported except for NetworkTypeRaw",
-	"openshiftSDNConfig":  "openShiftSDNConfig configures the openshift-sdn plugin",
+	"openshiftSDNConfig":  "openShiftSDNConfig configures the uccp-sdn plugin",
 	"ovnKubernetesConfig": "oVNKubernetesConfig configures the ovn-kubernetes plugin. This is currently not implemented.",
 	"kuryrConfig":         "KuryrConfig configures the kuryr plugin",
 }
@@ -793,7 +793,7 @@ var map_NetworkSpec = map[string]string{
 	"additionalNetworks":  "additionalNetworks is a list of extra networks to make available to pods when multiple networks are enabled.",
 	"disableMultiNetwork": "disableMultiNetwork specifies whether or not multiple pod network support should be disabled. If unset, this property defaults to 'false' and multiple network support is enabled.",
 	"deployKubeProxy":     "deployKubeProxy specifies whether or not a standalone kube-proxy should be deployed by the operator. Some network providers include kube-proxy or similar functionality. If unset, the plugin will attempt to select the correct value, which is false when OpenShift SDN and ovn-kubernetes are used and true otherwise.",
-	"kubeProxyConfig":     "kubeProxyConfig lets us configure desired proxy configuration. If not specified, sensible defaults will be chosen by OpenShift directly. Not consumed by all network providers - currently only openshift-sdn.",
+	"kubeProxyConfig":     "kubeProxyConfig lets us configure desired proxy configuration. If not specified, sensible defaults will be chosen by OpenShift directly. Not consumed by all network providers - currently only uccp-sdn.",
 	"logLevel":            "logLevel allows configuring the logging level of the components deployed by the operator. Currently only Kuryr SDN is affected by this setting. Please note that turning on extensive logging may affect performance. The default value is \"Normal\".",
 }
 
@@ -802,7 +802,7 @@ func (NetworkSpec) SwaggerDoc() map[string]string {
 }
 
 var map_NetworkStatus = map[string]string{
-	"": "NetworkStatus is currently unused. Instead, status is reported in the Network.config.openshift.io object.",
+	"": "NetworkStatus is currently unused. Instead, status is reported in the Network.config.uccp.io object.",
 }
 
 func (NetworkStatus) SwaggerDoc() map[string]string {
@@ -821,7 +821,7 @@ func (OVNKubernetesConfig) SwaggerDoc() map[string]string {
 }
 
 var map_OpenShiftSDNConfig = map[string]string{
-	"":                       "OpenShiftSDNConfig configures the three openshift-sdn plugins",
+	"":                       "OpenShiftSDNConfig configures the three uccp-sdn plugins",
 	"mode":                   "mode is one of \"Multitenant\", \"Subnet\", or \"NetworkPolicy\"",
 	"vxlanPort":              "vxlanPort is the port to use for all vxlan packets. The default is 4789.",
 	"mtu":                    "mtu is the mtu to use for the tunnel interface. Defaults to 1450 if unset. This must be 50 bytes smaller than the machine's uplink.",
@@ -899,7 +899,7 @@ func (StaticIPAMRoutes) SwaggerDoc() map[string]string {
 }
 
 var map_OpenShiftAPIServer = map[string]string{
-	"":       "OpenShiftAPIServer provides information to configure an operator to manage openshift-apiserver.",
+	"":       "OpenShiftAPIServer provides information to configure an operator to manage uccp-apiserver.",
 	"spec":   "spec is the specification of the desired behavior of the OpenShift API Server.",
 	"status": "status defines the observed status of the OpenShift API Server.",
 }
@@ -926,7 +926,7 @@ func (OpenShiftAPIServerStatus) SwaggerDoc() map[string]string {
 }
 
 var map_OpenShiftControllerManager = map[string]string{
-	"": "OpenShiftControllerManager provides information to configure an operator to manage openshift-controller-manager.",
+	"": "OpenShiftControllerManager provides information to configure an operator to manage uccp-controller-manager.",
 }
 
 func (OpenShiftControllerManager) SwaggerDoc() map[string]string {

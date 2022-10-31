@@ -18,7 +18,7 @@ var AllowAllCapabilities corev1.Capability = "*"
 // that will be applied to a container.
 // For historical reasons SCC was exposed under the core Kubernetes API group.
 // That exposure is deprecated and will be removed in a future release - users
-// should instead use the security.openshift.io group to manage
+// should instead use the security.uccp.io group to manage
 // SecurityContextConstraints.
 // +kubebuilder:printcolumn:name="Priv",type=string,JSONPath=`.allowPrivilegedContainer`,description="Determines if a container can request to be run as privileged"
 // +kubebuilder:printcolumn:name="Caps",type=string,JSONPath=`.allowedCapabilities`,description="A list of capabilities that can be requested to add to the container"

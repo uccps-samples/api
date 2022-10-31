@@ -139,8 +139,8 @@ type ClusterOperatorStatusCondition struct {
 type ClusterStatusConditionType string
 
 const (
-	// Available indicates that the operand (eg: openshift-apiserver for the
-	// openshift-apiserver-operator), is functional and available in the cluster.
+	// Available indicates that the operand (eg: uccp-apiserver for the
+	// uccp-apiserver-operator), is functional and available in the cluster.
 	OperatorAvailable ClusterStatusConditionType = "Available"
 
 	// Progressing indicates that the operator is actively rolling out new code,

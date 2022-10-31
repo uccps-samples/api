@@ -1,11 +1,11 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: authentications.config.openshift.io
+  name: authentications.config.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   names:
     kind: Authentication
     listKind: AuthenticationList
@@ -55,7 +55,7 @@ spec:
                 used to locate the data. If specified and the config map or expected
                 key is not found, no metadata is served. If the specified metadata
                 is not valid, no metadata is served. The namespace for this config
-                map is openshift-config.'
+                map is uccp-config.'
               type: object
               required:
               - name
@@ -86,7 +86,7 @@ spec:
                 kubeConfig:
                   description: "kubeConfig references a secret that contains kube
                     config file data which describes how to access the remote webhook
-                    service. The namespace for the referenced secret is openshift-config.
+                    service. The namespace for the referenced secret is uccp-config.
                     \n For further details, see: \n https://kubernetes.io/docs/reference/access-authn-authz/authentication/#webhook-token-authentication
                     \n The key \"kubeConfig\" is used to locate the data. If the secret
                     or expected key is not found, the webhook is not honored. If the
@@ -142,7 +142,7 @@ spec:
                 The key "oauthMetadata" is used to locate the data. If the config
                 map or expected key is not found, no metadata is served. If the specified
                 metadata is not valid, no metadata is served. The namespace for this
-                config map is openshift-config-managed.'
+                config map is uccp-config-managed.'
               type: object
               required:
               - name

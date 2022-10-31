@@ -10,7 +10,7 @@ import (
 
 // APIServer holds configuration (like serving certificates, client CA and CORS domains)
 // shared by all API servers in the system, among them especially kube-apiserver
-// and openshift-apiserver. The canonical name of an instance is 'cluster'.
+// and uccp-apiserver. The canonical name of an instance is 'cluster'.
 type APIServer struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
@@ -31,7 +31,7 @@ type APIServerSpec struct {
 	// clientCA references a ConfigMap containing a certificate bundle for the signers that will be recognized for
 	// incoming client certificates in addition to the operator managed signers. If this is empty, then only operator managed signers are valid.
 	// You usually only have to set this if you have your own PKI you wish to honor client certificates from.
-	// The ConfigMap must exist in the openshift-config namespace and contain the following required fields:
+	// The ConfigMap must exist in the uccp-config namespace and contain the following required fields:
 	// - ConfigMap.Data["ca-bundle.crt"] - CA bundle.
 	// +optional
 	ClientCA ConfigMapNameReference `json:"clientCA"`
@@ -51,7 +51,7 @@ type APIServerSpec struct {
 	// is VersionTLS12.
 	// +optional
 	TLSSecurityProfile *TLSSecurityProfile `json:"tlsSecurityProfile,omitempty"`
-	// audit specifies the settings for audit configuration to be applied to all OpenShift-provided
+	// audit specifies the settings for audit configuration to be applied to all uccp-provided
 	// API servers in the cluster.
 	// +optional
 	// +kubebuilder:default={profile: Default}
@@ -77,7 +77,7 @@ const (
 
 type Audit struct {
 	// profile specifies the name of the desired audit policy configuration to be deployed to
-	// all OpenShift-provided API servers in the cluster.
+	// all uccp-provided API servers in the cluster.
 	//
 	// The following profiles are provided:
 	// - Default: the existing default policy.
@@ -107,7 +107,7 @@ type APIServerNamedServingCert struct {
 	// +optional
 	Names []string `json:"names,omitempty"`
 	// servingCertificate references a kubernetes.io/tls type secret containing the TLS cert info for serving secure traffic.
-	// The secret must exist in the openshift-config namespace and contain the following required fields:
+	// The secret must exist in the uccp-config namespace and contain the following required fields:
 	// - Secret.Data["tls.key"] - TLS private key.
 	// - Secret.Data["tls.crt"] - TLS certificate.
 	ServingCertificate SecretNameReference `json:"servingCertificate"`
@@ -124,9 +124,9 @@ type APIServerEncryption struct {
 	//
 	//   1. secrets
 	//   2. configmaps
-	//   3. routes.route.openshift.io
-	//   4. oauthaccesstokens.oauth.openshift.io
-	//   5. oauthauthorizetokens.oauth.openshift.io
+	//   3. routes.route.uccp.io
+	//   4. oauthaccesstokens.oauth.uccp.io
+	//   5. oauthauthorizetokens.oauth.uccp.io
 	//
 	// +unionDiscriminator
 	// +optional

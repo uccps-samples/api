@@ -1,11 +1,11 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: builds.config.openshift.io
+  name: builds.config.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   scope: Cluster
   preserveUnknownFields: false
   names:
@@ -21,7 +21,7 @@ spec:
     status: {}
   "validation":
     "openAPIV3Schema":
-      description: "Build configures the behavior of OpenShift builds for the entire
+      description: "Build configures the behavior of Uccp builds for the entire
         cluster. This includes default settings that can be overridden in BuildConfig
         objects, and overrides which are applied to all builds. \n The canonical name
         is \"cluster\""
@@ -48,9 +48,9 @@ spec:
             additionalTrustedCA:
               description: "AdditionalTrustedCA is a reference to a ConfigMap containing
                 additional CAs that should be trusted for image pushes and pulls during
-                builds. The namespace for this config map is openshift-config. \n
+                builds. The namespace for this config map is uccp-config. \n
                 DEPRECATED: Additional CAs for image pull and push should be set on
-                image.config.openshift.io/cluster instead."
+                image.config.uccp.io/cluster instead."
               type: object
               required:
               - name
@@ -96,14 +96,14 @@ spec:
                         for reading the certificate bundle from the required key \"ca-bundle.crt\",
                         merging it with the system default trust bundle, and writing
                         the merged trust bundle to a ConfigMap named \"trusted-ca-bundle\"
-                        in the \"openshift-config-managed\" namespace. Clients that
+                        in the \"uccp-config-managed\" namespace. Clients that
                         expect to make proxy connections must use the trusted-ca-bundle
                         for all HTTPS requests to the proxy, and may use the trusted-ca-bundle
                         for non-proxy HTTPS requests as well. \n The namespace for
-                        the ConfigMap referenced by trustedCA is \"openshift-config\".
+                        the ConfigMap referenced by trustedCA is \"uccp-config\".
                         Here is an example ConfigMap (in yaml): \n apiVersion: v1
                         kind: ConfigMap metadata:  name: user-ca-bundle  namespace:
-                        openshift-config  data:    ca-bundle.crt: |      -----BEGIN
+                        uccp-config  data:    ca-bundle.crt: |      -----BEGIN
                         CERTIFICATE-----      Custom CA certificate bundle.      -----END
                         CERTIFICATE-----"
                       type: object
@@ -255,14 +255,14 @@ spec:
                         for reading the certificate bundle from the required key \"ca-bundle.crt\",
                         merging it with the system default trust bundle, and writing
                         the merged trust bundle to a ConfigMap named \"trusted-ca-bundle\"
-                        in the \"openshift-config-managed\" namespace. Clients that
+                        in the \"uccp-config-managed\" namespace. Clients that
                         expect to make proxy connections must use the trusted-ca-bundle
                         for all HTTPS requests to the proxy, and may use the trusted-ca-bundle
                         for non-proxy HTTPS requests as well. \n The namespace for
-                        the ConfigMap referenced by trustedCA is \"openshift-config\".
+                        the ConfigMap referenced by trustedCA is \"uccp-config\".
                         Here is an example ConfigMap (in yaml): \n apiVersion: v1
                         kind: ConfigMap metadata:  name: user-ca-bundle  namespace:
-                        openshift-config  data:    ca-bundle.crt: |      -----BEGIN
+                        uccp-config  data:    ca-bundle.crt: |      -----BEGIN
                         CERTIFICATE-----      Custom CA certificate bundle.      -----END
                         CERTIFICATE-----"
                       type: object

@@ -1,11 +1,11 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: apiservers.config.openshift.io
+  name: apiservers.config.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   scope: Cluster
   names:
     kind: APIServer
@@ -22,7 +22,7 @@ spec:
       "openAPIV3Schema":
         description: APIServer holds configuration (like serving certificates, client
           CA and CORS domains) shared by all API servers in the system, among them
-          especially kube-apiserver and openshift-apiserver. The canonical name of
+          especially kube-apiserver and uccp-apiserver. The canonical name of
           an instance is 'cluster'.
         type: object
         required:
@@ -56,14 +56,14 @@ spec:
                   type: string
               audit:
                 description: audit specifies the settings for audit configuration
-                  to be applied to all OpenShift-provided API servers in the cluster.
+                  to be applied to all uccp-provided API servers in the cluster.
                 type: object
                 default:
                   profile: Default
                 properties:
                   profile:
                     description: "profile specifies the name of the desired audit
-                      policy configuration to be deployed to all OpenShift-provided
+                      policy configuration to be deployed to all uccp-provided
                       API servers in the cluster. \n The following profiles are provided:
                       - Default: the existing default policy. - WriteRequestBodies:
                       like 'Default', but logs request and response HTTP payloads
@@ -83,7 +83,7 @@ spec:
                   certificates in addition to the operator managed signers. If this
                   is empty, then only operator managed signers are valid. You usually
                   only have to set this if you have your own PKI you wish to honor
-                  client certificates from. The ConfigMap must exist in the openshift-config
+                  client certificates from. The ConfigMap must exist in the uccp-config
                   namespace and contain the following required fields: - ConfigMap.Data["ca-bundle.crt"]
                   - CA bundle.'
                 type: object
@@ -110,8 +110,8 @@ spec:
                       resources shipped with the platform are encrypted. This list
                       of sensitive resources can and will change over time.  The current
                       authoritative list is: \n   1. secrets   2. configmaps   3.
-                      routes.route.openshift.io   4. oauthaccesstokens.oauth.openshift.io
-                      \  5. oauthauthorizetokens.oauth.openshift.io"
+                      routes.route.uccp.io   4. oauthaccesstokens.oauth.uccp.io
+                      \  5. oauthauthorizetokens.oauth.uccp.io"
                     type: string
                     enum:
                     - ""
@@ -148,7 +148,7 @@ spec:
                         servingCertificate:
                           description: 'servingCertificate references a kubernetes.io/tls
                             type secret containing the TLS cert info for serving secure
-                            traffic. The secret must exist in the openshift-config
+                            traffic. The secret must exist in the uccp-config
                             namespace and contain the following required fields: -
                             Secret.Data["tls.key"] - TLS private key. - Secret.Data["tls.crt"]
                             - TLS certificate.'

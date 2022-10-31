@@ -8,7 +8,7 @@ import (
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// OpenShiftControllerManager provides information to configure an operator to manage openshift-controller-manager.
+// OpenShiftControllerManager provides information to configure an operator to manage uccp-controller-manager.
 type OpenShiftControllerManager struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata"`

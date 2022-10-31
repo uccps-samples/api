@@ -3,6 +3,6 @@
 // +k8s:openapi-gen=true
 
 // +kubebuilder:validation:Optional
-// +groupName=helm.openshift.io
+// +groupName=helm.uccp.io
 // Package v1 is the v1 version of the API.
 package v1beta1

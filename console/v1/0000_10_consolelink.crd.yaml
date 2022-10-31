@@ -1,15 +1,15 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: consolelinks.console.openshift.io
+  name: consolelinks.console.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
     displayName: ConsoleLinks
-    description: Extension for customizing OpenShift web console links
+    description: Extension for customizing Uccp web console links
 spec:
   scope: Cluster
   preserveUnknownFields: false
-  group: console.openshift.io
+  group: console.uccp.io
   versions:
   - name: v1
     served: true
@@ -36,7 +36,7 @@ spec:
     status: {}
   "validation":
     "openAPIV3Schema":
-      description: ConsoleLink is an extension for customizing OpenShift web console
+      description: ConsoleLink is an extension for customizing Uccp web console
         links.
       type: object
       required:

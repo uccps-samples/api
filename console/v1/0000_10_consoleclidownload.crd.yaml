@@ -1,16 +1,16 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: consoleclidownloads.console.openshift.io
+  name: consoleclidownloads.console.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
     displayName: ConsoleCLIDownload
-    description: Extension for configuring openshift web console command line interface
+    description: Extension for configuring uccp web console command line interface
       (CLI) downloads.
 spec:
   scope: Cluster
   preserveUnknownFields: false
-  group: console.openshift.io
+  group: console.uccp.io
   versions:
   - name: v1
     served: true
@@ -31,7 +31,7 @@ spec:
     status: {}
   "validation":
     "openAPIV3Schema":
-      description: ConsoleCLIDownload is an extension for configuring openshift web
+      description: ConsoleCLIDownload is an extension for configuring uccp web
         console command line interface (CLI) downloads.
       type: object
       required:

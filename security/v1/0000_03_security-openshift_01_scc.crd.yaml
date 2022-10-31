@@ -1,11 +1,11 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: securitycontextconstraints.security.openshift.io
+  name: securitycontextconstraints.security.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
 spec:
-  group: security.openshift.io
+  group: security.uccp.io
   names:
     kind: SecurityContextConstraints
     listKind: SecurityContextConstraintsList
@@ -61,7 +61,7 @@ spec:
         that affect the SecurityContext that will be applied to a container. For historical
         reasons SCC was exposed under the core Kubernetes API group. That exposure
         is deprecated and will be removed in a future release - users should instead
-        use the security.openshift.io group to manage SecurityContextConstraints.
+        use the security.uccp.io group to manage SecurityContextConstraints.
       type: object
       required:
       - allowHostDirVolumePlugin

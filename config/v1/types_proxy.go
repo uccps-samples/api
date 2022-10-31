@@ -46,19 +46,19 @@ type ProxySpec struct {
 	// validator is responsible for reading the certificate bundle from the required
 	// key "ca-bundle.crt", merging it with the system default trust bundle,
 	// and writing the merged trust bundle to a ConfigMap named "trusted-ca-bundle"
-	// in the "openshift-config-managed" namespace. Clients that expect to make
+	// in the "uccp-config-managed" namespace. Clients that expect to make
 	// proxy connections must use the trusted-ca-bundle for all HTTPS requests to
 	// the proxy, and may use the trusted-ca-bundle for non-proxy HTTPS requests as
 	// well.
 	//
 	// The namespace for the ConfigMap referenced by trustedCA is
-	// "openshift-config". Here is an example ConfigMap (in yaml):
+	// "uccp-config". Here is an example ConfigMap (in yaml):
 	//
 	// apiVersion: v1
 	// kind: ConfigMap
 	// metadata:
 	//  name: user-ca-bundle
-	//  namespace: openshift-config
+	//  namespace: uccp-config
 	//  data:
 	//    ca-bundle.crt: |
 	//      -----BEGIN CERTIFICATE-----

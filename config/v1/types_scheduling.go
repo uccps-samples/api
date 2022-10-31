@@ -25,7 +25,7 @@ type SchedulerSpec struct {
 	// policy is a reference to a ConfigMap containing scheduler policy which has
 	// user specified predicates and priorities. If this ConfigMap is not available
 	// scheduler will default to use DefaultAlgorithmProvider.
-	// The namespace for this configmap is openshift-config.
+	// The namespace for this configmap is uccp-config.
 	// +optional
 	Policy ConfigMapNameReference `json:"policy"`
 	// defaultNodeSelector helps set the cluster-wide default node selector to
@@ -40,12 +40,12 @@ type SchedulerSpec struct {
 	// the namespace.
 	// For example, if a new namespace is created with
 	// node-selector='type=user-node,region=east',
-	// the annotation openshift.io/node-selector: type=user-node,region=east
-	// gets added to the project. When the openshift.io/node-selector annotation
+	// the annotation uccp.io/node-selector: type=user-node,region=east
+	// gets added to the project. When the uccp.io/node-selector annotation
 	// is set on the project the value is used in preference to the value we are setting
 	// for defaultNodeSelector field.
 	// For instance,
-	// openshift.io/node-selector: "type=user-node,region=west" means
+	// uccp.io/node-selector: "type=user-node,region=west" means
 	// that the default of "type=user-node,region=east" set in defaultNodeSelector
 	// would not be applied.
 	// +optional

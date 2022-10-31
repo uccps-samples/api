@@ -116,7 +116,7 @@ func (EtcdConnectionInfo) SwaggerDoc() map[string]string {
 }
 
 var map_EtcdStorageConfig = map[string]string{
-	"storagePrefix": "StoragePrefix is the path within etcd that the OpenShift resources will be rooted under. This value, if changed, will mean existing objects in etcd will no longer be located.",
+	"storagePrefix": "StoragePrefix is the path within etcd that the Uccp resources will be rooted under. This value, if changed, will mean existing objects in etcd will no longer be located.",
 }
 
 func (EtcdStorageConfig) SwaggerDoc() map[string]string {
@@ -244,7 +244,7 @@ func (StringSourceSpec) SwaggerDoc() map[string]string {
 }
 
 var map_APIServer = map[string]string{
-	"":       "APIServer holds configuration (like serving certificates, client CA and CORS domains) shared by all API servers in the system, among them especially kube-apiserver and openshift-apiserver. The canonical name of an instance is 'cluster'.",
+	"":       "APIServer holds configuration (like serving certificates, client CA and CORS domains) shared by all API servers in the system, among them especially kube-apiserver and uccp-apiserver. The canonical name of an instance is 'cluster'.",
 	"spec":   "spec holds user settable values for configuration",
 	"status": "status holds observed values from the cluster. They may not be overridden.",
 }
@@ -254,7 +254,7 @@ func (APIServer) SwaggerDoc() map[string]string {
 }
 
 var map_APIServerEncryption = map[string]string{
-	"type": "type defines what encryption type should be used to encrypt resources at the datastore layer. When this field is unset (i.e. when it is set to the empty string), identity is implied. The behavior of unset can and will change over time.  Even if encryption is enabled by default, the meaning of unset may change to a different encryption type based on changes in best practices.\n\nWhen encryption is enabled, all sensitive resources shipped with the platform are encrypted. This list of sensitive resources can and will change over time.  The current authoritative list is:\n\n  1. secrets\n  2. configmaps\n  3. routes.route.openshift.io\n  4. oauthaccesstokens.oauth.openshift.io\n  5. oauthauthorizetokens.oauth.openshift.io",
+	"type": "type defines what encryption type should be used to encrypt resources at the datastore layer. When this field is unset (i.e. when it is set to the empty string), identity is implied. The behavior of unset can and will change over time.  Even if encryption is enabled by default, the meaning of unset may change to a different encryption type based on changes in best practices.\n\nWhen encryption is enabled, all sensitive resources shipped with the platform are encrypted. This list of sensitive resources can and will change over time.  The current authoritative list is:\n\n  1. secrets\n  2. configmaps\n  3. routes.route.uccp.io\n  4. oauthaccesstokens.oauth.uccp.io\n  5. oauthauthorizetokens.oauth.uccp.io",
 }
 
 func (APIServerEncryption) SwaggerDoc() map[string]string {
@@ -264,7 +264,7 @@ func (APIServerEncryption) SwaggerDoc() map[string]string {
 var map_APIServerNamedServingCert = map[string]string{
 	"":                   "APIServerNamedServingCert maps a server DNS name, as understood by a client, to a certificate.",
 	"names":              "names is a optional list of explicit DNS names (leading wildcards allowed) that should use this certificate to serve secure traffic. If no names are provided, the implicit names will be extracted from the certificates. Exact names trump over wildcard names. Explicit names defined here trump over extracted implicit names.",
-	"servingCertificate": "servingCertificate references a kubernetes.io/tls type secret containing the TLS cert info for serving secure traffic. The secret must exist in the openshift-config namespace and contain the following required fields: - Secret.Data[\"tls.key\"] - TLS private key. - Secret.Data[\"tls.crt\"] - TLS certificate.",
+	"servingCertificate": "servingCertificate references a kubernetes.io/tls type secret containing the TLS cert info for serving secure traffic. The secret must exist in the uccp-config namespace and contain the following required fields: - Secret.Data[\"tls.key\"] - TLS private key. - Secret.Data[\"tls.crt\"] - TLS certificate.",
 }
 
 func (APIServerNamedServingCert) SwaggerDoc() map[string]string {
@@ -281,11 +281,11 @@ func (APIServerServingCerts) SwaggerDoc() map[string]string {
 
 var map_APIServerSpec = map[string]string{
 	"servingCerts":                 "servingCert is the TLS cert info for serving secure traffic. If not specified, operator managed certificates will be used for serving secure traffic.",
-	"clientCA":                     "clientCA references a ConfigMap containing a certificate bundle for the signers that will be recognized for incoming client certificates in addition to the operator managed signers. If this is empty, then only operator managed signers are valid. You usually only have to set this if you have your own PKI you wish to honor client certificates from. The ConfigMap must exist in the openshift-config namespace and contain the following required fields: - ConfigMap.Data[\"ca-bundle.crt\"] - CA bundle.",
+	"clientCA":                     "clientCA references a ConfigMap containing a certificate bundle for the signers that will be recognized for incoming client certificates in addition to the operator managed signers. If this is empty, then only operator managed signers are valid. You usually only have to set this if you have your own PKI you wish to honor client certificates from. The ConfigMap must exist in the uccp-config namespace and contain the following required fields: - ConfigMap.Data[\"ca-bundle.crt\"] - CA bundle.",
 	"additionalCORSAllowedOrigins": "additionalCORSAllowedOrigins lists additional, user-defined regular expressions describing hosts for which the API server allows access using the CORS headers. This may be needed to access the API and the integrated OAuth server from JavaScript applications. The values are regular expressions that correspond to the Golang regular expression language.",
 	"encryption":                   "encryption allows the configuration of encryption of resources at the datastore layer.",
 	"tlsSecurityProfile":           "tlsSecurityProfile specifies settings for TLS connections for externally exposed servers.\n\nIf unset, a default (which may change between releases) is chosen. Note that only Old and Intermediate profiles are currently supported, and the maximum available MinTLSVersions is VersionTLS12.",
-	"audit":                        "audit specifies the settings for audit configuration to be applied to all OpenShift-provided API servers in the cluster.",
+	"audit":                        "audit specifies the settings for audit configuration to be applied to all uccp-provided API servers in the cluster.",
 }
 
 func (APIServerSpec) SwaggerDoc() map[string]string {
@@ -293,7 +293,7 @@ func (APIServerSpec) SwaggerDoc() map[string]string {
 }
 
 var map_Audit = map[string]string{
-	"profile": "profile specifies the name of the desired audit policy configuration to be deployed to all OpenShift-provided API servers in the cluster.\n\nThe following profiles are provided: - Default: the existing default policy. - WriteRequestBodies: like 'Default', but logs request and response HTTP payloads for write requests (create, update, patch). - AllRequestBodies: like 'WriteRequestBodies', but also logs request and response HTTP payloads for read requests (get, list).\n\nIf unset, the 'Default' profile is used as the default.",
+	"profile": "profile specifies the name of the desired audit policy configuration to be deployed to all uccp-provided API servers in the cluster.\n\nThe following profiles are provided: - Default: the existing default policy. - WriteRequestBodies: like 'Default', but logs request and response HTTP payloads for write requests (create, update, patch). - AllRequestBodies: like 'WriteRequestBodies', but also logs request and response HTTP payloads for read requests (get, list).\n\nIf unset, the 'Default' profile is used as the default.",
 }
 
 func (Audit) SwaggerDoc() map[string]string {
@@ -312,7 +312,7 @@ func (Authentication) SwaggerDoc() map[string]string {
 
 var map_AuthenticationSpec = map[string]string{
 	"type":                       "type identifies the cluster managed, user facing authentication mode in use. Specifically, it manages the component that responds to login attempts. The default is IntegratedOAuth.",
-	"oauthMetadata":              "oauthMetadata contains the discovery endpoint data for OAuth 2.0 Authorization Server Metadata for an external OAuth server. This discovery document can be viewed from its served location: oc get --raw '/.well-known/oauth-authorization-server' For further details, see the IETF Draft: https://tools.ietf.org/html/draft-ietf-oauth-discovery-04#section-2 If oauthMetadata.name is non-empty, this value has precedence over any metadata reference stored in status. The key \"oauthMetadata\" is used to locate the data. If specified and the config map or expected key is not found, no metadata is served. If the specified metadata is not valid, no metadata is served. The namespace for this config map is openshift-config.",
+	"oauthMetadata":              "oauthMetadata contains the discovery endpoint data for OAuth 2.0 Authorization Server Metadata for an external OAuth server. This discovery document can be viewed from its served location: oc get --raw '/.well-known/oauth-authorization-server' For further details, see the IETF Draft: https://tools.ietf.org/html/draft-ietf-oauth-discovery-04#section-2 If oauthMetadata.name is non-empty, this value has precedence over any metadata reference stored in status. The key \"oauthMetadata\" is used to locate the data. If specified and the config map or expected key is not found, no metadata is served. If the specified metadata is not valid, no metadata is served. The namespace for this config map is uccp-config.",
 	"webhookTokenAuthenticators": "webhookTokenAuthenticators is DEPRECATED, setting it has no effect.",
 	"webhookTokenAuthenticator":  "webhookTokenAuthenticator configures a remote token reviewer. These remote authentication webhooks can be used to verify bearer tokens via the tokenreviews.authentication.k8s.io REST API. This is required to honor bearer tokens that are provisioned by an external authentication service.",
 	"serviceAccountIssuer":       "serviceAccountIssuer is the identifier of the bound service account token issuer. The default is https://kubernetes.default.svc",
@@ -323,7 +323,7 @@ func (AuthenticationSpec) SwaggerDoc() map[string]string {
 }
 
 var map_AuthenticationStatus = map[string]string{
-	"integratedOAuthMetadata": "integratedOAuthMetadata contains the discovery endpoint data for OAuth 2.0 Authorization Server Metadata for the in-cluster integrated OAuth server. This discovery document can be viewed from its served location: oc get --raw '/.well-known/oauth-authorization-server' For further details, see the IETF Draft: https://tools.ietf.org/html/draft-ietf-oauth-discovery-04#section-2 This contains the observed value based on cluster state. An explicitly set value in spec.oauthMetadata has precedence over this field. This field has no meaning if authentication spec.type is not set to IntegratedOAuth. The key \"oauthMetadata\" is used to locate the data. If the config map or expected key is not found, no metadata is served. If the specified metadata is not valid, no metadata is served. The namespace for this config map is openshift-config-managed.",
+	"integratedOAuthMetadata": "integratedOAuthMetadata contains the discovery endpoint data for OAuth 2.0 Authorization Server Metadata for the in-cluster integrated OAuth server. This discovery document can be viewed from its served location: oc get --raw '/.well-known/oauth-authorization-server' For further details, see the IETF Draft: https://tools.ietf.org/html/draft-ietf-oauth-discovery-04#section-2 This contains the observed value based on cluster state. An explicitly set value in spec.oauthMetadata has precedence over this field. This field has no meaning if authentication spec.type is not set to IntegratedOAuth. The key \"oauthMetadata\" is used to locate the data. If the config map or expected key is not found, no metadata is served. If the specified metadata is not valid, no metadata is served. The namespace for this config map is uccp-config-managed.",
 }
 
 func (AuthenticationStatus) SwaggerDoc() map[string]string {
@@ -341,7 +341,7 @@ func (DeprecatedWebhookTokenAuthenticator) SwaggerDoc() map[string]string {
 
 var map_WebhookTokenAuthenticator = map[string]string{
 	"":           "webhookTokenAuthenticator holds the necessary configuration options for a remote token authenticator",
-	"kubeConfig": "kubeConfig references a secret that contains kube config file data which describes how to access the remote webhook service. The namespace for the referenced secret is openshift-config.\n\nFor further details, see:\n\nhttps://kubernetes.io/docs/reference/access-authn-authz/authentication/#webhook-token-authentication\n\nThe key \"kubeConfig\" is used to locate the data. If the secret or expected key is not found, the webhook is not honored. If the specified kube config data is not valid, the webhook is not honored.",
+	"kubeConfig": "kubeConfig references a secret that contains kube config file data which describes how to access the remote webhook service. The namespace for the referenced secret is uccp-config.\n\nFor further details, see:\n\nhttps://kubernetes.io/docs/reference/access-authn-authz/authentication/#webhook-token-authentication\n\nThe key \"kubeConfig\" is used to locate the data. If the secret or expected key is not found, the webhook is not honored. If the specified kube config data is not valid, the webhook is not honored.",
 }
 
 func (WebhookTokenAuthenticator) SwaggerDoc() map[string]string {
@@ -349,7 +349,7 @@ func (WebhookTokenAuthenticator) SwaggerDoc() map[string]string {
 }
 
 var map_Build = map[string]string{
-	"":     "Build configures the behavior of OpenShift builds for the entire cluster. This includes default settings that can be overridden in BuildConfig objects, and overrides which are applied to all builds.\n\nThe canonical name is \"cluster\"",
+	"":     "Build configures the behavior of Uccp builds for the entire cluster. This includes default settings that can be overridden in BuildConfig objects, and overrides which are applied to all builds.\n\nThe canonical name is \"cluster\"",
 	"spec": "Spec holds user-settable values for the build controller configuration",
 }
 
@@ -381,7 +381,7 @@ func (BuildOverrides) SwaggerDoc() map[string]string {
 }
 
 var map_BuildSpec = map[string]string{
-	"additionalTrustedCA": "AdditionalTrustedCA is a reference to a ConfigMap containing additional CAs that should be trusted for image pushes and pulls during builds. The namespace for this config map is openshift-config.\n\nDEPRECATED: Additional CAs for image pull and push should be set on image.config.openshift.io/cluster instead.",
+	"additionalTrustedCA": "AdditionalTrustedCA is a reference to a ConfigMap containing additional CAs that should be trusted for image pushes and pulls during builds. The namespace for this config map is uccp-config.\n\nDEPRECATED: Additional CAs for image pull and push should be set on image.config.uccp.io/cluster instead.",
 	"buildDefaults":       "BuildDefaults controls the default information for Builds",
 	"buildOverrides":      "BuildOverrides controls override settings for builds",
 }
@@ -530,7 +530,7 @@ func (ComponentOverride) SwaggerDoc() map[string]string {
 }
 
 var map_Release = map[string]string{
-	"":         "Release represents an OpenShift release image and associated metadata.",
+	"":         "Release represents an Uccp release image and associated metadata.",
 	"version":  "version is a semantic versioning identifying the update version. When this field is part of spec, version is optional if image is specified.",
 	"image":    "image is a container image location that contains the update. When this field is part of spec, image is optional if version is specified and the availableUpdates field contains a matching version.",
 	"url":      "url contains information about this release. This URL is set by the 'url' metadata property on a release or the metadata returned by the update API and should be displayed as a link in user interfaces. The URL field may not be set for test or nightly releases.",
@@ -613,7 +613,7 @@ func (DNS) SwaggerDoc() map[string]string {
 }
 
 var map_DNSSpec = map[string]string{
-	"baseDomain":  "baseDomain is the base domain of the cluster. All managed DNS records will be sub-domains of this base.\n\nFor example, given the base domain `openshift.example.com`, an API server DNS record may be created for `cluster-api.openshift.example.com`.\n\nOnce set, this field cannot be changed.",
+	"baseDomain":  "baseDomain is the base domain of the cluster. All managed DNS records will be sub-domains of this base.\n\nFor example, given the base domain `uccp.example.com`, an API server DNS record may be created for `cluster-api.uccp.example.com`.\n\nOnce set, this field cannot be changed.",
 	"publicZone":  "publicZone is the location where all the DNS records that are publicly accessible to the internet exist.\n\nIf this field is nil, no public records should be created.\n\nOnce set, this field cannot be changed.",
 	"privateZone": "privateZone is the location where all the DNS records that are only available internally to the cluster exist.\n\nIf this field is nil, no private records should be created.\n\nOnce set, this field cannot be changed.",
 }
@@ -661,7 +661,7 @@ func (FeatureGateSelection) SwaggerDoc() map[string]string {
 }
 
 var map_Image = map[string]string{
-	"":       "Image governs policies related to imagestream imports and runtime configuration for external registries. It allows cluster admins to configure which registries OpenShift is allowed to import images from, extra CA trust bundles for external registries, and policies to block or allow registry hostnames. When exposing OpenShift's image registry to the public, this also lets cluster admins specify the external hostname.",
+	"":       "Image governs policies related to imagestream imports and runtime configuration for external registries. It allows cluster admins to configure which registries Uccp is allowed to import images from, extra CA trust bundles for external registries, and policies to block or allow registry hostnames. When exposing Uccp's image registry to the public, this also lets cluster admins specify the external hostname.",
 	"spec":   "spec holds user settable values for configuration",
 	"status": "status holds observed values from the cluster. They may not be overridden.",
 }
@@ -673,7 +673,7 @@ func (Image) SwaggerDoc() map[string]string {
 var map_ImageSpec = map[string]string{
 	"allowedRegistriesForImport": "allowedRegistriesForImport limits the container image registries that normal users may import images from. Set this list to the registries that you trust to contain valid Docker images and that you want applications to be able to import from. Users with permission to create Images or ImageStreamMappings via the API are not affected by this policy - typically only administrators or system integrations will have those permissions.",
 	"externalRegistryHostnames":  "externalRegistryHostnames provides the hostnames for the default external image registry. The external hostname should be set only when the image registry is exposed externally. The first value is used in 'publicDockerImageRepository' field in ImageStreams. The value must be in \"hostname[:port]\" format.",
-	"additionalTrustedCA":        "additionalTrustedCA is a reference to a ConfigMap containing additional CAs that should be trusted during imagestream import, pod image pull, build image pull, and imageregistry pullthrough. The namespace for this config map is openshift-config.",
+	"additionalTrustedCA":        "additionalTrustedCA is a reference to a ConfigMap containing additional CAs that should be trusted during imagestream import, pod image pull, build image pull, and imageregistry pullthrough. The namespace for this config map is uccp-config.",
 	"registrySources":            "registrySources contains configuration that determines how the container runtime should treat individual registries when accessing images for builds+pods. (e.g. whether or not to allow insecure access).  It does not contain configuration for the internal cluster registry.",
 }
 
@@ -682,7 +682,7 @@ func (ImageSpec) SwaggerDoc() map[string]string {
 }
 
 var map_ImageStatus = map[string]string{
-	"internalRegistryHostname":  "internalRegistryHostname sets the hostname for the default internal image registry. The value must be in \"hostname[:port]\" format. This value is set by the image registry operator which controls the internal registry hostname. For backward compatibility, users can still use OPENSHIFT_DEFAULT_REGISTRY environment variable but this setting overrides the environment variable.",
+	"internalRegistryHostname":  "internalRegistryHostname sets the hostname for the default internal image registry. The value must be in \"hostname[:port]\" format. This value is set by the image registry operator which controls the internal registry hostname. For backward compatibility, users can still use UCCP_DEFAULT_REGISTRY environment variable but this setting overrides the environment variable.",
 	"externalRegistryHostnames": "externalRegistryHostnames provides the hostnames for the default external image registry. The external hostname should be set only when the image registry is exposed externally. The first value is used in 'publicDockerImageRepository' field in ImageStreams. The value must be in \"hostname[:port]\" format.",
 }
 
@@ -768,7 +768,7 @@ func (BareMetalPlatformSpec) SwaggerDoc() map[string]string {
 }
 
 var map_BareMetalPlatformStatus = map[string]string{
-	"":                    "BareMetalPlatformStatus holds the current status of the BareMetal infrastructure provider. For more information about the network architecture used with the BareMetal platform type, see: https://github.com/openshift/installer/blob/master/docs/design/baremetal/networking-infrastructure.md",
+	"":                    "BareMetalPlatformStatus holds the current status of the BareMetal infrastructure provider. For more information about the network architecture used with the BareMetal platform type, see: https://github.com/uccps-samples/installer/blob/master/docs/design/baremetal/networking-infrastructure.md",
 	"apiServerInternalIP": "apiServerInternalIP is an IP address to contact the Kubernetes API server that can be used by components inside the cluster, like kubelets using the infrastructure rather than Kubernetes networking. It is the IP that the Infrastructure.status.apiServerInternalURI points to. It is the IP for a self-hosted load balancer in front of the API servers.",
 	"ingressIP":           "ingressIP is an external IP which routes to the default ingress controller. The IP is a suitable target of a wildcard DNS record used to resolve default route host names.",
 	"nodeDNSIP":           "nodeDNSIP is the IP address for the internal DNS used by the nodes. Unlike the one managed by the DNS operator, `NodeDNSIP` provides name resolution for the nodes themselves. There is no DNS-as-a-service for BareMetal deployments. In order to minimize necessary changes to the datacenter DNS, a DNS service is hosted as a static pod to serve those hostnames to the nodes in the cluster.",
@@ -835,7 +835,7 @@ func (InfrastructureList) SwaggerDoc() map[string]string {
 
 var map_InfrastructureSpec = map[string]string{
 	"":             "InfrastructureSpec contains settings that apply to the cluster infrastructure.",
-	"cloudConfig":  "cloudConfig is a reference to a ConfigMap containing the cloud provider configuration file. This configuration file is used to configure the Kubernetes cloud provider integration when using the built-in cloud provider integration or the external cloud controller manager. The namespace for this config map is openshift-config.\n\ncloudConfig should only be consumed by the kube_cloud_config controller. The controller is responsible for using the user configuration in the spec for various platforms and combining that with the user provided ConfigMap in this field to create a stitched kube cloud config. The controller generates a ConfigMap `kube-cloud-config` in `openshift-config-managed` namespace with the kube cloud config is stored in `cloud.conf` key. All the clients are expected to use the generated ConfigMap only.",
+	"cloudConfig":  "cloudConfig is a reference to a ConfigMap containing the cloud provider configuration file. This configuration file is used to configure the Kubernetes cloud provider integration when using the built-in cloud provider integration or the external cloud controller manager. The namespace for this config map is uccp-config.\n\ncloudConfig should only be consumed by the kube_cloud_config controller. The controller is responsible for using the user configuration in the spec for various platforms and combining that with the user provided ConfigMap in this field to create a stitched kube cloud config. The controller generates a ConfigMap `kube-cloud-config` in `uccp-config-managed` namespace with the kube cloud config is stored in `cloud.conf` key. All the clients are expected to use the generated ConfigMap only.",
 	"platformSpec": "platformSpec holds desired information specific to the underlying infrastructure provider.",
 }
 
@@ -980,7 +980,7 @@ func (ClusterNetworkEntry) SwaggerDoc() map[string]string {
 var map_ExternalIPConfig = map[string]string{
 	"":                "ExternalIPConfig specifies some IP blocks relevant for the ExternalIP field of a Service resource.",
 	"policy":          "policy is a set of restrictions applied to the ExternalIP field. If nil or empty, then ExternalIP is not allowed to be set.",
-	"autoAssignCIDRs": "autoAssignCIDRs is a list of CIDRs from which to automatically assign Service.ExternalIP. These are assigned when the service is of type LoadBalancer. In general, this is only useful for bare-metal clusters. In Openshift 3.x, this was misleadingly called \"IngressIPs\". Automatically assigned External IPs are not affected by any ExternalIPPolicy rules. Currently, only one entry may be provided.",
+	"autoAssignCIDRs": "autoAssignCIDRs is a list of CIDRs from which to automatically assign Service.ExternalIP. These are assigned when the service is of type LoadBalancer. In general, this is only useful for bare-metal clusters.",
 }
 
 func (ExternalIPConfig) SwaggerDoc() map[string]string {
@@ -1043,11 +1043,11 @@ func (BasicAuthIdentityProvider) SwaggerDoc() map[string]string {
 var map_GitHubIdentityProvider = map[string]string{
 	"":              "GitHubIdentityProvider provides identities for users authenticating using GitHub credentials",
 	"clientID":      "clientID is the oauth client ID",
-	"clientSecret":  "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is openshift-config.",
+	"clientSecret":  "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is uccp-config.",
 	"organizations": "organizations optionally restricts which organizations are allowed to log in",
 	"teams":         "teams optionally restricts which teams are allowed to log in. Format is <org>/<team>.",
 	"hostname":      "hostname is the optional domain (e.g. \"mycompany.com\") for use with a hosted instance of GitHub Enterprise. It must match the GitHub Enterprise settings value configured at /setup/settings#hostname.",
-	"ca":            "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. This can only be configured when hostname is set to a non-empty value. The namespace for this config map is openshift-config.",
+	"ca":            "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. This can only be configured when hostname is set to a non-empty value. The namespace for this config map is uccp-config.",
 }
 
 func (GitHubIdentityProvider) SwaggerDoc() map[string]string {
@@ -1057,9 +1057,9 @@ func (GitHubIdentityProvider) SwaggerDoc() map[string]string {
 var map_GitLabIdentityProvider = map[string]string{
 	"":             "GitLabIdentityProvider provides identities for users authenticating using GitLab credentials",
 	"clientID":     "clientID is the oauth client ID",
-	"clientSecret": "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is openshift-config.",
+	"clientSecret": "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is uccp-config.",
 	"url":          "url is the oauth server base URL",
-	"ca":           "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is openshift-config.",
+	"ca":           "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is uccp-config.",
 }
 
 func (GitLabIdentityProvider) SwaggerDoc() map[string]string {
@@ -1069,7 +1069,7 @@ func (GitLabIdentityProvider) SwaggerDoc() map[string]string {
 var map_GoogleIdentityProvider = map[string]string{
 	"":             "GoogleIdentityProvider provides identities for users authenticating using Google credentials",
 	"clientID":     "clientID is the oauth client ID",
-	"clientSecret": "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is openshift-config.",
+	"clientSecret": "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is uccp-config.",
 	"hostedDomain": "hostedDomain is the optional Google App domain (e.g. \"mycompany.com\") to restrict logins to",
 }
 
@@ -1079,7 +1079,7 @@ func (GoogleIdentityProvider) SwaggerDoc() map[string]string {
 
 var map_HTPasswdIdentityProvider = map[string]string{
 	"":         "HTPasswdPasswordIdentityProvider provides identities for users authenticating using htpasswd credentials",
-	"fileData": "fileData is a required reference to a secret by name containing the data to use as the htpasswd file. The key \"htpasswd\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. If the specified htpasswd data is not valid, the identity provider is not honored. The namespace for this secret is openshift-config.",
+	"fileData": "fileData is a required reference to a secret by name containing the data to use as the htpasswd file. The key \"htpasswd\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. If the specified htpasswd data is not valid, the identity provider is not honored. The namespace for this secret is uccp-config.",
 }
 
 func (HTPasswdIdentityProvider) SwaggerDoc() map[string]string {
@@ -1088,7 +1088,7 @@ func (HTPasswdIdentityProvider) SwaggerDoc() map[string]string {
 
 var map_IdentityProvider = map[string]string{
 	"":              "IdentityProvider provides identities for users authenticating using credentials",
-	"name":          "name is used to qualify the identities returned by this provider. - It MUST be unique and not shared by any other identity provider used - It MUST be a valid path segment: name cannot equal \".\" or \"..\" or contain \"/\" or \"%\" or \":\"\n  Ref: https://godoc.org/github.com/openshift/origin/pkg/user/apis/user/validation#ValidateIdentityProviderName",
+	"name":          "name is used to qualify the identities returned by this provider. - It MUST be unique and not shared by any other identity provider used - It MUST be a valid path segment: name cannot equal \".\" or \"..\" or contain \"/\" or \"%\" or \":\"\n  Ref: https://godoc.org/github.com/uccps-samples/origin/pkg/user/apis/user/validation#ValidateIdentityProviderName",
 	"mappingMethod": "mappingMethod determines how identities from this provider are mapped to users Defaults to \"claim\"",
 }
 
@@ -1124,7 +1124,7 @@ func (KeystoneIdentityProvider) SwaggerDoc() map[string]string {
 }
 
 var map_LDAPAttributeMapping = map[string]string{
-	"":                  "LDAPAttributeMapping maps LDAP attributes to OpenShift identity fields",
+	"":                  "LDAPAttributeMapping maps LDAP attributes to Uccp identity fields",
 	"id":                "id is the list of attributes whose values should be used as the user ID. Required. First non-empty attribute is used. At least one attribute is required. If none of the listed attribute have a value, authentication fails. LDAP standard identity attribute is \"dn\"",
 	"preferredUsername": "preferredUsername is the list of attributes whose values should be used as the preferred username. LDAP standard login attribute is \"uid\"",
 	"name":              "name is the list of attributes whose values should be used as the display name. Optional. If unspecified, no display name is set for the identity LDAP standard display name attribute is \"cn\"",
@@ -1139,9 +1139,9 @@ var map_LDAPIdentityProvider = map[string]string{
 	"":             "LDAPPasswordIdentityProvider provides identities for users authenticating using LDAP credentials",
 	"url":          "url is an RFC 2255 URL which specifies the LDAP search parameters to use. The syntax of the URL is: ldap://host:port/basedn?attribute?scope?filter",
 	"bindDN":       "bindDN is an optional DN to bind with during the search phase.",
-	"bindPassword": "bindPassword is an optional reference to a secret by name containing a password to bind with during the search phase. The key \"bindPassword\" is used to locate the data. If specified and the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is openshift-config.",
+	"bindPassword": "bindPassword is an optional reference to a secret by name containing a password to bind with during the search phase. The key \"bindPassword\" is used to locate the data. If specified and the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is uccp-config.",
 	"insecure":     "insecure, if true, indicates the connection should not use TLS WARNING: Should not be set to `true` with the URL scheme \"ldaps://\" as \"ldaps://\" URLs always\n         attempt to connect using TLS, even when `insecure` is set to `true`\nWhen `true`, \"ldap://\" URLS connect insecurely. When `false`, \"ldap://\" URLs are upgraded to a TLS connection using StartTLS as specified in https://tools.ietf.org/html/rfc2830.",
-	"ca":           "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is openshift-config.",
+	"ca":           "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is uccp-config.",
 	"attributes":   "attributes maps LDAP attributes to identities",
 }
 
@@ -1162,9 +1162,9 @@ func (OAuth) SwaggerDoc() map[string]string {
 var map_OAuthRemoteConnectionInfo = map[string]string{
 	"":              "OAuthRemoteConnectionInfo holds information necessary for establishing a remote connection",
 	"url":           "url is the remote URL to connect to",
-	"ca":            "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is openshift-config.",
-	"tlsClientCert": "tlsClientCert is an optional reference to a secret by name that contains the PEM-encoded TLS client certificate to present when connecting to the server. The key \"tls.crt\" is used to locate the data. If specified and the secret or expected key is not found, the identity provider is not honored. If the specified certificate data is not valid, the identity provider is not honored. The namespace for this secret is openshift-config.",
-	"tlsClientKey":  "tlsClientKey is an optional reference to a secret by name that contains the PEM-encoded TLS private key for the client certificate referenced in tlsClientCert. The key \"tls.key\" is used to locate the data. If specified and the secret or expected key is not found, the identity provider is not honored. If the specified certificate data is not valid, the identity provider is not honored. The namespace for this secret is openshift-config.",
+	"ca":            "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is uccp-config.",
+	"tlsClientCert": "tlsClientCert is an optional reference to a secret by name that contains the PEM-encoded TLS client certificate to present when connecting to the server. The key \"tls.crt\" is used to locate the data. If specified and the secret or expected key is not found, the identity provider is not honored. If the specified certificate data is not valid, the identity provider is not honored. The namespace for this secret is uccp-config.",
+	"tlsClientKey":  "tlsClientKey is an optional reference to a secret by name that contains the PEM-encoded TLS private key for the client certificate referenced in tlsClientCert. The key \"tls.key\" is used to locate the data. If specified and the secret or expected key is not found, the identity provider is not honored. If the specified certificate data is not valid, the identity provider is not honored. The namespace for this secret is uccp-config.",
 }
 
 func (OAuthRemoteConnectionInfo) SwaggerDoc() map[string]string {
@@ -1192,9 +1192,9 @@ func (OAuthStatus) SwaggerDoc() map[string]string {
 
 var map_OAuthTemplates = map[string]string{
 	"":                  "OAuthTemplates allow for customization of pages like the login page",
-	"login":             "login is the name of a secret that specifies a go template to use to render the login page. The key \"login.html\" is used to locate the template data. If specified and the secret or expected key is not found, the default login page is used. If the specified template is not valid, the default login page is used. If unspecified, the default login page is used. The namespace for this secret is openshift-config.",
-	"providerSelection": "providerSelection is the name of a secret that specifies a go template to use to render the provider selection page. The key \"providers.html\" is used to locate the template data. If specified and the secret or expected key is not found, the default provider selection page is used. If the specified template is not valid, the default provider selection page is used. If unspecified, the default provider selection page is used. The namespace for this secret is openshift-config.",
-	"error":             "error is the name of a secret that specifies a go template to use to render error pages during the authentication or grant flow. The key \"errors.html\" is used to locate the template data. If specified and the secret or expected key is not found, the default error page is used. If the specified template is not valid, the default error page is used. If unspecified, the default error page is used. The namespace for this secret is openshift-config.",
+	"login":             "login is the name of a secret that specifies a go template to use to render the login page. The key \"login.html\" is used to locate the template data. If specified and the secret or expected key is not found, the default login page is used. If the specified template is not valid, the default login page is used. If unspecified, the default login page is used. The namespace for this secret is uccp-config.",
+	"providerSelection": "providerSelection is the name of a secret that specifies a go template to use to render the provider selection page. The key \"providers.html\" is used to locate the template data. If specified and the secret or expected key is not found, the default provider selection page is used. If the specified template is not valid, the default provider selection page is used. If unspecified, the default provider selection page is used. The namespace for this secret is uccp-config.",
+	"error":             "error is the name of a secret that specifies a go template to use to render error pages during the authentication or grant flow. The key \"errors.html\" is used to locate the template data. If specified and the secret or expected key is not found, the default error page is used. If the specified template is not valid, the default error page is used. If unspecified, the default error page is used. The namespace for this secret is uccp-config.",
 }
 
 func (OAuthTemplates) SwaggerDoc() map[string]string {
@@ -1215,8 +1215,8 @@ func (OpenIDClaims) SwaggerDoc() map[string]string {
 var map_OpenIDIdentityProvider = map[string]string{
 	"":                         "OpenIDIdentityProvider provides identities for users authenticating using OpenID credentials",
 	"clientID":                 "clientID is the oauth client ID",
-	"clientSecret":             "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is openshift-config.",
-	"ca":                       "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is openshift-config.",
+	"clientSecret":             "clientSecret is a required reference to the secret by name containing the oauth client secret. The key \"clientSecret\" is used to locate the data. If the secret or expected key is not found, the identity provider is not honored. The namespace for this secret is uccp-config.",
+	"ca":                       "ca is an optional reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. The key \"ca.crt\" is used to locate the data. If specified and the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. If empty, the default system roots are used. The namespace for this config map is uccp-config.",
 	"extraScopes":              "extraScopes are any scopes to request in addition to the standard \"openid\" scope.",
 	"extraAuthorizeParameters": "extraAuthorizeParameters are any custom parameters to add to the authorize request.",
 	"issuer":                   "issuer is the URL that the OpenID Provider asserts as its Issuer Identifier. It must use the https scheme with no query or fragment component.",
@@ -1231,7 +1231,7 @@ var map_RequestHeaderIdentityProvider = map[string]string{
 	"":                         "RequestHeaderIdentityProvider provides identities for users authenticating using request header credentials",
 	"loginURL":                 "loginURL is a URL to redirect unauthenticated /authorize requests to Unauthenticated requests from OAuth clients which expect interactive logins will be redirected here ${url} is replaced with the current URL, escaped to be safe in a query parameter\n  https://www.example.com/sso-login?then=${url}\n${query} is replaced with the current query string\n  https://www.example.com/auth-proxy/oauth/authorize?${query}\nRequired when login is set to true.",
 	"challengeURL":             "challengeURL is a URL to redirect unauthenticated /authorize requests to Unauthenticated requests from OAuth clients which expect WWW-Authenticate challenges will be redirected here. ${url} is replaced with the current URL, escaped to be safe in a query parameter\n  https://www.example.com/sso-login?then=${url}\n${query} is replaced with the current query string\n  https://www.example.com/auth-proxy/oauth/authorize?${query}\nRequired when challenge is set to true.",
-	"ca":                       "ca is a required reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. Specifically, it allows verification of incoming requests to prevent header spoofing. The key \"ca.crt\" is used to locate the data. If the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. The namespace for this config map is openshift-config.",
+	"ca":                       "ca is a required reference to a config map by name containing the PEM-encoded CA bundle. It is used as a trust anchor to validate the TLS certificate presented by the remote server. Specifically, it allows verification of incoming requests to prevent header spoofing. The key \"ca.crt\" is used to locate the data. If the config map or expected key is not found, the identity provider is not honored. If the specified ca data is not valid, the identity provider is not honored. The namespace for this config map is uccp-config.",
 	"clientCommonNames":        "clientCommonNames is an optional list of common names to require a match from. If empty, any client certificate validated against the clientCA bundle is considered authoritative.",
 	"headers":                  "headers is the set of headers to check for identity information",
 	"preferredUsernameHeaders": "preferredUsernameHeaders is the set of headers to check for the preferred username",
@@ -1322,7 +1322,7 @@ func (Project) SwaggerDoc() map[string]string {
 var map_ProjectSpec = map[string]string{
 	"":                       "ProjectSpec holds the project creation configuration.",
 	"projectRequestMessage":  "projectRequestMessage is the string presented to a user if they are unable to request a project via the projectrequest api endpoint",
-	"projectRequestTemplate": "projectRequestTemplate is the template to use for creating projects in response to projectrequest. This must point to a template in 'openshift-config' namespace. It is optional. If it is not specified, a default template is used.",
+	"projectRequestTemplate": "projectRequestTemplate is the template to use for creating projects in response to projectrequest. This must point to a template in 'uccp-config' namespace. It is optional. If it is not specified, a default template is used.",
 }
 
 func (ProjectSpec) SwaggerDoc() map[string]string {
@@ -1354,7 +1354,7 @@ var map_ProxySpec = map[string]string{
 	"httpsProxy":         "httpsProxy is the URL of the proxy for HTTPS requests.  Empty means unset and will not result in an env var.",
 	"noProxy":            "noProxy is a comma-separated list of hostnames and/or CIDRs for which the proxy should not be used. Empty means unset and will not result in an env var.",
 	"readinessEndpoints": "readinessEndpoints is a list of endpoints used to verify readiness of the proxy.",
-	"trustedCA":          "trustedCA is a reference to a ConfigMap containing a CA certificate bundle. The trustedCA field should only be consumed by a proxy validator. The validator is responsible for reading the certificate bundle from the required key \"ca-bundle.crt\", merging it with the system default trust bundle, and writing the merged trust bundle to a ConfigMap named \"trusted-ca-bundle\" in the \"openshift-config-managed\" namespace. Clients that expect to make proxy connections must use the trusted-ca-bundle for all HTTPS requests to the proxy, and may use the trusted-ca-bundle for non-proxy HTTPS requests as well.\n\nThe namespace for the ConfigMap referenced by trustedCA is \"openshift-config\". Here is an example ConfigMap (in yaml):\n\napiVersion: v1 kind: ConfigMap metadata:\n name: user-ca-bundle\n namespace: openshift-config\n data:\n   ca-bundle.crt: |",
+	"trustedCA":          "trustedCA is a reference to a ConfigMap containing a CA certificate bundle. The trustedCA field should only be consumed by a proxy validator. The validator is responsible for reading the certificate bundle from the required key \"ca-bundle.crt\", merging it with the system default trust bundle, and writing the merged trust bundle to a ConfigMap named \"trusted-ca-bundle\" in the \"uccp-config-managed\" namespace. Clients that expect to make proxy connections must use the trusted-ca-bundle for all HTTPS requests to the proxy, and may use the trusted-ca-bundle for non-proxy HTTPS requests as well.\n\nThe namespace for the ConfigMap referenced by trustedCA is \"uccp-config\". Here is an example ConfigMap (in yaml):\n\napiVersion: v1 kind: ConfigMap metadata:\n name: user-ca-bundle\n namespace: uccp-config\n data:\n   ca-bundle.crt: |",
 }
 
 func (ProxySpec) SwaggerDoc() map[string]string {
@@ -1383,8 +1383,8 @@ func (Scheduler) SwaggerDoc() map[string]string {
 }
 
 var map_SchedulerSpec = map[string]string{
-	"policy":              "policy is a reference to a ConfigMap containing scheduler policy which has user specified predicates and priorities. If this ConfigMap is not available scheduler will default to use DefaultAlgorithmProvider. The namespace for this configmap is openshift-config.",
-	"defaultNodeSelector": "defaultNodeSelector helps set the cluster-wide default node selector to restrict pod placement to specific nodes. This is applied to the pods created in all namespaces and creates an intersection with any existing nodeSelectors already set on a pod, additionally constraining that pod's selector. For example, defaultNodeSelector: \"type=user-node,region=east\" would set nodeSelector field in pod spec to \"type=user-node,region=east\" to all pods created in all namespaces. Namespaces having project-wide node selectors won't be impacted even if this field is set. This adds an annotation section to the namespace. For example, if a new namespace is created with node-selector='type=user-node,region=east', the annotation openshift.io/node-selector: type=user-node,region=east gets added to the project. When the openshift.io/node-selector annotation is set on the project the value is used in preference to the value we are setting for defaultNodeSelector field. For instance, openshift.io/node-selector: \"type=user-node,region=west\" means that the default of \"type=user-node,region=east\" set in defaultNodeSelector would not be applied.",
+	"policy":              "policy is a reference to a ConfigMap containing scheduler policy which has user specified predicates and priorities. If this ConfigMap is not available scheduler will default to use DefaultAlgorithmProvider. The namespace for this configmap is uccp-config.",
+	"defaultNodeSelector": "defaultNodeSelector helps set the cluster-wide default node selector to restrict pod placement to specific nodes. This is applied to the pods created in all namespaces and creates an intersection with any existing nodeSelectors already set on a pod, additionally constraining that pod's selector. For example, defaultNodeSelector: \"type=user-node,region=east\" would set nodeSelector field in pod spec to \"type=user-node,region=east\" to all pods created in all namespaces. Namespaces having project-wide node selectors won't be impacted even if this field is set. This adds an annotation section to the namespace. For example, if a new namespace is created with node-selector='type=user-node,region=east', the annotation uccp.io/node-selector: type=user-node,region=east gets added to the project. When the uccp.io/node-selector annotation is set on the project the value is used in preference to the value we are setting for defaultNodeSelector field. For instance, uccp.io/node-selector: \"type=user-node,region=west\" means that the default of \"type=user-node,region=east\" set in defaultNodeSelector would not be applied.",
 	"mastersSchedulable":  "MastersSchedulable allows masters nodes to be schedulable. When this flag is turned on, all the master nodes in the cluster will be made schedulable, so that workload pods can run on them. The default value for this field is false, meaning none of the master nodes are schedulable. Important Note: Once the workload pods start running on the master nodes, extreme care must be taken to ensure that cluster-critical control plane components are not impacted. Please turn on this field after doing due diligence.",
 }
 

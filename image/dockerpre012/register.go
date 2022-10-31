@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	GroupName       = "image.openshift.io"
+	GroupName       = "image.uccp.io"
 	LegacyGroupName = ""
 )
 

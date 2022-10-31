@@ -21,7 +21,7 @@ kubecontrolplane/v1 \
 legacyconfig/v1 \
 network/v1 \
 oauth/v1 \
-openshiftcontrolplane/v1 \
+uccpcontrolplane/v1 \
 operator/v1 \
 operatorcontrolplane/v1alpha1 \
 operatoringress/v1 \
@@ -36,17 +36,17 @@ template/v1 \
 user/v1 \
 "
 API_PACKAGES="\
-github.com/openshift/api/apps/v1,\
-github.com/openshift/api/authorization/v1,\
-github.com/openshift/api/build/v1,\
-github.com/openshift/api/image/v1,\
-github.com/openshift/api/network/v1,\
-github.com/openshift/api/oauth/v1,\
-github.com/openshift/api/project/v1,\
-github.com/openshift/api/quota/v1,\
-github.com/openshift/api/route/v1,\
-github.com/openshift/api/samples/v1,\
-github.com/openshift/api/security/v1,\
-github.com/openshift/api/template/v1,\
-github.com/openshift/api/user/v1\
+github.com/uccps-samples/api/apps/v1,\
+github.com/uccps-samples/api/authorization/v1,\
+github.com/uccps-samples/api/build/v1,\
+github.com/uccps-samples/api/image/v1,\
+github.com/uccps-samples/api/network/v1,\
+github.com/uccps-samples/api/oauth/v1,\
+github.com/uccps-samples/api/project/v1,\
+github.com/uccps-samples/api/quota/v1,\
+github.com/uccps-samples/api/route/v1,\
+github.com/uccps-samples/api/samples/v1,\
+github.com/uccps-samples/api/security/v1,\
+github.com/uccps-samples/api/template/v1,\
+github.com/uccps-samples/api/user/v1\
 "

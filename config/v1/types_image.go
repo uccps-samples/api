@@ -45,7 +45,7 @@ type ImageSpec struct {
 	// additionalTrustedCA is a reference to a ConfigMap containing additional CAs that
 	// should be trusted during imagestream import, pod image pull, build image pull, and
 	// imageregistry pullthrough.
-	// The namespace for this config map is openshift-config.
+	// The namespace for this config map is uccp-config.
 	// +optional
 	AdditionalTrustedCA ConfigMapNameReference `json:"additionalTrustedCA"`
 
@@ -62,7 +62,7 @@ type ImageStatus struct {
 	// internalRegistryHostname sets the hostname for the default internal image
 	// registry. The value must be in "hostname[:port]" format.
 	// This value is set by the image registry operator which controls the internal registry
-	// hostname. For backward compatibility, users can still use OPENSHIFT_DEFAULT_REGISTRY
+	// hostname. For backward compatibility, users can still use UCCP_DEFAULT_REGISTRY
 	// environment variable but this setting overrides the environment variable.
 	// +optional
 	InternalRegistryHostname string `json:"internalRegistryHostname,omitempty"`

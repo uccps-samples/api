@@ -8,7 +8,7 @@ import (
 // +genclient:nonNamespaced
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// OpenShiftAPIServer provides information to configure an operator to manage openshift-apiserver.
+// OpenShiftAPIServer provides information to configure an operator to manage uccp-apiserver.
 type OpenShiftAPIServer struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata"`

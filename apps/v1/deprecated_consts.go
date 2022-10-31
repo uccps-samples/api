@@ -9,20 +9,20 @@ const (
 	// deployment was created.
 	// This is set by deployer controller, but not consumed by any command or internally.
 	// DEPRECATED: will be removed soon
-	DeployerPodCreatedAtAnnotation = "openshift.io/deployer-pod.created-at"
+	DeployerPodCreatedAtAnnotation = "uccp.io/deployer-pod.created-at"
 
 	// DeployerPodStartedAtAnnotation is an annotation on a deployment that
 	// records the time in RFC3339 format of when the deployer pod for this particular
 	// deployment was started.
 	// This is set by deployer controller, but not consumed by any command or internally.
 	// DEPRECATED: will be removed soon
-	DeployerPodStartedAtAnnotation = "openshift.io/deployer-pod.started-at"
+	DeployerPodStartedAtAnnotation = "uccp.io/deployer-pod.started-at"
 
 	// DeployerPodCompletedAtAnnotation is an annotation on deployment that records
 	// the time in RFC3339 format of when the deployer pod finished.
 	// This is set by deployer controller, but not consumed by any command or internally.
 	// DEPRECATED: will be removed soon
-	DeployerPodCompletedAtAnnotation = "openshift.io/deployer-pod.completed-at"
+	DeployerPodCompletedAtAnnotation = "uccp.io/deployer-pod.completed-at"
 
 	// DesiredReplicasAnnotation represents the desired number of replicas for a
 	// new deployment.
@@ -34,5 +34,5 @@ const (
 	// of the deployment (a ReplicationController) on which the deployer Pod acts.
 	// This is set by deployer controller and consumed internally and in oc adm top command.
 	// DEPRECATED: will be removed soon
-	DeploymentAnnotation = "openshift.io/deployment.name"
+	DeploymentAnnotation = "uccp.io/deployment.name"
 )

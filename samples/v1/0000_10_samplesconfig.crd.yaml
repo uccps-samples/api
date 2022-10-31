@@ -1,7 +1,7 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: configs.samples.operator.openshift.io
+  name: configs.samples.operator.uccp.io
   annotations:
     displayName: ConfigsSamples
     description: Extension for configuring openshif samples operator.
@@ -10,7 +10,7 @@ spec:
   subresources:
     status: {}
   preserveUnknownFields: false
-  group: samples.operator.openshift.io
+  group: samples.operator.uccp.io
   versions:
   - name: v1
     served: true
@@ -69,7 +69,7 @@ spec:
             samplesRegistry:
               description: samplesRegistry allows for the specification of which registry
                 is accessed by the ImageStreams for their image content.  Defaults
-                on the content in https://github.com/openshift/library that are pulled
+                on the content in https://github.com/uccps-samples/library that are pulled
                 into this github repository, but based on our pulling only ocp content
                 it typically defaults to registry.redhat.io.
               type: string
@@ -147,7 +147,7 @@ spec:
             samplesRegistry:
               description: samplesRegistry allows for the specification of which registry
                 is accessed by the ImageStreams for their image content.  Defaults
-                on the content in https://github.com/openshift/library that are pulled
+                on the content in https://github.com/uccps-samples/library that are pulled
                 into this github repository, but based on our pulling only ocp content
                 it typically defaults to registry.redhat.io.
               type: string

@@ -5,8 +5,8 @@ import (
 
 	"fmt"
 
-	configv1 "github.com/openshift/api/config/v1"
-	osinv1 "github.com/openshift/api/osin/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
+	osinv1 "github.com/uccps-samples/api/osin/v1"
 )
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
@@ -73,7 +73,7 @@ func (t Arguments) String() string {
 type KubeAPIServerImagePolicyConfig struct {
 	// internalRegistryHostname sets the hostname for the default internal image
 	// registry. The value must be in "hostname[:port]" format.
-	// For backward compatibility, users can still use OPENSHIFT_DEFAULT_REGISTRY
+	// For backward compatibility, users can still use UCCP_DEFAULT_REGISTRY
 	// environment variable but this setting overrides the environment variable.
 	InternalRegistryHostname string `json:"internalRegistryHostname"`
 	// externalRegistryHostnames provides the hostnames for the default external image

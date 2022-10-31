@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: imagepruners.imageregistry.operator.openshift.io
+  name: imagepruners.imageregistry.operator.uccp.io
 spec:
-  group: imageregistry.operator.openshift.io
+  group: imageregistry.operator.uccp.io
   scope: Cluster
   versions:
   - name: v1

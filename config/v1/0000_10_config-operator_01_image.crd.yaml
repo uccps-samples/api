@@ -1,11 +1,11 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: images.config.openshift.io
+  name: images.config.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   scope: Cluster
   preserveUnknownFields: false
   names:
@@ -51,7 +51,7 @@ spec:
               description: additionalTrustedCA is a reference to a ConfigMap containing
                 additional CAs that should be trusted during imagestream import, pod
                 image pull, build image pull, and imageregistry pullthrough. The namespace
-                for this config map is openshift-config.
+                for this config map is uccp-config.
               type: object
               required:
               - name
@@ -141,6 +141,6 @@ spec:
                 internal image registry. The value must be in "hostname[:port]" format.
                 This value is set by the image registry operator which controls the
                 internal registry hostname. For backward compatibility, users can
-                still use OPENSHIFT_DEFAULT_REGISTRY environment variable but this
+                still use UCCP_DEFAULT_REGISTRY environment variable but this
                 setting overrides the environment variable.
               type: string

@@ -1,16 +1,16 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: consoleexternalloglinks.console.openshift.io
+  name: consoleexternalloglinks.console.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
     displayName: ConsoleExternalLogLinks
-    description: ConsoleExternalLogLink is an extension for customizing OpenShift
+    description: ConsoleExternalLogLink is an extension for customizing Uccp
       web console log links.
 spec:
   scope: Cluster
   preserveUnknownFields: false
-  group: console.openshift.io
+  group: console.uccp.io
   versions:
   - name: v1
     served: true
@@ -34,7 +34,7 @@ spec:
     status: {}
   "validation":
     "openAPIV3Schema":
-      description: ConsoleExternalLogLink is an extension for customizing OpenShift
+      description: ConsoleExternalLogLink is an extension for customizing Uccp
         web console log links.
       type: object
       required:
@@ -78,7 +78,7 @@ spec:
               pattern: ^https://
             namespaceFilter:
               description: namespaceFilter is a regular expression used to restrict
-                a log link to a matching set of namespaces (e.g., `^openshift-`).
+                a log link to a matching set of namespaces (e.g., `^uccp-`).
                 The string is converted into a regular expression using the JavaScript
                 RegExp constructor. If not specified, links will be displayed for
                 all the namespaces.

@@ -1,7 +1,7 @@
 package v1
 
 import (
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
@@ -12,7 +12,7 @@ import (
 // +kubebuilder:subresource:status
 
 // DNSRecord is a DNS record managed in the zones defined by
-// dns.config.openshift.io/cluster .spec.publicZone and .spec.privateZone.
+// dns.config.uccp.io/cluster .spec.publicZone and .spec.privateZone.
 //
 // Cluster admin manipulation of this resource is not supported. This resource
 // is only for internal communication of OpenShift operators.

@@ -1,11 +1,11 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: proxies.config.openshift.io
+  name: proxies.config.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
 spec:
-  group: config.openshift.io
+  group: config.uccp.io
   scope: Cluster
   preserveUnknownFields: false
   versions:
@@ -68,13 +68,13 @@ spec:
                 a proxy validator. The validator is responsible for reading the certificate
                 bundle from the required key \"ca-bundle.crt\", merging it with the
                 system default trust bundle, and writing the merged trust bundle to
-                a ConfigMap named \"trusted-ca-bundle\" in the \"openshift-config-managed\"
+                a ConfigMap named \"trusted-ca-bundle\" in the \"uccp-config-managed\"
                 namespace. Clients that expect to make proxy connections must use
                 the trusted-ca-bundle for all HTTPS requests to the proxy, and may
                 use the trusted-ca-bundle for non-proxy HTTPS requests as well. \n
-                The namespace for the ConfigMap referenced by trustedCA is \"openshift-config\".
+                The namespace for the ConfigMap referenced by trustedCA is \"uccp-config\".
                 Here is an example ConfigMap (in yaml): \n apiVersion: v1 kind: ConfigMap
-                metadata:  name: user-ca-bundle  namespace: openshift-config  data:
+                metadata:  name: user-ca-bundle  namespace: uccp-config  data:
                 \   ca-bundle.crt: |      -----BEGIN CERTIFICATE-----      Custom
                 CA certificate bundle.      -----END CERTIFICATE-----"
               type: object

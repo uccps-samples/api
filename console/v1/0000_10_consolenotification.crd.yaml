@@ -1,15 +1,15 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: consolenotifications.console.openshift.io
+  name: consolenotifications.console.uccp.io
   annotations:
-    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.uccp.io/self-managed-high-availability: "true"
     displayName: ConsoleNotification
-    description: Extension for configuring openshift web console notifications.
+    description: Extension for configuring Uccp web console notifications.
 spec:
   scope: Cluster
   preserveUnknownFields: false
-  group: console.openshift.io
+  group: console.uccp.io
   versions:
   - name: v1
     served: true
@@ -33,7 +33,7 @@ spec:
     status: {}
   "validation":
     "openAPIV3Schema":
-      description: ConsoleNotification is the extension for configuring openshift
+      description: ConsoleNotification is the extension for configuring Uccp
         web console notifications.
       type: object
       required:

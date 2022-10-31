@@ -34,7 +34,7 @@ type ProjectSpec struct {
 	ProjectRequestMessage string `json:"projectRequestMessage"`
 
 	// projectRequestTemplate is the template to use for creating projects in response to projectrequest.
-	// This must point to a template in 'openshift-config' namespace. It is optional.
+	// This must point to a template in 'uccp-config' namespace. It is optional.
 	// If it is not specified, a default template is used.
 	//
 	// +optional

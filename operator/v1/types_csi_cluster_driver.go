@@ -6,7 +6,7 @@ import (
 
 // ClusterCSIDriver is used to manage and configure CSI driver installed by default
 // in OpenShift. An example configuration may look like:
-//   apiVersion: operator.openshift.io/v1
+//   apiVersion: operator.uccp.io/v1
 //   kind: "ClusterCSIDriver"
 //   metadata:
 //     name: "ebs.csi.aws.com"

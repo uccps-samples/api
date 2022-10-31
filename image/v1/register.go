@@ -6,12 +6,12 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"github.com/openshift/api/image/docker10"
-	"github.com/openshift/api/image/dockerpre012"
+	"github.com/uccps-samples/api/image/docker10"
+	"github.com/uccps-samples/api/image/dockerpre012"
 )
 
 var (
-	GroupName     = "image.openshift.io"
+	GroupName     = "image.uccp.io"
 	GroupVersion  = schema.GroupVersion{Group: GroupName, Version: "v1"}
 	schemeBuilder = runtime.NewSchemeBuilder(addKnownTypes, docker10.AddToScheme, dockerpre012.AddToScheme, corev1.AddToScheme)
 	// Install is a function which adds this version to a scheme

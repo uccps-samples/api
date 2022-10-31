@@ -253,7 +253,7 @@ var map_BuildStrategy = map[string]string{
 	"dockerStrategy":          "dockerStrategy holds the parameters to the container image build strategy.",
 	"sourceStrategy":          "sourceStrategy holds the parameters to the Source build strategy.",
 	"customStrategy":          "customStrategy holds the parameters to the Custom build strategy",
-	"jenkinsPipelineStrategy": "JenkinsPipelineStrategy holds the parameters to the Jenkins Pipeline build strategy. Deprecated: use OpenShift Pipelines",
+	"jenkinsPipelineStrategy": "JenkinsPipelineStrategy holds the parameters to the Jenkins Pipeline build strategy. Deprecated: use Uccp Pipelines",
 }
 
 func (BuildStrategy) SwaggerDoc() map[string]string {
@@ -481,7 +481,7 @@ var map_ImageSource = map[string]string{
 	"from":       "from is a reference to an ImageStreamTag, ImageStreamImage, or DockerImage to copy source from.",
 	"as":         "A list of image names that this source will be used in place of during a multi-stage container image build. For instance, a Dockerfile that uses \"COPY --from=nginx:latest\" will first check for an image source that has \"nginx:latest\" in this field before attempting to pull directly. If the Dockerfile does not reference an image source it is ignored. This field and paths may both be set, in which case the contents will be used twice.",
 	"paths":      "paths is a list of source and destination paths to copy from the image. This content will be copied into the build context prior to starting the build. If no paths are set, the build context will not be altered.",
-	"pullSecret": "pullSecret is a reference to a secret to be used to pull the image from a registry If the image is pulled from the OpenShift registry, this field does not need to be set.",
+	"pullSecret": "pullSecret is a reference to a secret to be used to pull the image from a registry If the image is pulled from the Uccp registry, this field does not need to be set.",
 }
 
 func (ImageSource) SwaggerDoc() map[string]string {
@@ -499,7 +499,7 @@ func (ImageSourcePath) SwaggerDoc() map[string]string {
 }
 
 var map_JenkinsPipelineBuildStrategy = map[string]string{
-	"":                "JenkinsPipelineBuildStrategy holds parameters specific to a Jenkins Pipeline build. Deprecated: use OpenShift Pipelines",
+	"":                "JenkinsPipelineBuildStrategy holds parameters specific to a Jenkins Pipeline build. Deprecated: use Uccp Pipelines",
 	"jenkinsfilePath": "JenkinsfilePath is the optional path of the Jenkinsfile that will be used to configure the pipeline relative to the root of the context (contextDir). If both JenkinsfilePath & Jenkinsfile are both not specified, this defaults to Jenkinsfile in the root of the specified contextDir.",
 	"jenkinsfile":     "Jenkinsfile defines the optional raw contents of a Jenkinsfile which defines a Jenkins pipeline build.",
 	"env":             "env contains additional environment variables you want to pass into a build pipeline.",

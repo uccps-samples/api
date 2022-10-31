@@ -6,7 +6,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	buildv1 "github.com/openshift/api/build/v1"
+	buildv1 "github.com/uccps-samples/api/build/v1"
 )
 
 type ExtendedArguments map[string][]string
@@ -406,7 +406,7 @@ type ImagePolicyConfig struct {
 	AllowedRegistriesForImport *AllowedRegistries `json:"allowedRegistriesForImport,omitempty"`
 	// InternalRegistryHostname sets the hostname for the default internal image
 	// registry. The value must be in "hostname[:port]" format.
-	// For backward compatibility, users can still use OPENSHIFT_DEFAULT_REGISTRY
+	// For backward compatibility, users can still use UCCP_DEFAULT_REGISTRY
 	// environment variable but this setting overrides the environment variable.
 	InternalRegistryHostname string `json:"internalRegistryHostname,omitempty"`
 	// ExternalRegistryHostname sets the hostname for the default external image
@@ -617,7 +617,7 @@ type EtcdStorageConfig struct {
 	OpenShiftStorageVersion string `json:"openShiftStorageVersion"`
 	// OpenShiftStoragePrefix is the path within etcd that the OpenShift resources will
 	// be rooted under. This value, if changed, will mean existing objects in etcd will
-	// no longer be located. The default value is 'openshift.io'.
+	// no longer be located. The default value is 'uccp.io'.
 	OpenShiftStoragePrefix string `json:"openShiftStoragePrefix"`
 }
 

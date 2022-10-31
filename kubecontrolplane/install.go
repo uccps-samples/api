@@ -4,11 +4,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	kubecontrolplanev1 "github.com/openshift/api/kubecontrolplane/v1"
+	kubecontrolplanev1 "github.com/uccps-samples/api/kubecontrolplane/v1"
 )
 
 const (
-	GroupName = "kubecontrolplane.config.openshift.io"
+	GroupName = "kubecontrolplane.config.uccp.io"
 )
 
 var (

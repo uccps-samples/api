@@ -5,7 +5,7 @@ import (
 
 	corev1 "k8s.io/api/core/v1"
 
-	configv1 "github.com/openshift/api/config/v1"
+	configv1 "github.com/uccps-samples/api/config/v1"
 )
 
 // +genclient
@@ -55,7 +55,7 @@ type IngressControllerSpec struct {
 	// domain must be unique among all IngressControllers, and cannot be
 	// updated.
 	//
-	// If empty, defaults to ingress.config.openshift.io/cluster .spec.domain.
+	// If empty, defaults to ingress.config.uccp.io/cluster .spec.domain.
 	//
 	// +optional
 	Domain string `json:"domain,omitempty"`
@@ -70,7 +70,7 @@ type IngressControllerSpec struct {
 	// endpoints to other networks, enable load balancer integrations, etc.
 	//
 	// If unset, the default is based on
-	// infrastructure.config.openshift.io/cluster .status.platform:
+	// infrastructure.config.uccp.io/cluster .status.platform:
 	//
 	//   AWS:      LoadBalancerService (with External scope)
 	//   Azure:    LoadBalancerService (with External scope)
@@ -138,7 +138,7 @@ type IngressControllerSpec struct {
 
 	// tlsSecurityProfile specifies settings for TLS connections for ingresscontrollers.
 	//
-	// If unset, the default is based on the apiservers.config.openshift.io/cluster resource.
+	// If unset, the default is based on the apiservers.config.uccp.io/cluster resource.
 	//
 	// Note that when using the Old, Intermediate, and Modern profile types, the effective
 	// profile configuration is subject to change between releases. For example, given
@@ -386,7 +386,7 @@ type EndpointPublishingStrategy struct {
 	//
 	// If domain is set, a wildcard DNS record will be managed to point at the
 	// LoadBalancer Service's external name. DNS records are managed only in DNS
-	// zones defined by dns.config.openshift.io/cluster .spec.publicZone and
+	// zones defined by dns.config.uccp.io/cluster .spec.publicZone and
 	// .spec.privateZone.
 	//
 	// Wildcard DNS management is currently supported only on the AWS, Azure,
@@ -466,7 +466,7 @@ type RouteAdmissionPolicy struct {
 	// of routes [1] exposed by the ingress controller based on the route's
 	// wildcard policy.
 	//
-	// [1] https://github.com/openshift/api/blob/master/route/v1/types.go
+	// [1] https://github.com/uccps-samples/api/blob/master/route/v1/types.go
 	//
 	// Note: Updating WildcardPolicy from WildcardsAllowed to WildcardsDisallowed
 	// will cause admitted routes with a wildcard policy of Subdomain to stop
@@ -906,7 +906,7 @@ type IngressControllerStatus struct {
 	//   - True if the following conditions are met:
 	//     * The endpoint publishing strategy and platform support DNS.
 	//     * The ingress controller domain is set.
-	//     * dns.config.openshift.io/cluster configures DNS zones.
+	//     * dns.config.uccp.io/cluster configures DNS zones.
 	//   - False if any of those conditions are unsatisfied.
 	//
 	//   * DNSReady

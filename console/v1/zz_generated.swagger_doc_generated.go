@@ -31,7 +31,7 @@ func (CLIDownloadLink) SwaggerDoc() map[string]string {
 }
 
 var map_ConsoleCLIDownload = map[string]string{
-	"": "ConsoleCLIDownload is an extension for configuring openshift web console command line interface (CLI) downloads.",
+	"": "ConsoleCLIDownload is an extension for configuring Uccp web console command line interface (CLI) downloads.",
 }
 
 func (ConsoleCLIDownload) SwaggerDoc() map[string]string {
@@ -50,7 +50,7 @@ func (ConsoleCLIDownloadSpec) SwaggerDoc() map[string]string {
 }
 
 var map_ConsoleExternalLogLink = map[string]string{
-	"": "ConsoleExternalLogLink is an extension for customizing OpenShift web console log links.",
+	"": "ConsoleExternalLogLink is an extension for customizing Uccp web console log links.",
 }
 
 func (ConsoleExternalLogLink) SwaggerDoc() map[string]string {
@@ -61,7 +61,7 @@ var map_ConsoleExternalLogLinkSpec = map[string]string{
 	"":                "ConsoleExternalLogLinkSpec is the desired log link configuration. The log link will appear on the logs tab of the pod details page.",
 	"text":            "text is the display text for the link",
 	"hrefTemplate":    "hrefTemplate is an absolute secure URL (must use https) for the log link including variables to be replaced. Variables are specified in the URL with the format ${variableName}, for instance, ${containerName} and will be replaced with the corresponding values from the resource. Resource is a pod. Supported variables are: - ${resourceName} - name of the resource which containes the logs - ${resourceUID} - UID of the resource which contains the logs\n              - e.g. `11111111-2222-3333-4444-555555555555`\n- ${containerName} - name of the resource's container that contains the logs - ${resourceNamespace} - namespace of the resource that contains the logs - ${resourceNamespaceUID} - namespace UID of the resource that contains the logs - ${podLabels} - JSON representation of labels matching the pod with the logs\n            - e.g. `{\"key1\":\"value1\",\"key2\":\"value2\"}`\n\ne.g., https://example.com/logs?resourceName=${resourceName}&containerName=${containerName}&resourceNamespace=${resourceNamespace}&podLabels=${podLabels}",
-	"namespaceFilter": "namespaceFilter is a regular expression used to restrict a log link to a matching set of namespaces (e.g., `^openshift-`). The string is converted into a regular expression using the JavaScript RegExp constructor. If not specified, links will be displayed for all the namespaces.",
+	"namespaceFilter": "namespaceFilter is a regular expression used to restrict a log link to a matching set of namespaces (e.g., `^uccp-`). The string is converted into a regular expression using the JavaScript RegExp constructor. If not specified, links will be displayed for all the namespaces.",
 }
 
 func (ConsoleExternalLogLinkSpec) SwaggerDoc() map[string]string {
@@ -79,7 +79,7 @@ func (ApplicationMenuSpec) SwaggerDoc() map[string]string {
 }
 
 var map_ConsoleLink = map[string]string{
-	"": "ConsoleLink is an extension for customizing OpenShift web console links.",
+	"": "ConsoleLink is an extension for customizing Uccp web console links.",
 }
 
 func (ConsoleLink) SwaggerDoc() map[string]string {
@@ -108,7 +108,7 @@ func (NamespaceDashboardSpec) SwaggerDoc() map[string]string {
 }
 
 var map_ConsoleNotification = map[string]string{
-	"": "ConsoleNotification is the extension for configuring openshift web console notifications.",
+	"": "ConsoleNotification is the extension for configuring Uccp web console notifications.",
 }
 
 func (ConsoleNotification) SwaggerDoc() map[string]string {
@@ -129,7 +129,7 @@ func (ConsoleNotificationSpec) SwaggerDoc() map[string]string {
 }
 
 var map_ConsoleYAMLSample = map[string]string{
-	"": "ConsoleYAMLSample is an extension for customizing OpenShift web console YAML samples.",
+	"": "ConsoleYAMLSample is an extension for customizing Uccp web console YAML samples.",
 }
 
 func (ConsoleYAMLSample) SwaggerDoc() map[string]string {
